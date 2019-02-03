@@ -1,0 +1,37 @@
+<div class="shell">
+  <div class="center-block block-margin" style="width:100%;">
+    <div class="card" style="height:100%;">
+
+      <div class="card-header sub-header p-2">
+        <span class="component-header-text">Signatory Detail</span>
+        <span><button class="component-header-button" type="button" pButton icon="fa fa-refresh" pTooltip="Reset to original state" tooltipPosition="top"></button></span>
+        <span><button class="component-header-button" type="button" pButton icon="fa fa-info" pTooltip="Information" tooltipPosition="top"></button></span>
+      </div>
+
+      <div class="card-body card-h100 " [ngClass]="{'parentCardBody': bodyCenter === true}">
+        <div class="template-shell-control">
+          <ngx-dynamic-form #formDir [formDefinition]="formDefinition" [questionData]="questionData" [header]="formDefinition.formName"></ngx-dynamic-form>
+          <button class="btn btn-primary Subie" (click)="submit()">submit</button>
+          <div *ngIf="submitB">
+            <ngx-data-table title={{title}}
+                            model={{items}}
+                            tableTools={{tableTools}}
+                            headers={{headers}}></ngx-data-table>
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <div *ngIf="formDir.form.valid">
+        <div class="d-flex card-footer p-2" style="text-align:right;">
+          <div style="display:inline-block; width:100%;">
+            <button type="button" class="btn btn-primary mr-2" (click)="formDir.onSubmit()"><i class="fa fa-recycle mr-1"></i>Save(call submit)</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

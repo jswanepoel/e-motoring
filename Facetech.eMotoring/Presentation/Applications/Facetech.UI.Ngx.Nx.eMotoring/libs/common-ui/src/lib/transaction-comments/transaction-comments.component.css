@@ -1,0 +1,92 @@
+.commentNodeCell {
+  padding: 0px !important;
+  padding-bottom: 7px !important;
+  background-color: white !important;
+}
+
+.commentNodeBubble {
+  margin-right: 15px;
+  width: 60%;
+  min-width: 400px;
+  background-color: #fafafa;
+  box-shadow: 1px 1px;
+}
+
+.includeWhiteSpace {
+  white-space: pre-wrap;
+}
+
+.roundCorners {
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+.roundCornersTop {
+  border-radius: 6px !important;
+  display: block !important;
+  padding-right: 5px !important;
+}
+
+.commentNodeHeader {
+  font-size: small;
+  font-weight: 700;
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+}
+
+.commentNodeMessage {
+  text-align: center;
+  width: 100%;
+}
+
+.iconSpan {
+  display: block;
+  text-align: right;
+  width: 100%;
+}
+
+.positiveIcon {
+  color: forestgreen;
+}
+
+.negativeIcon {
+  color: red;
+}
+
+.newCommentNodeBubble {
+  height: 150px;
+  text-align: center;
+  background-color: #fafafa;
+  box-shadow: 1px 1px;
+  padding-bottom: 5px;
+}
+
+.commentTextarea {
+  width: 100%;
+  height: 90px;
+  resize: none;
+}
+
+.level1Node {
+  background-color: #1b5e20;
+  color: white;
+}
+
+.level2Node {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.level3Node {
+  background-color: #388e3c;
+  color: white;
+}
+
+.level4Node {
+  background-color: #43a047;
+  color: white;
+}

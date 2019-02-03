@@ -1,0 +1,28 @@
+<div [formGroup]="form" *ngIf="!hidden" [@slideInOutQuestion] class="mx-auto m-3" style=" max-width: 550px;">
+  <div class="mt-2 form-row question">
+    <div class="question" style="min-width:280px;">
+      <label [attr.for]="question.key">{{question.label}}</label>
+    </div>
+    <div class="question d-flex justify-content-center">
+      <div [ngSwitch]="definition.componentType">
+        <ngx-pdf-viewer *ngSwitchCase="'pdfview'"></ngx-pdf-viewer>
+        <!--< #questionRef *ngSwitchCase="'textbox'"-->
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+<!--<div class="ui-grid-row mt-2 ">
+  <div class="ui-grid-col-6">
+    Stakeholder Surname *:
+  </div>
+  <div [ngStyle]="{'background-color':userform.controls['surname'].valid ? 'green' : 'red' }" style="z-index:1;" class="p-1 status-indicator"></div>
+  <div class="ui-grid-col-6">
+    <input pInputText type="text" formControlName="surname" (focus)="question[1] = false " (blur)="question[1] = true" placeholder="Required" />
+    <div *ngIf="question[1]" [@slideInOut]>
+      <p-message severity="error" text="This field is required" *ngIf="question[1]&&!userform.controls['surname'].valid&&userform.controls['surname'].dirty"></p-message>
+    </div>
+  </div>
+</div>-->

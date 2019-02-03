@@ -1,0 +1,21 @@
+<div class="shell">
+  <div class="center-block block-margin" style="width:100%;">
+    <div class="card" style="height:100%;">
+
+      <div class="card-header sub-header p-2">
+        <span class="component-header-text">Initial Entity Registration</span>
+        <span><button class="component-header-button" type="button" pButton icon="fa fa-refresh" pTooltip="Reset to original state" tooltipPosition="top"></button></span>
+        <span><button class="component-header-button" type="button" pButton icon="fa fa-info" pTooltip="Information" tooltipPosition="top"></button></span>
+      </div>
+
+      <div class="card-body card-h100 " [ngClass]="{'parentCardBody': bodyCenter === true}">
+        <div class="template-shell-control">
+          <ngx-dynamic-form [formDefinition]="formDefinition"></ngx-dynamic-form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+

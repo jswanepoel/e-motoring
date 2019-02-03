@@ -1,0 +1,86 @@
+@import 'styles.css';
+
+/* UI PANELMENU STYLES */
+.ui-panelmenu-icon {
+  color: var(--side-panel-font-color) !important;
+}
+
+  .ui-panelmenu-icon.pi.pi-fw {
+    display: none !important;
+  }
+
+.side-panel-menu {
+  border-top: thin solid black !important;
+  border-left: thin solid black !important;
+  border-right: thin solid black !important;
+  padding-top: 1.5%;
+  position: relative;
+  display: block;
+  z-index: 5;
+  background-color: white !important;
+}
+
+.side-panel-menu .ui-panelmenu-header-link {
+  color: var(--side-panel-font-color) !important;
+  border: 0.2px solid black !important;
+  font-weight: bold !important;
+}
+
+
+/* UI MENUITEM STYLES */
+.ui-menuitem-text {
+  font-size: small !important;
+  padding: 5px !important;
+}
+
+.ui-menuitem-link {
+  align-items: flex-start !important;
+  padding-left: 5px !important;
+}
+
+  .ui-menuitem-link.ui-corner-all {
+    margin-left: 20px !important;
+    flex-direction: row !important;
+    font-size: 10pt !important;
+  }
+
+    .ui-menuitem-link.ui-corner-all:active {
+      font-size: 9.8pt !important;
+    }
+
+li.ui-menuitem.ui-corner-all:hover {
+  background-color: #eaeaea !important;
+}
+
+.ui-menuitem-icon {
+  margin-top: 3px !important;
+}
+
+
+
+button:focus {
+  outline: 0;
+}
+
+.hamb:hover {
+  transform: scale(1.1);
+}
+
+.hamb:active {
+  transform: scale(0.9);
+}
+
+.scrollbar {
+  float: left;
+  overflow-y: scroll;
+}
+
+.scrollbar-primary::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar-primary::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--sub-bg-color);
+}

@@ -1,0 +1,43 @@
+<p-toast [style]="{marginTop: '80px'}"></p-toast>
+
+<form [formGroup]="queryform" (ngSubmit)="onSubmit()" class="bg-faded" style="height: 88%;">
+
+  <p class="p-3 mb-2 bg-primary text-white">Customer Query</p>
+
+  <div class="ui-grid ui-grid-responsive ui-grid-pad mt-3 h-100 ui-fluid">
+    <div class="ui-grid-row mt-3">
+      <div class="ui-grid-col-2">
+        <label for="category"><strong>Category:</strong></label>
+      </div>
+      <div class="ui-grid-col-6">
+        <p-dropdown [options]="categories" formControlName="category" [autoWidth]="false"></p-dropdown>
+      </div>
+      <div class="ui-grid-col-4 text-center mr-3" *ngIf="category.invalid&&category.touched">
+        <p-message severity="error" text="Category is required"></p-message>
+      </div>
+    </div>
+
+    <div class="ui-grid-row" style="height: 90%;">
+      <div class="ui-grid-col-2">
+        <label for="description"><strong>Description:</strong></label>
+      </div>
+      <div class="ui-grid-col-10">
+        <textarea pInputTextarea type="text" formControlName="description" class="form-control w-100 h-100 mb-3 mr-3"></textarea>
+      </div>
+    </div>
+    <div class="ui-grid-row" *ngIf="description.invalid&&description.touched">
+      <div class="ui-grid-col-2"></div>
+      <div class="text-center mt-3 ui-grid-col-10">
+        <p-message severity="error" text="Description is required" ></p-message>
+      </div>
+    </div>
+
+    <div class="ui-grid-row">
+      <div class="ui-grid-col-10 text-center">
+      </div>
+      <div class="ui-grid-col-2 float-right ">
+        <button pButton type="submit" class="ui-button-success" label="Submit" [disabled]="!queryform.valid"></button>
+      </div>
+    </div>
+  </div>
+</form>

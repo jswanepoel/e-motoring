@@ -1,0 +1,348 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --main-bg-color: #0d47a1;
+  --sub-bg-color: #1565c0;
+  --bg-color: white;
+  --font-color: white;
+  --icon-color: white;
+  --side-panel-color: whitesmoke;
+  --side-panel-font-color: black;
+  --button-color: blue;
+  --div-size: 2px;
+  --bread-size: 2px;
+}
+
+html, body {
+  min-height: 100vh;
+  height: auto;
+  margin: 0;
+}
+
+body {
+  background: var(--bg-color) !important;
+}
+
+/* Base Template class : Copy, rename and set for custom component */
+.template-shell-control {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-width: 300px;
+  max-width: 1800px;
+  min-height: 200px;
+  max-height: 1200px;
+}
+
+label {
+  font-size: 10pt !important;
+}
+
+
+td.ng-star-inserted {
+  word-wrap: break-word !important;
+}
+
+.p-td {
+  height: 5px !important;
+}
+
+.ui-overlaypanel-content {
+  border-radius: 10px;
+}
+
+.sub-header {
+  background: var(--sub-bg-color) !important;
+  color: var(--font-color) !important;
+  font-weight: bold !important;
+  font-size: 10px;
+  /*text-shadow: 1px 1px black;*/
+}
+
+.ui-panel .ui-panel-titlebar {
+  background: var(--sub-bg-color) !important;
+  color: var(--font-color) !important;
+  font-weight: bold !important;
+  font-size: 10px;
+  text-shadow: 1px 1px black;
+}
+
+.block-margin {
+  padding: 10px !important;
+  /*min-width: 750px;*/
+}
+
+p-treeTable tr {
+  border: hidden;
+}
+
+.center-block {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  /*display: flex !important;*/
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+
+.ui-breadcrumb {
+  padding-bottom: 5px !important;
+}
+
+.ui-breadcrumb {
+  background-color: white !important;
+}
+
+
+
+
+
+
+.sri-Lanka-Theme {
+  z-index: 3;
+  background-color: var(--main-bg-color);
+}
+
+.sri-Lanka-Theme-Nav-Buttons {
+  background-color: var(--main-bg-color);
+  box-shadow: 1px 1px 1px 1px black;
+}
+
+th tr td {
+  background: #ffffff !important;
+}
+
+.ui-table-caption.ui-widget-header {
+  background: var(--sub-bg-color) !important;
+}
+
+.card-body {
+  -ms-flex: 1 1 auto !important;
+  flex: 1 1 auto !important;
+  padding: 1.25rem !important;
+}
+
+.photo-control {
+  min-width: 300px;
+  max-width: 650px;
+  height: 525px;
+}
+
+.fingerprint-control {
+  width: 100%;
+  height: 660px;
+}
+
+.signature-control {
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 68px;
+  max-height: 168px;
+}
+
+.footerFixedButton {
+  width: 200px;
+}
+
+
+/* Base Template class : Do not alter */
+.shell {
+  width: 100%;
+  height: var(--div-size);
+  /*min-height: 100%;*/
+}
+
+/* TODO: SHOULD BE PART OF THE TEMPLATE SHELL  */
+.component-header-text {
+  font-size: 16px;
+}
+
+.component-header-button {
+  float: right !important;
+  width: 25px;
+  height: 25px;
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+  box-shadow: 2px 2px black;
+  color: var(--icon-color)
+}
+
+  .component-header-button:active {
+    box-shadow: 2px 2px black;
+  }
+
+
+.bread-scroll {
+  width: var(--bread-size);
+  /*min-height: 100%;*/
+}
+
+.ui-inputtext {
+  width: 252px;
+  border-right: 1px solid rgb(166,166,166) !important;
+  border-top-right-radius: 2px !important;
+  border-bottom-right-radius: 2px !important;
+}
+
+  .ui-inputtext:hover {
+    border-right: 1px solid #333333 !important;
+    border-top-right-radius: 2px !important;
+    border-bottom-right-radius: 2px !important;
+  }
+
+.ui-dropdown.ui-widget {
+  width: 252px !important;
+}
+
+.radioContainer {
+  width: 252px !important;
+}
+
+input.form-control {
+  width: 252px !important;
+}
+
+.ui-message.ui-widget {
+  min-width: 255px !important;
+}
+
+.ui-radiobutton-label {
+  margin-right: 10px !important;
+}
+
+.ui-datepicker-trigger.ui-calendar-button:focus {
+  outline: 0 !important;
+}
+
+.ui-datepicker-trigger.ui-calendar-button:active {
+  outline: 0 !important;
+}
+
+.ui-datepicker-trigger.ui-calendar-button:hover {
+  border-color: #333333 !important;
+}
+
+.input-calendar:hover {
+  outline: 0 !important;
+}
+
+.ui-datepicker-trigger.ui-calendar-button {
+  background-color: white !important;
+  outline: 0 !important;
+  margin-left: -35px !important;
+  border: none !important;
+}
+
+.ui-button-icon-left.ui-clickable.pi.pi-calendar {
+  color: black !important;
+}
+
+/* Base Template class : Do not alter */
+.parentCardBody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa.fa-home {
+  margin-left: 3px !important;
+}
+
+.card-h100 {
+  min-height: var(--div-size);
+}
+
+.question {
+  margin: 0 auto !important;
+}
+
+.form-row {
+  max-width: 600px !important;
+  align-items: center !important;
+}
+
+.scheduleCalendar-control {
+  width: 100%;
+  min-width: 500px;
+  height: 100%;
+  min-height: 500px;
+}
+
+.flex-even {
+  flex: 1;
+}
+
+.calendarNodeContent {
+  height: 55px;
+  min-width: 50px;
+  text-align: center;
+  font-size: x-large;
+  background-color: #fafafa;
+  border-left: 1px;
+  border-top: 0px;
+  border-right: 1px;
+  border-bottom: 1px;
+  border-color: black;
+  border-style: solid;
+}
+
+.calendarNodeHeader {
+  height: 25px;
+  min-width: 50px;
+  text-align: right;
+  background-color: #e4e4e4;
+  border: 1px solid black;
+}
+
+.calendarNodeSelected {
+  background-color: rgba(0, 120, 247, 0.6);
+}
+
+
+.scrollbar {
+  /*min-width: 500px;*/
+  background: white !important;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  width: 100%;
+  background: #fff;
+  overflow-y: scroll;
+  margin-bottom: 25px;
+}
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  white-space: nowrap;
+  background-color: white;
+  margin-bottom: 11px !important;
+  border-radius: 5px !important;
+  margin-right: 10px;
+}
+
+  .scrolling-wrapper::-webkit-scrollbar {
+    width: 12px;
+    height: 8px;
+    background-color: var(--bg-color);
+  }
+
+  .scrolling-wrapper::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--sub-bg-color);
+  }
+
+.scrollbar-primary::-webkit-scrollbar {
+  width: 12px;
+  height: 6px;
+  background-color: #F5F5F5;
+}
+
+.scrollbar-primary::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--sub-bg-color);
+}

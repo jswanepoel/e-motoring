@@ -1,0 +1,28 @@
+<div class="shell">
+  <div class="center-block block-margin" style="width:100%;">
+    <div class="card" style="height:100%;">
+
+      <div class="card-header sub-header p-2">
+        <span class="component-header-text">Template Shell</span>
+        <span><button class="component-header-button" type="button" pButton icon="fa fa-refresh" pTooltip="Reset to original state" tooltipPosition="top"></button></span>
+        <span><button class="component-header-button" type="button" pButton icon="fa fa-info" pTooltip="Information" tooltipPosition="top"></button></span>
+      </div>
+
+      <div class="card-body card-h100 " [ngClass]="{'parentCardBody': bodyCenter === true}">
+        <div class="template-shell-control">
+          Your content here...
+        </div>
+      </div>
+
+      <div *ngIf="includeFooter">
+        <div class="d-flex card-footer p-2" style="text-align:right;">
+          <div style="display:inline-block; width:100%;">
+            <button type="button" class="btn btn-primary mr-2"><i class="fa fa-recycle mr-1"></i>Do Something Normal</button>
+            <button type="button" class="btn btn-success"><i class="fa fa-bullseye mr-1"></i>Do Something Positive</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+<div class="center-block block-margin" style="width:100%;height:100%" #elementSize>
+  <div class="card" style="height:100%;">
+    <div class="card-header sub-header p-2">
+      <span class="component-header-text">Document Scanning <i class=" fa-sm" pTooltip="Busy" tooltipPosition="top"></i></span>
+      <span><button class="component-header-button" type="button" pButton [disabled]="!clearButtonEnabled" (click)="clearCapturedImages()" icon="fa fa-refresh" pTooltip="Reset to original state" tooltipPosition="top"></button></span>
+      <span><button class="component-header-button" type="button" pButton icon="fa fa-info" pTooltip="Information" style="" tooltipPosition="top"></button></span>
+    </div>
+    <div class="card-body">
+      <ng-template #popInstructions>
+        <ol>
+          <li *ngFor="let instruction of instructions">{{instruction}}</li>
+        </ol>
+      </ng-template>
+
+      <div class="d-flex w-100 justify-content-center mb-3">
+        <div class="ngx-page d-flex" [ngStyle]="{'height.px': calculatePreviewPageHeight(), 'width.px': calculatePreviewPageWidth()}">
+          <ngx-image-zoom [thumbImage]=[(currentDocument.thumbnail)]
+                          [fullImage]=[(currentDocument.image)]
+                          [enableScrollZoom]="true">
+          </ngx-image-zoom>
+          <div class="small text-center align-self-end w-100 p-1">
+            Page {{currentPageNumber}} of {{totalNumberOfPages}}
+          </div>
+        </div>
+        <!--[enableLens]="true"
+        [lensWidth]="225"
+        [lensHeight]="125"-->
+      </div>
+
+      <div class="d-flex" style="text-align:center;">
+        <div style="display:inline-block; width:100%;">
+          <button type="button" class="btn btn-primary mr-1" [disabled]="!firstButtonEnabled" (click)="firstCapturedImage()">
+            <fa-icon [icon]=firstIcon></fa-icon>
+          </button>
+          <button type="button" class="btn btn-primary mr-1" [disabled]="!previousButtonEnabled" (click)="previousCapturedImage()">
+            <fa-icon [icon]=previousIcon></fa-icon>
+          </button>
+          <button type="button" class="btn btn-primary mr-1" [disabled]="!nextButtonEnabled" (click)="nextCapturedImage()">
+            <fa-icon [icon]=nextIcon></fa-icon>
+          </button>
+          <button type="button" class="btn btn-primary" [disabled]="!lastButtonEnabled" (click)="lastCapturedImage()">
+            <fa-icon [icon]=lastIcon></fa-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--<div class="d-flex card-footer p-2" style="text-align:right;">
+      <div style="display:inline-block; width:100%;">
+        <button type="button" class="btn btn-primary mr-2" style="width:152px;" [disabled]="!reinitializeButtonEnabled" (click)="reinitializeDevice()"><i class="fa fa-recycle mr-1"></i>Reinitialise</button>
+        <button type="button" class="btn btn-success" style="width:152px;" [disabled]="!captureButtonEnabled" (click)="getImageSnaphot()"><i class="fa fa-bullseye mr-1"></i>{{captureButtonText}}</button>
+      </div>
+    </div>-->
+
+    <div class="d-flex card-footer p-2" style="text-align:right;">
+      <div style="display:inline-block; width:100%;">
+        <button type="button" class="btn btn-primary footerFixedButton mr-2" (click)="reinitializeDevice()" [disabled]="!reinitializeButtonEnabled">
+          <i class="fa fa-recycle mr-1"></i>
+          Reinitialise Device
+        </button>
+        <button type="button" class="btn btn-success footerFixedButton" (click)="getImageSnaphot()" [disabled]="!captureButtonEnabled">
+          <i class="fa fa-bullseye mr-1"></i>
+          {{captureButtonText}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

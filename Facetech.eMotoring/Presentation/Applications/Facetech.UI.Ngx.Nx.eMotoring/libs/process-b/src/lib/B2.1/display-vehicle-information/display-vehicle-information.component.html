@@ -1,0 +1,42 @@
+<div class="shell">
+  <div class="center-block block-margin" style="width:100%;">
+    <div class="card" style="height:100%;">
+
+      <div class="card-header sub-header p-2">
+        <span class="component-header-text">Display vehicle</span>
+        <span><button class="component-header-button" type="button" pButton icon="fa fa-refresh" pTooltip="Reset to original state" style="color:var(--icon-color)" tooltipPosition="top"></button></span>
+        <span><button class="component-header-button" type="button" pButton icon="fa fa-info" pTooltip="Information" style="color:var(--icon-color)" tooltipPosition="top"></button></span>
+      </div>
+
+      <!--<ng-template #popInstructions>
+        <ul class="list-unstyled">
+          <li *ngFor="let instruction of instructions">{{instruction}}</li>
+        </ul>
+      </ng-template>-->
+
+      <div class="card-body card-h100 " [ngClass]="{'parentCardBody': bodyCenter === true}">
+        <div class="template-shell-control" #contentSize>
+          <div *ngFor="let headers of parentHeadersReal; let i = index" [attr.data-index]="i">
+            <div class="d-flex justify-content-center">
+              <div class="col-2 mt-2">
+                <label for="id">{{parentHeaders[i]}}</label>
+              </div>
+              <div class="col-3 mt-2">
+                <input pInputText id="id" class="w-100 form-control" [(ngModel)]="selectedVehicle[headers]" disabled />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="includeFooter">
+        <div class="d-flex card-footer p-2" style="text-align:right;">
+          <div style="display:inline-block; width:100%;">
+            <button type="button" class="btn btn-primary mr-2" (click)="Confirm()"><i class="fa fa-check mr-1"></i>Confirm</button>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

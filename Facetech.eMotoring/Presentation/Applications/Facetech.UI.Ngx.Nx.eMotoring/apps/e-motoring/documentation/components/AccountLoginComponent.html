@@ -1,0 +1,1136 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>facetech.ui.ngx.nx.e-motoring documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">facetech.ui.ngx.nx.e-motoring documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>AccountLoginComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>apps/e-motoring/src/app/account/account-login/account-login.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-account-login</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./account-login.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./account-login.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#credential">credential</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#errors">errors</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#faUserCircle">faUserCircle</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#isRequesting">isRequesting</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#submitted">submitted</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#subscription">subscription</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#login">login</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#loginFailure">loginFailure</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#loginSuccess">loginSuccess</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#notify">notify</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, activatedRoute: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, loginService: <a href="../injectables/LoginService.html">LoginService</a>, notificationService: NotificationService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">apps/e-motoring/src/app/account/account-login/account-login.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>activatedRoute</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>loginService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/LoginService.html" target="_self" >LoginService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>notificationService</td>
+                                                  
+                                                        <td>
+                                                                    <code>NotificationService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="login"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            login
+                            </b>
+                            <a href="#login"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>login(undefined: literal type)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">apps/e-motoring/src/app/account/account-login/account-login.component.ts:55</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>
+                                                                    <code>literal type</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loginFailure"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            loginFailure
+                            </b>
+                            <a href="#loginFailure"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>loginFailure(error: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="92" class="link-to-prism">apps/e-motoring/src/app/account/account-login/account-login.component.ts:92</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>error</td>
+                                                        <td>
+                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loginSuccess"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            loginSuccess
+                            </b>
+                            <a href="#loginSuccess"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>loginSuccess()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">apps/e-motoring/src/app/account/account-login/account-login.component.ts:96</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnDestroy"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            ngOnDestroy
+                            </b>
+                            <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ngOnDestroy()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">apps/e-motoring/src/app/account/account-login/account-login.component.ts:50</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">apps/e-motoring/src/app/account/account-login/account-login.component.ts:42</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="notify"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            notify
+                            </b>
+                            <a href="#notify"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>notify(message: IMessage)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="88" class="link-to-prism">apps/e-motoring/src/app/account/account-login/account-login.component.ts:88</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>message</td>
+                                                        <td>
+                                                                    <code>IMessage</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="credential"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            credential
+                            </b>
+                            <a href="#credential"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>credential:     <code>ICredential</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>ICredential</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    username: &#x27;&#x27;,
+    detail: &#x27;&#x27;,
+    baseActionValue: &#x27;&#x27;,
+    baseFunctionValue: &#x27;&#x27;,
+    baseRequiredDatabase: [],
+    detailDTL: &#x27;&#x27;,
+    userNameDTL: &#x27;&#x27;
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">apps/e-motoring/src/app/account/account-login/account-login.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="errors"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            errors
+                            </b>
+                            <a href="#errors"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>errors:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">apps/e-motoring/src/app/account/account-login/account-login.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="faUserCircle"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            faUserCircle
+                            </b>
+                            <a href="#faUserCircle"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>faUserCircle:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>faUserCircle</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">apps/e-motoring/src/app/account/account-login/account-login.component.ts:21</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isRequesting"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            isRequesting
+                            </b>
+                            <a href="#isRequesting"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>isRequesting:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">apps/e-motoring/src/app/account/account-login/account-login.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="submitted"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            submitted
+                            </b>
+                            <a href="#submitted"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>submitted:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">apps/e-motoring/src/app/account/account-login/account-login.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="subscription"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            subscription
+                            </b>
+                            <a href="#subscription"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>subscription:     <code>Subscription</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">apps/e-motoring/src/app/account/account-login/account-login.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Subscription } from &#x27;rxjs&#x27;;
+import { Component, OnInit, OnDestroy } from &#x27;@angular/core&#x27;;
+import { Router, ActivatedRoute } from &#x27;@angular/router&#x27;;
+import { faUserCircle } from &#x27;@fortawesome/free-regular-svg-icons&#x27;;
+import { MessageType } from &#x27;libs/common-ui/src/models/enums/message-type&#x27;;
+import { IMessage } from &#x27;libs/common-ui/src/models/interfaces/message.interface&#x27;;
+import { Message } from &#x27;libs/common-ui/src/models/message&#x27;;
+import { LoginService } from &#x27;../../serivces/login.service&#x27;;
+import { NotificationService } from &#x27;libs/common-ui/src/lib/notification/notification.service&#x27;;
+import { ICredential } from &#x27;libs/common-ui/src/models/interfaces/credential.interface&#x27;;
+import { finalize } from &#x27;rxjs/operators&#x27;;
+
+
+@Component({
+  selector: &#x27;app-account-login&#x27;,
+  templateUrl: &#x27;./account-login.component.html&#x27;,
+  styleUrls: [&#x27;./account-login.component.css&#x27;]
+})
+export class AccountLoginComponent implements OnInit, OnDestroy {
+  private subscription: Subscription;
+  public faUserCircle &#x3D; faUserCircle;
+  public errors: string;
+  public isRequesting: boolean;
+  public submitted: boolean &#x3D; false;
+  public credential: ICredential &#x3D; {
+    username: &#x27;&#x27;,
+    detail: &#x27;&#x27;,
+    baseActionValue: &#x27;&#x27;,
+    baseFunctionValue: &#x27;&#x27;,
+    baseRequiredDatabase: [],
+    detailDTL: &#x27;&#x27;,
+    userNameDTL: &#x27;&#x27;
+  };
+
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    private loginService: LoginService,
+    private notificationService: NotificationService) {
+  }
+
+  public ngOnInit(): void {
+    // subscribe to router event
+    this.subscription &#x3D; this.activatedRoute.queryParams
+      .subscribe((params: any) &#x3D;&gt; {
+        this.credential.username &#x3D; &#x27;username&#x27; in params ? params.username : &#x27;&#x27;;
+      });
+  }
+
+  public ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
+
+
+  public login({ value, valid }: {
+    value: {
+      username,
+      detail,
+      baseActionValue,
+      baseFunctionValue,
+      baseRequiredDatabase,
+      detailDTL,
+      userNameDTL
+    }, valid: boolean
+  }) {
+    this.submitted &#x3D; true;
+    this.isRequesting &#x3D; true;
+    this.errors &#x3D; &#x27;&#x27;;
+
+    value.baseActionValue &#x3D; &#x27;SIGN_IN&#x27;;
+    value.baseFunctionValue &#x3D; &#x27;USER_ACCESS&#x27;;
+    value.baseRequiredDatabase &#x3D; [&#x27;SystemUserDBID&#x27;];
+    value.userNameDTL &#x3D; &#x27;MasterKey&#x27;;
+    value.detailDTL &#x3D; &#x27;1111&#x27;
+
+    if (valid) {
+      this.loginService.login(value).pipe(finalize(() &#x3D;&gt; this.isRequesting &#x3D; false))
+        .subscribe(result &#x3D;&gt; {
+          if (result) {
+            this.loginSuccess();
+            this.router.navigate([&#x27;/home&#x27;]);
+          }
+        },
+        error &#x3D;&gt; this.loginFailure(error));
+    }
+  }
+
+  private notify(message: IMessage): void {
+    this.notificationService.notify(message);
+  }
+
+  private loginFailure(error: any): void {
+    this.notify(Message.create(MessageType.Error, &#x27;Authentication Failure&#x27;, error));
+  }
+
+  private loginSuccess(): void {
+    this.notify(Message.create(
+      MessageType.Success,
+      &#x27;Authentication Success&#x27;,
+      &#x27;User authentication has been successful.&#x27;));
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div #pnl class&#x3D;&quot;col-10 mx-auto mt-5&quot; style&#x3D;&quot;width:400px&quot;&gt;
+  &lt;div class&#x3D;&quot;center-block block-margin mt-5&quot; style&#x3D;&quot;height:100%;&quot; #elementSize&gt;
+    &lt;div class&#x3D;&quot;card&quot; style&#x3D;&quot;height:100%;margin-top:180px;&quot;&gt;
+      &lt;div class&#x3D;&quot;card-header sub-header&quot;&gt;
+        &lt;span class&#x3D;&quot;component-header-text&quot;&gt;Login&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;card-body&quot;&gt;
+        &lt;form #f&#x3D;&quot;ngForm&quot; novalidate (ngSubmit)&#x3D;&quot;login(f)&quot;&gt;
+          &lt;div class&#x3D;&quot;form-group text-left&quot;&gt;
+            &lt;label class&#x3D;&quot;sr-only-focusable&quot; for&#x3D;&quot;inputUsername&quot;&gt;Username&lt;/label&gt;
+            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control input-lg&quot;
+                   id&#x3D;&quot;inputUsername&quot;
+                   placeholder&#x3D;&quot;Username&quot;
+                   name&#x3D;&quot;username&quot;
+                   [(ngModel)]&#x3D;&quot;credential.username&quot;
+                   #username&#x3D;&quot;ngModel&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;form-group text-left&quot;&gt;
+            &lt;label class&#x3D;&quot;sr-only-focusable&quot; for&#x3D;&quot;inputPassword&quot;&gt;Password&lt;/label&gt;
+            &lt;input type&#x3D;&quot;password&quot; class&#x3D;&quot;form-control input-lgs&quot;
+                   id&#x3D;&quot;inputPassword&quot;
+                   placeholder&#x3D;&quot;Password&quot;
+                   name&#x3D;&quot;detail&quot;
+                   [(ngModel)]&#x3D;&quot;credential.detail&quot;
+                   #detail&#x3D;&quot;ngModel&quot;&gt;
+            &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;baseActionValue&quot; value&#x3D;&quot;&quot; hidden ngModel&gt;
+            &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;baseFunctionValue&quot; value&#x3D;&quot;&quot; hidden ngModel&gt;
+            &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;baseRequiredDatabase&quot; value&#x3D;&quot;&quot; hidden ngModel&gt;
+            &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;userNameDTL&quot; value&#x3D;&quot;&quot; hidden ngModel&gt;
+            &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;detailDTL&quot; value&#x3D;&quot;&quot; hidden ngModel&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;form-group&quot;&gt;
+            &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;disabled&quot;&gt;Forgot password?&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;form-group&quot;&gt;
+            &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;disabled&quot;&gt;Register&lt;/a&gt;
+          &lt;/div&gt;
+
+          &lt;div class&#x3D;&quot;form-group&quot;&gt;
+            &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary btn-block btn-sm btn-lg roundCorners&quot;
+                    [disabled]&#x3D;&quot;f.invalid || isRequesting&quot;&gt;
+              Login
+            &lt;/button&gt;
+
+          &lt;/div&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./account-login.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.new-user-alert {
+  padding-top: 5rem;
+}
+
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div #pnl class="col-10 mx-auto mt-5" style="width:400px">  <div class="center-block block-margin mt-5" style="height:100%;" #elementSize>    <div class="card" style="height:100%;margin-top:180px;">      <div class="card-header sub-header p-2">        <span class="component-header-text">Login</span>      </div>      <div class="card-body">        <form #f="ngForm" novalidate (ngSubmit)="login(f)">          <div class="form-group text-left">            <label class="sr-only-focusable" for="inputUsername">Username</label>            <input type="text" class="form-control input-lg"                   id="inputUsername"                   placeholder="Username"                   name="username"                   [(ngModel)]="credential.username"                   #username="ngModel">          </div>          <div class="form-group text-left">            <label class="sr-only-focusable" for="inputPassword">Password</label>            <input type="password" class="form-control input-lgs"                   id="inputPassword"                   placeholder="Password"                   name="detail"                   [(ngModel)]="credential.detail"                   #detail="ngModel">            <input type="text" name="baseActionValue" value="" hidden ngModel>            <input type="text" name="baseFunctionValue" value="" hidden ngModel>            <input type="text" name="baseRequiredDatabase" value="" hidden ngModel>            <input type="text" name="userNameDTL" value="" hidden ngModel>            <input type="text" name="detailDTL" value="" hidden ngModel>          </div>          <div class="form-group">            <a href="#" class="disabled">Forgot password?</a>          </div>          <div class="form-group">            <a href="#" class="disabled">Register</a>          </div>          <div class="form-group">            <button type="submit" class="btn btn-primary btn-block btn-sm btn-lg roundCorners"                    [disabled]="f.invalid || isRequesting">              Login            </button>          </div>        </form>      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AccountLoginComponent', 'selector': 'app-account-login'},{'name': 'AppComponent', 'selector': 'facetech-root'},{'name': 'PersonCreateComponent', 'selector': 'ngx-person-create'},{'name': 'PersonListComponent', 'selector': 'ngx-person-list'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AccountLoginComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AccountLoginComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

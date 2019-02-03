@@ -1,0 +1,99 @@
+<!--<div #pnl style="width:250px; margin-left:auto; margin-right:auto; display:block">
+  <div class="center-block block-margin" style="height:100%;" #elementSize>
+    <div class="card" style="height:100%;width:300px;margin-top:180px;">
+      <div class="card-header sub-header p-2">
+        <span class="component-header-text">Change Password</span>
+      </div>
+      <div class="card-body">
+        <form #f="ngForm" novalidate (ngSubmit)="login(f)">
+          <div class="form-group text-left">
+            <label class="sr-only-focusable" for="inputUsername">Password</label>
+            <input type="text" class="form-control input-lg"
+                   id="inputUsername"
+                   placeholder="Username"
+                   name="username"
+                   [(ngModel)]="credential.username"
+                   #username="ngModel">
+          </div>
+          <div class="form-group text-left">
+            <label class="sr-only-focusable" for="inputPassword">Confirm Password</label>
+            <input type="password" class="form-control input-lgs"
+                   id="inputPassword"
+                   placeholder="Password"
+                   name="detail"
+                   [(ngModel)]="credential.detail"
+                   #detail="ngModel">
+            <input type="text" name="baseActionValue" value="" hidden ngModel>
+            <input type="text" name="baseFunctionValue" value="" hidden ngModel>
+            <input type="text" name="baseRequiredDatabase" value="" hidden ngModel>
+            <input type="text" name="userNameDTL" value="" hidden ngModel>
+            <input type="text" name="detailDTL" value="" hidden ngModel>
+          </div>
+ 
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block btn-sm btn-lg roundCorners"
+                    [disabled]="f.invalid || isRequesting">
+              Change password
+            </button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+
+
+
+<div #pnl style="width:250px; margin-left:auto; margin-right:auto; display:block">
+  <div class="center-block block-margin" style="height:100%;" #elementSize>
+    <div class="card" style="height:100%;width:300px;margin-top:180px;">
+      <div class="card-header sub-header p-2">
+        <span class="component-header-text">Login</span>
+      </div>
+      <div class="card-body">
+        <form #f="ngForm" novalidate (ngSubmit)="login(f)">
+          <div class="form-group text-left">
+            <label class="sr-only-focusable" for="inputUsername">Username</label>
+            <input type="text" class="form-control input-lg"
+                   id="inputUsername"
+                   placeholder="Username"
+                   name="username"
+                   [(ngModel)]="credential.username"
+                   #username="ngModel">
+          </div>
+          <div class="form-group text-left">
+            <label class="sr-only-focusable" for="inputPassword">Password</label>
+            <input type="password" class="form-control input-lgs"
+                   id="inputPassword"
+                   placeholder="Password"
+                   name="detail"
+                   [(ngModel)]="credential.detail"
+                   #detail="ngModel">
+            <input type="text" name="baseActionValue" value="" hidden ngModel>
+            <input type="text" name="baseFunctionValue" value="" hidden ngModel>
+            <input type="text" name="baseRequiredDatabase" value="" hidden ngModel>
+            <input type="text" name="userNameDTL" value="" hidden ngModel>
+            <input type="text" name="detailDTL" value="" hidden ngModel>
+          </div>
+          <div class="form-group">
+            <a href="#" class="disabled">Forgot password?</a>
+          </div>
+          <div class="form-group">
+            <a href="#" class="disabled">Register</a>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block btn-sm btn-lg roundCorners"
+                    [disabled]="f.invalid || isRequesting">
+              Login
+            </button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

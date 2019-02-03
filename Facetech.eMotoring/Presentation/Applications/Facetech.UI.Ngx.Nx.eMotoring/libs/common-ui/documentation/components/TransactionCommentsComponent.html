@@ -1,0 +1,2134 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>facetech.ui.ngx.nx.e-motoring documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">facetech.ui.ngx.nx.e-motoring documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>TransactionCommentsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>ngx-transaction-comments</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./transaction-comments.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./transaction-comments.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#addingNewComment">addingNewComment</a>
+                            </li>
+                            <li>
+                                <a href="#elementSize">elementSize</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#foundNode">foundNode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#foundNodeLevel">foundNodeLevel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#newComment">newComment</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#newMessageLevel">newMessageLevel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#newNode">newNode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#newNodeID">newNodeID</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#transactionComments">transactionComments</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#calculateScrollPanelHeight">calculateScrollPanelHeight</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#clearNewComment">clearNewComment</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#collapseAll">collapseAll</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#constructNewNode">constructNewNode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#displayNewCommentNode">displayNewCommentNode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#expandAll">expandAll</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getNode">getNode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getNodeLevel">getNodeLevel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#initializeComponent">initializeComponent</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setExpanded">setExpanded</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#submitNewComment">submitNewComment</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#submitReplyComment">submitReplyComment</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#toggleComment">toggleComment</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#transactionId">transactionId</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="transactionId"></a>
+                        <code>transactionId</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:11</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="calculateScrollPanelHeight"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            calculateScrollPanelHeight
+                            </b>
+                            <a href="#calculateScrollPanelHeight"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>calculateScrollPanelHeight()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="332" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:332</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="clearNewComment"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            clearNewComment
+                            </b>
+                            <a href="#clearNewComment"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>clearNewComment()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="267" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:267</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="collapseAll"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            collapseAll
+                            </b>
+                            <a href="#collapseAll"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>collapseAll()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="313" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:313</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="constructNewNode"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            constructNewNode
+                            </b>
+                            <a href="#constructNewNode"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>constructNewNode(newId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, parentId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, comment: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, indentationLevel: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="238" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:238</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>newId</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>parentId</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>comment</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>indentationLevel</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>TreeNode</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayNewCommentNode"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            displayNewCommentNode
+                            </b>
+                            <a href="#displayNewCommentNode"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>displayNewCommentNode()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="272" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:272</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="expandAll"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            expandAll
+                            </b>
+                            <a href="#expandAll"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>expandAll()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="303" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:303</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getNode"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            getNode
+                            </b>
+                            <a href="#getNode"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getNode(node: TreeNode, id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="276" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:276</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>node</td>
+                                                        <td>
+                                                                    <code>TreeNode</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>id</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>TreeNode</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getNodeLevel"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            getNodeLevel
+                            </b>
+                            <a href="#getNodeLevel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getNodeLevel(node: TreeNode, id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, searchNodeLevel: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="290" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:290</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>node</td>
+                                                        <td>
+                                                                    <code>TreeNode</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>id</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>searchNodeLevel</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>TreeNode</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="initializeComponent"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            initializeComponent
+                            </b>
+                            <a href="#initializeComponent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>initializeComponent()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="195" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:195</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setExpanded"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            setExpanded
+                            </b>
+                            <a href="#setExpanded"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>setExpanded(node: TreeNode, expand: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="323" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:323</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>node</td>
+                                                        <td>
+                                                                    <code>TreeNode</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>expand</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="submitNewComment"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            submitNewComment
+                            </b>
+                            <a href="#submitNewComment"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>submitNewComment(newMessage: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="199" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:199</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>newMessage</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="submitReplyComment"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            submitReplyComment
+                            </b>
+                            <a href="#submitReplyComment"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>submitReplyComment(rowData: TreeNode)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="209" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:209</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>rowData</td>
+                                                        <td>
+                                                                    <code>TreeNode</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="toggleComment"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            toggleComment
+                            </b>
+                            <a href="#toggleComment"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>toggleComment(rowData: TreeNode)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="258" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:258</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>rowData</td>
+                                                        <td>
+                                                                    <code>TreeNode</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addingNewComment"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            addingNewComment
+                            </b>
+                            <a href="#addingNewComment"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>addingNewComment:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="elementSize"></a>
+                        <span class="name">
+                            <b>
+                            elementSize
+                            </b>
+                            <a href="#elementSize"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>elementSize:     <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;elementSize&#x27;)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="foundNode"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            foundNode
+                            </b>
+                            <a href="#foundNode"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>foundNode:     <code>TreeNode</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>TreeNode</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="foundNodeLevel"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            foundNodeLevel
+                            </b>
+                            <a href="#foundNodeLevel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>foundNodeLevel:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="newComment"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            newComment
+                            </b>
+                            <a href="#newComment"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>newComment:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="newMessageLevel"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            newMessageLevel
+                            </b>
+                            <a href="#newMessageLevel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>newMessageLevel:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="newNode"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            newNode
+                            </b>
+                            <a href="#newNode"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>newNode:     <code>TreeNode</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>TreeNode</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="newNodeID"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            newNodeID
+                            </b>
+                            <a href="#newNodeID"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>newNodeID:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="transactionComments"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            transactionComments
+                            </b>
+                            <a href="#transactionComments"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>transactionComments:     <code>TreeNode[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>TreeNode[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">libs/common-ui/src/lib/transaction-comments/transaction-comments.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ViewChild, ElementRef, Renderer, Directive, Input, Renderer2 } from &#x27;@angular/core&#x27;;
+import { Tree, TreeNode, InputTextarea } from &#x27;primeng/primeng&#x27;;
+
+@Component({
+  selector: &#x27;ngx-transaction-comments&#x27;,
+  templateUrl: &#x27;./transaction-comments.component.html&#x27;,
+  styleUrls: [&#x27;./transaction-comments.component.css&#x27;]
+})
+export class TransactionCommentsComponent implements OnInit {
+
+  @Input() transactionId: number;
+
+  public transactionComments: TreeNode[];
+  public newNode: TreeNode;
+  public newNodeID: number;
+  public foundNode: TreeNode;
+  public newComment: string;
+  public addingNewComment: boolean &#x3D; false;
+  private newMessageLevel: number;
+  private foundNodeLevel: number;
+
+  @ViewChild(&#x27;elementSize&#x27;) elementSize: ElementRef; // Needed for method calculateScrollPanelHeight()
+    
+  constructor() {
+  }
+
+  private initializeComponent(): void {
+    this.transactionComments &#x3D; [];
+
+    //  Test data :
+    //this.transactionComments &#x3D; [
+    //  {
+    //    &quot;data&quot;: {
+    //      &quot;id&quot;: &quot;1&quot;,
+    //      &quot;parent_id&quot;: &quot;&quot;,
+    //      &quot;header&quot;: &quot;Morne Stander : 11/11/1111 11:11&quot;,
+    //      &quot;message&quot;: &quot;Indentation 0px. Indentation 0px. Indentation 0px. Indentation 0px. Indentation 0px. Indentation 0px. Indentation 0px. Indentation 0px. Indentation 0px. Indentation 0px. Indentation 0px. Indentation 0px. Indentation 0px. &quot;,
+    //      &quot;indentationLevel&quot;: &quot;1&quot;,
+    //      &quot;replyMessage&quot;: &quot;&quot;,
+    //      &quot;collapsed&quot;: true,
+    //      &quot;hasChildren&quot;: true
+    //    },
+    //    &quot;expanded&quot;: false,
+    //    &quot;children&quot;: [
+    //      {
+    //        &quot;data&quot;: {
+    //          &quot;id&quot;: &quot;2&quot;,
+    //          &quot;parent_id&quot;: &quot;1&quot;,
+    //          &quot;header&quot;: &quot;Jacques Visage : 22/22/2222 22:22&quot;,
+    //          &quot;message&quot;: &quot;Indentation level 0&quot;,
+    //          &quot;indentationLevel&quot;: &quot;2&quot;,
+    //          &quot;replyMessage&quot;: &quot;&quot;,
+    //          &quot;collapsed&quot;: true,
+    //          &quot;hasChildren&quot;: true
+    //        },
+    //        &quot;expanded&quot;: false,
+    //        &quot;children&quot;: [
+    //          {
+    //            &quot;data&quot;: {
+    //              &quot;id&quot;: &quot;4&quot;,
+    //              &quot;parent_id&quot;: &quot;2&quot;,
+    //              &quot;header&quot;: &quot;Dawie Lombaard : 33/33/3333 33:33&quot;,
+    //              &quot;message&quot;: &quot;So het ons nou gestop?&quot;,
+    //              &quot;indentationLevel&quot;: &quot;3&quot;,
+    //              &quot;replyMessage&quot;: &quot;&quot;,
+    //              &quot;collapsed&quot;: true,
+    //              &quot;hasChildren&quot;: false
+    //            },
+    //            &quot;expanded&quot;: false,
+    //            &quot;children&quot;: []
+    //          },
+    //          {
+    //            &quot;data&quot;: {
+    //              &quot;id&quot;: &quot;5&quot;,
+    //              &quot;parent_id&quot;: &quot;2&quot;,
+    //              &quot;header&quot;: &quot;Elisma Lombard : 33/33/3333 33:34&quot;,
+    //              &quot;message&quot;: &quot;Nou wat nou?&quot;,
+    //              &quot;indentationLevel&quot;: &quot;3&quot;,
+    //              &quot;replyMessage&quot;: &quot;&quot;,
+    //              &quot;collapsed&quot;: true,
+    //              &quot;hasChildren&quot;: false
+    //            },
+    //            &quot;expanded&quot;: false,
+    //            &quot;children&quot;: []
+    //          }
+    //        ]
+    //      },
+    //      {
+    //        &quot;data&quot;: {
+    //          &quot;id&quot;: &quot;3&quot;,
+    //          &quot;parent_id&quot;: &quot;1&quot;,
+    //          &quot;header&quot;: &quot;Elize le Roux : 22/22/2222 22:22&quot;,
+    //          &quot;message&quot;: &quot;20kb&quot;,
+    //          &quot;indentationLevel&quot;: &quot;2&quot;,
+    //          &quot;replyMessage&quot;: &quot;&quot;,
+    //          &quot;collapsed&quot;: true,
+    //          &quot;hasChildren&quot;: true
+    //        },
+    //        &quot;expanded&quot;: false,
+    //        &quot;children&quot;: [
+    //          {
+    //            &quot;data&quot;: {
+    //              &quot;id&quot;: &quot;7&quot;,
+    //              &quot;parent_id&quot;: &quot;3&quot;,
+    //              &quot;header&quot;: &quot;Joe Black : 33/33/3333 33:34&quot;,
+    //              &quot;message&quot;: &quot;20kb&quot;,
+    //              &quot;indentationLevel&quot;: &quot;3&quot;,
+    //              &quot;replyMessage&quot;: &quot;&quot;,
+    //              &quot;collapsed&quot;: true,
+    //              &quot;hasChildren&quot;: false
+    //            },
+    //            &quot;expanded&quot;: false,
+    //            &quot;children&quot;: []
+    //          }
+    //        ]
+    //      }
+    //    ]
+    //  },
+    //  {
+    //    &quot;data&quot;: {
+    //      &quot;id&quot;: &quot;6&quot;,
+    //      &quot;parent_id&quot;: &quot;&quot;,
+    //      &quot;header&quot;: &quot;Marius Bosman : 11/11/1111 11:11&quot;,
+    //      &quot;message&quot;: &quot;Second level 0 message.&quot;,
+    //      &quot;indentationLevel&quot;: &quot;1&quot;,
+    //      &quot;replyMessage&quot;: &quot;&quot;,
+    //      &quot;collapsed&quot;: true,
+    //      &quot;hasChildren&quot;: true
+    //    },
+    //    &quot;expanded&quot;: false,
+    //    &quot;children&quot;: [
+    //      {
+    //        &quot;data&quot;: {
+    //          &quot;id&quot;: &quot;8&quot;,
+    //          &quot;parent_id&quot;: &quot;6&quot;,
+    //          &quot;header&quot;: &quot;Shaun of the Dead : 22/22/2222 22:22&quot;,
+    //          &quot;message&quot;: &quot;Abc def ghi jkl mno p q.&quot;,
+    //          &quot;indentationLevel&quot;: &quot;2&quot;,
+    //          &quot;replyMessage&quot;: &quot;&quot;,
+    //          &quot;collapsed&quot;: true,
+    //          &quot;hasChildren&quot;: false
+    //        },
+    //        &quot;expanded&quot;: false,
+    //        &quot;children&quot;: []
+    //      },
+    //      {
+    //        &quot;data&quot;: {
+    //          &quot;id&quot;: &quot;9&quot;,
+    //          &quot;parent_id&quot;: &quot;6&quot;,
+    //          &quot;header&quot;: &quot;Shaun of the Dead : 22/22/2222 22:23&quot;,
+    //          &quot;message&quot;: &quot;Abc def ghi jkl mno p q.&quot;,
+    //          &quot;indentationLevel&quot;: &quot;2&quot;,
+    //          &quot;replyMessage&quot;: &quot;&quot;,
+    //          &quot;collapsed&quot;: true,
+    //          &quot;hasChildren&quot;: false
+    //        },
+    //        &quot;expanded&quot;: false,
+    //        &quot;children&quot;: []
+    //      },
+    //      {
+    //        &quot;data&quot;: {
+    //          &quot;id&quot;: &quot;10&quot;,
+    //          &quot;parent_id&quot;: &quot;6&quot;,
+    //          &quot;header&quot;: &quot;Shaun of the Dead : 22/22/2222 22:24&quot;,
+    //          &quot;message&quot;: &quot;Abc def ghi jkl mno p q.&quot;,
+    //          &quot;indentationLevel&quot;: &quot;2&quot;,
+    //          &quot;replyMessage&quot;: &quot;&quot;,
+    //          &quot;collapsed&quot;: true,
+    //          &quot;hasChildren&quot;: false
+    //        },
+    //        &quot;expanded&quot;: false,
+    //        &quot;children&quot;: []
+    //      }
+    //    ]
+    //  },
+    //  {
+    //    &quot;data&quot;: {
+    //      &quot;id&quot;: &quot;6&quot;,
+    //      &quot;parent_id&quot;: &quot;&quot;,
+    //      &quot;header&quot;: &quot;Marius Bosman : 11/11/1111 11:11&quot;,
+    //      &quot;message&quot;: &quot;Second level 0 message.&quot;,
+    //      &quot;indentationLevel&quot;: &quot;1&quot;,
+    //      &quot;replyMessage&quot;: &quot;&quot;,
+    //      &quot;collapsed&quot;: true,
+    //      &quot;hasChildren&quot;: false
+    //    },
+    //    &quot;expanded&quot;: false,
+    //    &quot;children&quot;: []
+    //  }
+    //]
+   
+    this.newNodeID &#x3D; 20;  // For testing only - Will be obtained from service
+  }
+
+  ngOnInit(): void {
+    this.initializeComponent();
+  }
+
+  public submitNewComment(newMessage: string): void {
+    this.collapseAll();
+    this.newNodeID++;
+    this.newNode &#x3D; this.constructNewNode(this.newNodeID.toString(), &quot;&quot;, newMessage, &quot;1&quot;);
+    this.transactionComments.push(this.newNode);
+    this.addingNewComment &#x3D; false;
+    this.transactionComments &#x3D; [...this.transactionComments];
+    this.newComment &#x3D; &quot;&quot;;
+  }
+
+  public submitReplyComment(rowData: TreeNode): void {
+    this.collapseAll();
+    this.newNodeID++; // Will be replaced with service
+
+    rowData[&#x27;collapsed&#x27;] &#x3D; !rowData[&#x27;collapsed&#x27;];
+    rowData[&#x27;hasChildren&#x27;] &#x3D; true;
+
+    for (let i &#x3D; 0; i &lt; this.transactionComments.length; i++) { // Cycle through highest level parents
+      this.getNode(this.transactionComments[i], rowData[&#x27;id&#x27;]);
+
+      this.foundNodeLevel &#x3D; 0;
+      this.getNodeLevel(this.transactionComments[i], rowData[&#x27;id&#x27;], 1);
+
+      if (this.foundNode !&#x3D; null) {
+        this.newNode &#x3D; this.constructNewNode(this.newNodeID.toString(), rowData[&#x27;id&#x27;], rowData[&#x27;replyMessage&#x27;], (this.foundNodeLevel + 1).toString());
+        this.foundNode.children.push(this.newNode);
+
+        for (var _i &#x3D; 0; _i &lt;&#x3D; this.foundNodeLevel - 1; _i++) {
+          this.foundNode.expanded &#x3D; true;
+          this.foundNode &#x3D; this.foundNode.parent;
+        }
+
+        this.foundNode &#x3D; null;
+      }
+    }
+
+    this.transactionComments &#x3D; [...this.transactionComments];
+  }
+
+  private constructNewNode(newId: string, parentId: string, comment: string, indentationLevel: string): TreeNode {
+    this.newNode &#x3D;
+      {
+        &quot;data&quot;: {
+          &quot;id&quot;: newId,
+          &quot;parent_id&quot;: parentId,
+          &quot;header&quot;: &quot;{Signed in user} &quot; + new Date().toLocaleDateString() + &quot; &quot; + new Date().toLocaleTimeString(),
+          &quot;message&quot;: comment.trim(),
+          &quot;indentationLevel&quot;: indentationLevel,
+          &quot;replyMessage&quot;: &quot;&quot;,
+          &quot;collapsed&quot;: true,
+          &quot;hasChildren&quot;: false
+        },
+        &quot;expanded&quot;: false,
+        &quot;children&quot;: []
+      };
+
+    return this.newNode;
+  }
+
+  public toggleComment(rowData: TreeNode): void {
+    rowData[&#x27;replyMessage&#x27;] &#x3D; &quot;&quot;;
+    rowData[&#x27;collapsed&#x27;] &#x3D; !rowData[&#x27;collapsed&#x27;];
+
+    if (!rowData[&#x27;collapsed&#x27;]) {
+      this.addingNewComment &#x3D; false;
+    }
+  }
+
+  public clearNewComment(): void {
+    this.newComment &#x3D; &quot;&quot;;
+    this.addingNewComment &#x3D; false;
+  }
+
+  public displayNewCommentNode(): void {
+    this.addingNewComment &#x3D; !this.addingNewComment;
+  }
+
+  private getNode(node: TreeNode, id: string): TreeNode {
+    if (node.data[&#x27;id&#x27;] &#x3D;&#x3D; id) {
+      this.foundNode &#x3D; node;
+      return node;
+    }
+    else {
+      if (node.children) {
+        node.children.forEach(childNode &#x3D;&gt; {
+          return this.getNode(childNode, id);
+        });
+      }
+    }
+  }
+
+  private getNodeLevel(node: TreeNode, id: string, searchNodeLevel: number): TreeNode {
+    if (node.data[&#x27;id&#x27;] &#x3D;&#x3D; id) {
+      this.foundNodeLevel &#x3D; searchNodeLevel;
+      return;
+    }
+    else {
+      if (node.children.length &gt; 0) {
+        searchNodeLevel++;
+        node.children.forEach(childNode &#x3D;&gt; { return this.getNodeLevel(childNode, id, searchNodeLevel); });
+      }
+    }
+  }
+
+  public expandAll(): void {
+    if (this.transactionComments &amp;&amp; this.transactionComments.length &gt; 0) {
+      this.transactionComments.forEach(node &#x3D;&gt; {
+        this.setExpanded(node, true);
+      });
+
+      this.transactionComments &#x3D; [...this.transactionComments];
+    }
+  }
+
+  public collapseAll(): void {
+    if (this.transactionComments &amp;&amp; this.transactionComments.length &gt; 0) {
+      this.transactionComments.forEach(node &#x3D;&gt; {
+        this.setExpanded(node, false);
+      });
+
+      this.transactionComments &#x3D; [...this.transactionComments];
+    }
+  }
+
+  private setExpanded(node: TreeNode, expand: boolean): void {
+    node.expanded &#x3D; expand;
+    if (node.children) {
+      node.children.forEach(childNode &#x3D;&gt; {
+        this.setExpanded(childNode, expand);
+      });
+    }
+  }
+
+  public calculateScrollPanelHeight(): string {
+    if (this.addingNewComment) {
+      return (this.elementSize.nativeElement.offsetHeight - 290).toString() + &#x27;px&#x27;;
+    }
+    else {
+      return this.elementSize.nativeElement.offsetHeight.toString() - 82 + &#x27;px&#x27;;
+    }
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;center-block block-margin&quot; style&#x3D;&quot;height:100%;&quot; #elementSize&gt;
+
+  &lt;div class&#x3D;&quot;card&quot; style&#x3D;&quot;height:100%;&quot;&gt;
+
+    &lt;div class&#x3D;&quot;card-header sub-header&quot;&gt;
+      &lt;span class&#x3D;&quot;component-header-text&quot;&gt;Transaction comments&lt;/span&gt;
+      &lt;span *ngIf&#x3D;&quot;!addingNewComment&quot;&gt;&lt;button class&#x3D;&quot;component-header-button&quot; type&#x3D;&quot;button&quot; (click)&#x3D;&quot;displayNewCommentNode()&quot; pButton icon&#x3D;&quot;fa fa-commenting-o&quot;&gt;&lt;/button&gt;&lt;/span&gt;
+      &lt;span *ngIf&#x3D;&quot;addingNewComment&quot;&gt;&lt;button class&#x3D;&quot;component-header-button&quot; type&#x3D;&quot;button&quot; pButton icon&#x3D;&quot;fa fa-commenting-o&quot; disabled&gt;&lt;/button&gt;&lt;/span&gt;
+      &lt;span&gt;&lt;button class&#x3D;&quot;component-header-button&quot; type&#x3D;&quot;button&quot; (click)&#x3D;&quot;collapseAll()&quot; pButton icon&#x3D;&quot;fa fa-level-up fa-flip-horizontal&quot;&gt;&lt;/button&gt;&lt;/span&gt;
+      &lt;span&gt;&lt;button class&#x3D;&quot;component-header-button&quot; type&#x3D;&quot;button&quot; (click)&#x3D;&quot;expandAll()&quot; pButton icon&#x3D;&quot;fa fa-level-down&quot;&gt;&lt;/button&gt;&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;p-scrollPanel [style]&#x3D;&quot;{width: &#x27;100%&#x27;, &#x27;height&#x27;:calculateScrollPanelHeight(), &#x27;margin-top&#x27;:&#x27;5px&#x27;}&quot; styleClass&#x3D;&quot;custom&quot;&gt;
+      &lt;div class&#x3D;&quot;mt-3 mb-3&quot;&gt;
+        &lt;p-treeTable [value]&#x3D;&quot;transactionComments&quot;&gt;
+          &lt;ng-template pTemplate&#x3D;&quot;body&quot; let-rowNode let-rowData&#x3D;&quot;rowData&quot;&gt;
+            &lt;tr&gt;
+              &lt;td class&#x3D;&quot;commentNodeCell&quot;&gt;
+                &lt;div class&#x3D;&quot;d-flex justify-content-start&quot;&gt;
+                  &lt;div&gt;
+                    &lt;p-treeTableToggler [rowNode]&#x3D;&quot;rowNode&quot;&gt;&lt;/p-treeTableToggler&gt;
+                    &lt;span class&#x3D;&quot;btn btn-sm ml-1&quot; icon&#x3D;&quot;pi pi-clear&quot; *ngIf&#x3D;&quot;!rowData.hasChildren &amp;&amp; rowData.indentationLevel &#x3D;&#x3D; &#x27;1&#x27;&quot;&gt;&lt;/span&gt;
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;roundCorners commentNodeBubble&quot;&gt;
+                    &lt;span class&#x3D;&quot;roundCornersTop commentNodeHeader&quot;
+                          [ngClass]&#x3D;&quot;rowData.indentationLevel &#x3D;&#x3D; &#x27;1&#x27; ? &#x27;level1Node&#x27; : rowData.indentationLevel &#x3D;&#x3D; &#x27;2&#x27; ? &#x27;level2Node&#x27; : rowData.indentationLevel &#x3D;&#x3D; &#x27;3&#x27; ? &#x27;level3Node&#x27; : &#x27;level4Node&#x27;&quot;&gt;
+                      {{rowData.header}}
+                    &lt;/span&gt;
+                    &lt;div class&#x3D;&quot;includeWhiteSpace&quot;&gt;{{rowData.message}}&lt;/div&gt;
+
+                    &lt;div class&#x3D;&quot;commentNodeMessage&quot;&gt;
+                      &lt;span class&#x3D;&quot;iconSpan&quot;&gt;
+                        &lt;i class&#x3D;&quot;btn btn-sm fa p-0&quot;
+                           [ngClass]&#x3D;&quot;rowData.collapsed ? &#x27;fa-reply&#x27; : &#x27;fa-ban&#x27;&quot;
+                           [style.color]&#x3D;&quot;rowData.collapsed ? &#x27;#0079f9&#x27; : &#x27;red&#x27;&quot;
+                           (click)&#x3D;&quot;toggleComment(rowData)&quot;&gt;&lt;/i&gt;
+                      &lt;/span&gt;
+                      &lt;div [ngClass]&#x3D;&quot;rowData.collapsed ? &#x27;collapse&#x27; : &#x27;collapse show&#x27;&quot;&gt;
+                        &lt;textarea class&#x3D;&quot;commentTextarea&quot; [elementFocus]&#x3D;&quot;!rowData.collapsed&quot; pInputTextarea [(ngModel)]&#x3D;&quot;rowData.replyMessage&quot;&gt;{{rowData.replyMessage}}&lt;/textarea&gt;
+                        &lt;span class&#x3D;&quot;iconSpan&quot;&gt;
+                          &lt;i *ngIf&#x3D;&quot;rowData.replyMessage&quot;
+                             class&#x3D;&quot;btn btn-sm fa fa-paper-plane p-0 positiveIcon&quot;
+                             (click)&#x3D;&quot;submitReplyComment(rowData)&quot;&gt;&lt;/i&gt;
+                          &lt;i *ngIf&#x3D;&quot;!rowData.replyMessage&quot;
+                             class&#x3D;&quot;btn btn-sm fa fa-paper-plane p-0 positiveIcon&quot;
+                             [ngClass]&#x3D;&quot;rowData.replyMessage ? &#x27;&#x27; : &#x27;disabled&#x27;&quot;&gt;
+                          &lt;/i&gt;
+                        &lt;/span&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+
+          &lt;/ng-template&gt;
+        &lt;/p-treeTable&gt;
+      &lt;/div&gt;
+    &lt;/p-scrollPanel&gt;
+
+
+    &lt;div *ngIf&#x3D;&quot;addingNewComment&quot;&gt;
+      &lt;div class&#x3D;&quot;card m-2&quot;&gt;
+        &lt;div class&#x3D;&quot;card-header sub-header&quot;&gt;
+          &lt;span class&#x3D;&quot;ui-panel-title component-header-text&quot;&gt;Add new comment&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;roundCorners newCommentNodeBubble&quot;&gt;
+          &lt;span class&#x3D;&quot;iconSpan&quot;&gt;
+            &lt;i class&#x3D;&quot;btn btn-sm fa fa-ban p-0 negativeIcon&quot; (click)&#x3D;&quot;clearNewComment()&quot;&gt;&lt;/i&gt;
+          &lt;/span&gt;
+          &lt;div&gt;
+            &lt;textarea class&#x3D;&quot;commentTextarea&quot; [elementFocus]&#x3D;&quot;addingNewComment&quot; pInputTextarea [(ngModel)]&#x3D;&quot;newComment&quot;&gt;{{newComment}}&lt;/textarea&gt;
+          &lt;/div&gt;
+          &lt;span style&#x3D;&quot;display:block;text-align:right;vertical-align:top;&quot;&gt;
+            &lt;i *ngIf&#x3D;&quot;newComment&quot; class&#x3D;&quot;btn btn-sm fa fa-paper-plane p-0 positiveIcon&quot; style&#x3D;&quot;margin-top:-7px;&quot; (click)&#x3D;&quot;submitNewComment(newComment)&quot;&gt;&lt;/i&gt;
+            &lt;i *ngIf&#x3D;&quot;!newComment&quot; class&#x3D;&quot;btn btn-sm fa fa-paper-plane p-0 positiveIcon&quot; style&#x3D;&quot;margin-top:-7px;&quot; ngClass&#x3D;&quot;disabled&quot;&gt;&lt;/i&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./transaction-comments.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.commentNodeCell {
+  padding: 0px !important;
+  padding-bottom: 7px !important;
+  background-color: white !important;
+}
+
+.commentNodeBubble {
+  margin-right: 15px;
+  width: 60%;
+  min-width: 400px;
+  background-color: #fafafa;
+  box-shadow: 1px 1px;
+}
+
+.includeWhiteSpace {
+  white-space: pre-wrap;
+}
+
+.roundCorners {
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+.roundCornersTop {
+  border-radius: 6px !important;
+  display: block !important;
+  padding-right: 5px !important;
+}
+
+.commentNodeHeader {
+  font-size: small;
+  font-weight: 700;
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+}
+
+.commentNodeMessage {
+  text-align: center;
+  width: 100%;
+}
+
+.iconSpan {
+  display: block;
+  text-align: right;
+  width: 100%;
+}
+
+.positiveIcon {
+  color: forestgreen;
+}
+
+.negativeIcon {
+  color: red;
+}
+
+.newCommentNodeBubble {
+  height: 150px;
+  text-align: center;
+  background-color: #fafafa;
+  box-shadow: 1px 1px;
+  padding-bottom: 5px;
+}
+
+.commentTextarea {
+  width: 100%;
+  height: 90px;
+  resize: none;
+}
+
+.level1Node {
+  background-color: #1b5e20;
+  color: white;
+}
+
+.level2Node {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.level3Node {
+  background-color: #388e3c;
+  color: white;
+}
+
+.level4Node {
+  background-color: #43a047;
+  color: white;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="center-block block-margin" style="height:100%;" #elementSize>  <div class="card" style="height:100%;">    <div class="card-header sub-header p-2">      <span class="component-header-text">Transaction comments</span>      <span *ngIf="!addingNewComment"><button class="component-header-button" type="button" (click)="displayNewCommentNode()" pButton icon="fa fa-commenting-o"></button></span>      <span *ngIf="addingNewComment"><button class="component-header-button" type="button" pButton icon="fa fa-commenting-o" disabled></button></span>      <span><button class="component-header-button" type="button" (click)="collapseAll()" pButton icon="fa fa-level-up fa-flip-horizontal"></button></span>      <span><button class="component-header-button" type="button" (click)="expandAll()" pButton icon="fa fa-level-down"></button></span>    </div>    <p-scrollPanel [style]="{width: \'100%\', \'height\':calculateScrollPanelHeight(), \'margin-top\':\'5px\'}" styleClass="custom">      <div class="mt-3 mb-3">        <p-treeTable [value]="transactionComments">          <ng-template pTemplate="body" let-rowNode let-rowData="rowData">            <tr>              <td class="commentNodeCell">                <div class="d-flex justify-content-start">                  <div>                    <p-treeTableToggler [rowNode]="rowNode"></p-treeTableToggler>                    <span class="btn btn-sm ml-1" icon="pi pi-clear" *ngIf="!rowData.hasChildren && rowData.indentationLevel == \'1\'"></span>                  </div>                  <div class="roundCorners commentNodeBubble">                    <span class="roundCornersTop commentNodeHeader"                          [ngClass]="rowData.indentationLevel == \'1\' ? \'level1Node\' : rowData.indentationLevel == \'2\' ? \'level2Node\' : rowData.indentationLevel == \'3\' ? \'level3Node\' : \'level4Node\'">                      {{rowData.header}}                    </span>                    <div class="includeWhiteSpace">{{rowData.message}}</div>                    <div class="commentNodeMessage">                      <span class="iconSpan">                        <i class="btn btn-sm fa p-0"                           [ngClass]="rowData.collapsed ? \'fa-reply\' : \'fa-ban\'"                           [style.color]="rowData.collapsed ? \'#0079f9\' : \'red\'"                           (click)="toggleComment(rowData)"></i>                      </span>                      <div [ngClass]="rowData.collapsed ? \'collapse\' : \'collapse show\'">                        <textarea class="commentTextarea" [elementFocus]="!rowData.collapsed" pInputTextarea [(ngModel)]="rowData.replyMessage">{{rowData.replyMessage}}</textarea>                        <span class="iconSpan">                          <i *ngIf="rowData.replyMessage"                             class="btn btn-sm fa fa-paper-plane p-0 positiveIcon"                             (click)="submitReplyComment(rowData)"></i>                          <i *ngIf="!rowData.replyMessage"                             class="btn btn-sm fa fa-paper-plane p-0 positiveIcon"                             [ngClass]="rowData.replyMessage ? \'\' : \'disabled\'">                          </i>                        </span>                      </div>                    </div>                  </div>                </div>              </td>            </tr>          </ng-template>        </p-treeTable>      </div>    </p-scrollPanel>    <div *ngIf="addingNewComment">      <div class="card m-2">        <div class="card-header sub-header p-2">          <span class="ui-panel-title component-header-text">Add new comment</span>        </div>        <div class="roundCorners newCommentNodeBubble">          <span class="iconSpan">            <i class="btn btn-sm fa fa-ban p-0 negativeIcon" (click)="clearNewComment()"></i>          </span>          <div>            <textarea class="commentTextarea" [elementFocus]="addingNewComment" pInputTextarea [(ngModel)]="newComment">{{newComment}}</textarea>          </div>          <span style="display:block;text-align:right;vertical-align:top;">            <i *ngIf="newComment" class="btn btn-sm fa fa-paper-plane p-0 positiveIcon" style="margin-top:-7px;" (click)="submitNewComment(newComment)"></i>            <i *ngIf="!newComment" class="btn btn-sm fa fa-paper-plane p-0 positiveIcon" style="margin-top:-7px;" ngClass="disabled"></i>          </span>        </div>      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'BiometricFingerPrintComponent', 'selector': 'biometric-finger-print'},{'name': 'BreadcrumbsComponent', 'selector': 'ngx-breadcrumbs'},{'name': 'ContactDetailsComponent', 'selector': 'ngx-contact-details'},{'name': 'DataTableComponent', 'selector': 'ngx-data-table'},{'name': 'DocumentCaptureComponent', 'selector': 'ngx-document-capture'},{'name': 'DocumentUploadComplexComponent', 'selector': 'ngx-document-upload-complex'},{'name': 'DocumentUploadComponent', 'selector': 'ngx-document-upload'},{'name': 'DynamicFormComponent', 'selector': 'ngx-dynamic-form'},{'name': 'DynamicQuestionComponent', 'selector': 'ngx-question'},{'name': 'FooterComponent', 'selector': 'ngx-footer'},{'name': 'HeaderComponent', 'selector': 'ngx-header'},{'name': 'HomeComponent', 'selector': 'ngx-home'},{'name': 'IdentityComponent', 'selector': 'ngx-identity'},{'name': 'ImageMapAreaComponent', 'selector': 'ngx-image-map-area'},{'name': 'NotificationComponent', 'selector': 'ngx-notification'},{'name': 'NumberplateOrderComponent', 'selector': 'ngx-numberplate-order'},{'name': 'PageNotFoundComponent', 'selector': 'ngx-page-not-found'},{'name': 'PanelMenuComponent', 'selector': 'ngx-panel-menu'},{'name': 'PdfViewComponent', 'selector': 'ngx-pdf-viewer'},{'name': 'PhotoCaptureComponent', 'selector': 'facetech-photo-capture'},{'name': 'RecommendationComponent', 'selector': 'ngx-recommendation'},{'name': 'RegistrationComponent', 'selector': 'ngx-registration'},{'name': 'RepresentativeTransferComponent', 'selector': 'ngx-representative-transfer'},{'name': 'ScheduleCalendarComponent', 'selector': 'ngx-schedule-calendar'},{'name': 'ScheduleCalendarTestpageComponent', 'selector': 'ngx-schedule-calendar-testpage'},{'name': 'SignatoryCaptureComponent', 'selector': 'ngx-signatory-capture'},{'name': 'SignatureCaptureComponent', 'selector': 'facetech-signature-capture'},{'name': 'SpinnerComponent', 'selector': 'ngx-spinner'},{'name': 'TemplateClientMessagesComponent', 'selector': 'ngx-template-client-messages'},{'name': 'TemplateEditorComponent', 'selector': 'ngx-template-editor'},{'name': 'TemplateShellComponent', 'selector': 'ngx-template-shell'},{'name': 'TrainingManagmentComponent', 'selector': 'ngx-training-managment'},{'name': 'TransactionCommentsComponent', 'selector': 'ngx-transaction-comments'},{'name': 'TransactionListComponent', 'selector': 'ngx-transaction-list'},{'name': 'UiBlockComponent', 'selector': 'ngx-ui-block'}];
+    var DIRECTIVES = [{'name': 'FocusDirective', 'selector': '[elementFocus]'}];
+    var ACTUAL_COMPONENT = {'name': 'TransactionCommentsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TransactionCommentsComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

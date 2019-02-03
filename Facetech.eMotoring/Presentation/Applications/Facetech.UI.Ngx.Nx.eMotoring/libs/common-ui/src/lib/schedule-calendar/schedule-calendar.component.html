@@ -1,0 +1,159 @@
+<div class="shell">
+  <div class="center-block block-margin" style="width:100%;height:610px;"> <!--height:var(--div-size)-->
+    <div class="card" style="height:100%;">
+
+      <div class="card-header sub-header p-2">
+        <span class="component-header-text">Slots Available</span>
+        <span><button class="component-header-button" type="button" pButton icon="fa fa-refresh" pTooltip="Reset to original state" tooltipPosition="top"></button></span>
+        <span><button class="component-header-button" type="button" pButton icon="fa fa-info" pTooltip="Information" tooltipPosition="top"></button></span>
+      </div>
+
+      <!--<ng-template #popInstructions>
+      <ul class="list-unstyled">
+        <li *ngFor="let instruction of instructions">{{instruction}}</li>
+      </ul>
+    </ng-template>-->
+
+      <div class="mt-2" style="text-align:center;"><h2>{{currentMonthYear}}</h2></div>
+
+      <div>
+        <div class="d-flex mb-7" style="color:white;">
+          <div class="flex-even bg-primary ml-1 mt-1" style="height:25px; text-align:center;">Sun</div>
+          <div class="flex-even bg-primary ml-1 mt-1" style="height:25px; text-align:center;">Mon</div>
+          <div class="flex-even bg-primary ml-1 mt-1" style="height:25px; text-align:center;">Tue</div>
+          <div class="flex-even bg-primary ml-1 mt-1" style="height:25px; text-align:center;">Wed</div>
+          <div class="flex-even bg-primary ml-1 mt-1" style="height:25px; text-align:center;">Thu</div>
+          <div class="flex-even bg-primary ml-1 mt-1" style="height:25px; text-align:center;">Fri</div>
+          <div class="flex-even bg-primary ml-1 mt-1 mr-1" style="height:25px; text-align:center;">Sat</div>
+        </div>
+
+        <div class="d-flex mb-7">
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[0][0]">{{this.scheduleCalendarModel.availableSlots[0][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[1][0]">{{this.scheduleCalendarModel.availableSlots[1][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[2][0]">{{this.scheduleCalendarModel.availableSlots[2][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[3][0]">{{this.scheduleCalendarModel.availableSlots[3][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[4][0]">{{this.scheduleCalendarModel.availableSlots[4][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[5][0]">{{this.scheduleCalendarModel.availableSlots[5][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 mr-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[6][0]">{{this.scheduleCalendarModel.availableSlots[6][0].getDate()}}&nbsp;</div></div>
+        </div>
+        <div class="d-flex mb-7">
+          <div class="flex-even ml-1 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[0][2] ? 'calendarNodeSelected' : ''">{{scheduleCalendarModel.availableSlots[0][1] > 0 ? this.scheduleCalendarModel.availableSlots[0][1] : ''}}</div>
+          <div class="flex-even ml-1 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[1][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[1][1] > 0 ? this.scheduleCalendarModel.availableSlots[1][1] : ''}}</div>
+          <div class="flex-even ml-1 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[2][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[2][1] > 0 ? this.scheduleCalendarModel.availableSlots[2][1] : ''}}</div>
+          <div class="flex-even ml-1 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[3][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[3][1] > 0 ? this.scheduleCalendarModel.availableSlots[3][1] : ''}}</div>
+          <div class="flex-even ml-1 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[4][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[4][1] > 0 ? this.scheduleCalendarModel.availableSlots[4][1] : ''}}</div>
+          <div class="flex-even ml-1 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[5][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[5][1] > 0 ? this.scheduleCalendarModel.availableSlots[5][1] : ''}}</div>
+          <div class="flex-even ml-1 mr-1 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[6][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[6][1] > 0 ? this.scheduleCalendarModel.availableSlots[6][1] : ''}}</div>
+        </div>
+
+        <div class="d-flex mb-7">
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[7][0]">{{this.scheduleCalendarModel.availableSlots[7][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[8][0]">{{this.scheduleCalendarModel.availableSlots[8][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[9][0]">{{this.scheduleCalendarModel.availableSlots[9][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[10][0]">{{this.scheduleCalendarModel.availableSlots[10][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[11][0]">{{this.scheduleCalendarModel.availableSlots[11][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[12][0]">{{this.scheduleCalendarModel.availableSlots[12][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 mr-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[13][0]">{{this.scheduleCalendarModel.availableSlots[13][0].getDate()}}&nbsp;</div></div>
+        </div>
+        <div class="d-flex mb-7">
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[7][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[7][1] > 0 ? this.scheduleCalendarModel.availableSlots[7][1] : ''}}</div>
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[8][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[8][1] > 0 ? this.scheduleCalendarModel.availableSlots[8][1] : ''}}</div>
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[9][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[9][1] > 0 ? this.scheduleCalendarModel.availableSlots[9][1] : ''}}</div>
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[10][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[10][1] > 0 ? this.scheduleCalendarModel.availableSlots[10][1] : ''}}</div>
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[11][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[11][1] > 0 ? this.scheduleCalendarModel.availableSlots[11][1] : ''}}</div>
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[12][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[12][1] > 0 ? this.scheduleCalendarModel.availableSlots[12][1] : ''}}</div>
+          <div class="flex-even ml-1 mr-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[13][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[13][1] > 0 ? this.scheduleCalendarModel.availableSlots[13][1] : ''}}</div>
+        </div>
+
+        <div class="d-flex mb-7">
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[14][0]">{{this.scheduleCalendarModel.availableSlots[14][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[15][0]">{{this.scheduleCalendarModel.availableSlots[15][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[16][0]">{{this.scheduleCalendarModel.availableSlots[16][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[17][0]">{{this.scheduleCalendarModel.availableSlots[17][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[18][0]">{{this.scheduleCalendarModel.availableSlots[18][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[19][0]">{{this.scheduleCalendarModel.availableSlots[19][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 mr-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[20][0]">{{this.scheduleCalendarModel.availableSlots[20][0].getDate()}}&nbsp;</div></div>
+        </div>
+        <div class="d-flex mb-7">
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[14][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[14][1] > 0 ? this.scheduleCalendarModel.availableSlots[14][1] : ''}}</div>
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[15][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[15][1] > 0 ? this.scheduleCalendarModel.availableSlots[15][1] : ''}}</div>
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[16][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[16][1] > 0 ? this.scheduleCalendarModel.availableSlots[16][1] : ''}}</div>
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[17][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[17][1] > 0 ? this.scheduleCalendarModel.availableSlots[17][1] : ''}}</div>
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[18][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[18][1] > 0 ? this.scheduleCalendarModel.availableSlots[18][1] : ''}}</div>
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[19][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[19][1] > 0 ? this.scheduleCalendarModel.availableSlots[19][1] : ''}}</div>
+          <div class="flex-even ml-1 mr-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[20][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[20][1] > 0 ? this.scheduleCalendarModel.availableSlots[20][1] : ''}}</div>
+        </div>
+
+        <div class="d-flex mb-7">
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[21][0]">{{this.scheduleCalendarModel.availableSlots[21][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[22][0]">{{this.scheduleCalendarModel.availableSlots[22][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[23][0]">{{this.scheduleCalendarModel.availableSlots[23][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[24][0]">{{this.scheduleCalendarModel.availableSlots[24][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[25][0]">{{this.scheduleCalendarModel.availableSlots[25][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[26][0]">{{this.scheduleCalendarModel.availableSlots[26][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 mr-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[27][0]">{{this.scheduleCalendarModel.availableSlots[27][0].getDate()}}&nbsp;</div></div>
+        </div>
+        <div class="d-flex mb-7">
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[21][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[21][1] > 0 ? this.scheduleCalendarModel.availableSlots[21][1] : ''}}</div>
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[22][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[22][1] > 0 ? this.scheduleCalendarModel.availableSlots[22][1] : ''}}</div>
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[23][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[23][1] > 0 ? this.scheduleCalendarModel.availableSlots[23][1] : ''}}</div>
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[24][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[24][1] > 0 ? this.scheduleCalendarModel.availableSlots[24][1] : ''}}</div>
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[25][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[25][1] > 0 ? this.scheduleCalendarModel.availableSlots[25][1] : ''}}</div>
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[26][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[26][1] > 0 ? this.scheduleCalendarModel.availableSlots[26][1] : ''}}</div>
+          <div class="flex-even ml-1 mr-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[27][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[27][1] > 0 ? this.scheduleCalendarModel.availableSlots[27][1] : ''}}</div>
+        </div>
+
+        <div class="d-flex mb-7">
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[28][0]">{{this.scheduleCalendarModel.availableSlots[28][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[29][0]">{{this.scheduleCalendarModel.availableSlots[29][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[30][0]">{{this.scheduleCalendarModel.availableSlots[30][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[31][0]">{{this.scheduleCalendarModel.availableSlots[31][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[32][0]">{{this.scheduleCalendarModel.availableSlots[32][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[33][0]">{{this.scheduleCalendarModel.availableSlots[33][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 mr-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[34][0]">{{this.scheduleCalendarModel.availableSlots[34][0].getDate()}}&nbsp;</div></div>
+        </div>
+        <div class="d-flex mb-7">
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[28][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[28][1] > 0 ? this.scheduleCalendarModel.availableSlots[28][1] : ''}}</div>
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[29][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[29][1] > 0 ? this.scheduleCalendarModel.availableSlots[29][1] : ''}}</div>
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[30][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[30][1] > 0 ? this.scheduleCalendarModel.availableSlots[30][1] : ''}}</div>
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[31][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[31][1] > 0 ? this.scheduleCalendarModel.availableSlots[31][1] : ''}}</div>
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[32][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[32][1] > 0 ? this.scheduleCalendarModel.availableSlots[32][1] : ''}}</div>
+          <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[33][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[33][1] > 0 ? this.scheduleCalendarModel.availableSlots[33][1] : ''}}</div>
+          <div class="flex-even ml-1 mr-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[34][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[34][1] > 0 ? this.scheduleCalendarModel.availableSlots[34][1] : ''}}</div>
+        </div>
+
+        <div class="d-flex mb-7">
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[35][0]">{{this.scheduleCalendarModel.availableSlots[35][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[36][0]">{{this.scheduleCalendarModel.availableSlots[36][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[37][0]">{{this.scheduleCalendarModel.availableSlots[37][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[38][0]">{{this.scheduleCalendarModel.availableSlots[38][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[39][0]">{{this.scheduleCalendarModel.availableSlots[39][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[40][0]">{{this.scheduleCalendarModel.availableSlots[40][0].getDate()}}&nbsp;</div></div>
+          <div class="flex-even ml-1 mt-1 mr-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[41][0]">{{this.scheduleCalendarModel.availableSlots[41][0].getDate()}}&nbsp;</div></div>
+        </div>
+        <div class="d-flex mb-7">
+          <div class="flex-even ml-1 mb-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[35][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[35][1] > 0 ? this.scheduleCalendarModel.availableSlots[35][1] : ''}}</div>
+          <div class="flex-even ml-1 mb-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[36][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[36][1] > 0 ? this.scheduleCalendarModel.availableSlots[36][1] : ''}}</div>
+          <div class="flex-even ml-1 mb-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[37][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[37][1] > 0 ? this.scheduleCalendarModel.availableSlots[37][1] : ''}}</div>
+          <div class="flex-even ml-1 mb-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[38][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[38][1] > 0 ? this.scheduleCalendarModel.availableSlots[38][1] : ''}}</div>
+          <div class="flex-even ml-1 mb-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[39][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[39][1] > 0 ? this.scheduleCalendarModel.availableSlots[39][1] : ''}}</div>
+          <div class="flex-even ml-1 mb-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[40][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[40][1] > 0 ? this.scheduleCalendarModel.availableSlots[40][1] : ''}}</div>
+          <div class="flex-even ml-1 mb-1 mr-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[41][2] ? 'calendarNodeSelected' : ''">{{this.scheduleCalendarModel.availableSlots[41][1] > 0 ? this.scheduleCalendarModel.availableSlots[41][1] : ''}}</div>
+        </div>
+      </div>
+
+      <div *ngIf="includeFooter && this.scheduleCalendarModel.canCycle">
+        <div class="d-flex card-footer p-2" style="text-align:center;">
+          <div style="display:inline-block; width:100%;">
+            <button type="button" class="btn btn btn-primary btn-sm mr-2" style="width:35px;" (click)="previousMonth()" [attr.disabled]="canGoToPreviousMonth ? null : 'disabled'">
+              <i class="fa fa-angle-left"></i>
+            </button>
+            <button type="button" class="btn btn btn-primary btn-sm" style="width:35px;" (click)="nextMonth()" [attr.disabled]="canGoToNextMonth ? null : 'disabled'">
+              <i class="fa fa-angle-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [ "es2017", "dom" ],
+    "moduleResolution": "node",
+    "paths": {
+      "@facetech/widgets": [ "libs/widgets/src/index.ts" ],
+      "@facetech/server": [ "libs/server/src/index.ts" ],
+      "@facetech/domain": [ "libs/domain/src/index.ts" ],
+      "@facetech/core": [ "libs/core/src/index.ts" ],
+      "@facetech/common-ui": [ "libs/common-ui/src/index.ts" ],
+      "@facetech/process-a": [ "libs/process-a/src/index.ts" ],
+      "@facetech/process-b": [ "libs/process-b/src/index.ts" ],
+      "@facetech/process-c": [ "libs/process-c/src/index.ts" ],
+      "@facetech/process-d": [ "libs/process-d/src/index.ts" ],
+      "@facetech/process-e": [ "libs/process-e/src/index.ts" ]
+    },
+    "sourceMap": true,
+    "target": "es5",
+    "typeRoots": [ "node_modules/@types" ]
+  },
+  "exclude": [ "node_modules", "tmp" ]
+}

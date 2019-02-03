@@ -1,0 +1,70 @@
+<div class="center-block" style="width:100%;height:100%" #elementSize>
+  <div class="card" style="height:100%;">
+
+    <div class="card-header sub-header p-2">
+      <span class="component-header-text" style="float:left;">Document Preview</span>
+      <!--<span (click)="onShowAll()">
+    <button type="button" class="component-header-button" pButton>
+      <fa-icon [icon]=Icons.showAllIcon></fa-icon>
+    </button>
+  </span>-->
+      <!--<span (click)="onExpand($event)">
+    <button type="button" class="component-header-button" pButton>
+      <span class="fa fa-arrows" [ngStyle]="{'transform': !fullWidth ? 'scale(0.8)' : 'scale(1)'}"></span>
+    </button>
+  </span>-->
+      <span *ngIf="fullWidth" (click)="setFullpageZoom()"><button class="component-header-button" type="button" pButton icon="fa fa-angle-double-down" pTooltip="All Pages" tooltipPosition="top"></button></span>
+      <span *ngIf="fullWidth" (click)="incrementZoom(-0.1)"><button class="component-header-button" type="button" pButton icon="fa fa-search-minus" pTooltip="Zoom Out" tooltipPosition="top"></button></span>
+      <span *ngIf="fullWidth" (click)="incrementZoom(0.1)"><button class="component-header-button" type="button" pButton icon="fa fa-search-plus" pTooltip="Zoom In" tooltipPosition="top"></button></span>
+    </div>
+
+    <div class="card-body">
+      <div class="d-flex w-100 justify-content-center">
+        <!--style="background-color:yellow; height:528px; box-shadow: 2px 2px 10px 2px #888888;"-->
+        <div *ngIf="!isLoaded" style="display:block;position:fixed">
+          <p-progressSpinner></p-progressSpinner>
+        </div>
+        <div class="scrollbar scrollbar-primary"
+             [ngStyle]="{'height':  calculatePreviewPageHeight(), 'width':calculatePreviewPageWidth(),'visibility':isLoaded?'':'hidden'}"
+             style="box-shadow: 2px 2px 10px 2px black; margin-bottom:5px;">
+          <pdf-viewer [src]="pdfSrc"
+                      [(page)]="page"
+                      [original-size]="originalSize"
+                      [fit-to-page]="fitToPage"
+                      [zoom]="zoom"
+                      [autoresize]="autoresize"
+                      [show-all]="showAll"
+                      [stick-to-page]="showAll"
+                      [render-text]="renderText"
+                      [external-link-target]="'blank'"
+                      [rotation]="rotation"
+                      (error)="onError($event)"
+                      (on-progress)="onProgress($event)"
+                      (page-rendered)="pageRendered($event)"
+                      (after-load-complete)="afterLoadComplete($event)"
+                      style="display:block">
+          </pdf-viewer>
+        </div>
+      </div>
+      <div style="text-align:center;">
+        <div style="display:block">
+          {{pdf? showAll? 'Showing all '+ pdf.numPages :page+' of '+pdf.numPages:'Loading...'}}
+        </div>
+        <div *ngIf="!showAll" style="display:inline-block; width:100%;">
+          <button type="button" class="btn btn-primary mr-1" (click)="incrementPage(1-page)">
+            <fa-icon [icon]=Icons.firstIcon></fa-icon>
+          </button>
+          <button type="button" class="btn btn-primary mr-1" (click)="incrementPage(-1)">
+            <fa-icon [icon]=Icons.previousIcon></fa-icon>
+          </button>
+          <button type="button" class="btn btn-primary mr-1" (click)="incrementPage(1)">
+            <fa-icon [icon]=Icons.nextIcon></fa-icon>
+          </button>
+          <button type="button" class="btn btn-primary" (click)="incrementPage(pdf.numPages-page)">
+            <fa-icon [icon]=Icons.lastIcon></fa-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

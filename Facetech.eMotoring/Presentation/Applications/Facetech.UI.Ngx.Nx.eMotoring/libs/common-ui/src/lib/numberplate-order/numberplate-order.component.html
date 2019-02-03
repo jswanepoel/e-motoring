@@ -1,0 +1,117 @@
+<div class="m-3">
+  <p-panel>
+    <p-header>
+      <b class="component-header-text">Plate Orders</b>
+
+      <div *ngIf="savedOrders.length>0">
+        <button pButton type="button" class="btn btn-primary btn-sm m-1 p-0 text-truncate" label="Generate Payment Details"></button>
+      </div>
+      <div #addCatTarget>
+
+        <div *ngIf="unusedCategories.length>0">
+          <button type="button" class="btn btn-primary btn-sm m-1 p-0 text-truncate" pButton label="Add new order" (click)="showCatPans($event,addCatPan,addCatTarget)"></button>
+        </div>
+      </div>
+    </p-header>
+
+    <div *ngIf="orders.length<=0" class="m-2" style="text-align:center">
+      <p>
+        <b>No orders</b>
+      </p>
+    </div>
+    <div *ngIf="orders.length>0" class="mt-1">
+      <p-table [value]="orders">
+        <ng-template pTemplate="caption">
+          <div>
+            <b class="component-header-text" style="color:white">Orders</b>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+          <tr>
+            <th *ngFor="let col of cols" style="word-wrap: break-word;">
+              {{col.header}}
+            </th>
+            <th width="65px">
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-order>
+          <tr #currentRow [ngClass]="[order.totalPairs < 1 ? 'bg-danger text-light':'null', (checkSaved(order.orderId) && order.isNew) ? 'bg-success text-light':'', checkSaved(order.orderId)? '':'bg-secondary' ]">
+            <td>
+              <div>{{order.categoryId}}</div>
+              <div><b *ngIf="checkSaved(order.orderId) && order.isNew">(New Order Saved)</b></div>
+              <div><b *ngIf="!checkSaved(order.orderId) && !order.isNew && !order.flagDelete">(Edited)</b></div>
+              <div><b *ngIf="!checkSaved(order.orderId)&& !order.flagDelete">(Not Saved)</b></div>
+              <div><b *ngIf="order.flagDelete">(To be removed)</b></div>
+            </td>
+            <td class="text-truncate">
+              {{categories[order.categoryId-1].description}}
+            </td>
+            <td class="text-truncate">
+              {{categories[order.categoryId-1].size}}
+            </td>
+            <td pEditableColumn>
+              <p-cellEditor>
+                <ng-template pTemplate="input">
+                  <p-spinner size="4" [(ngModel)]="order.totalPairs"></p-spinner>
+                </ng-template>
+                <ng-template pTemplate="output">
+                  <div class="text-center"><b style="cursor:pointer">{{order.totalPairs}}</b></div>
+                </ng-template>
+              </p-cellEditor>
+            </td>
+            <td class="text-center">
+              <i class="pi pi-times p-0 m-0 nav-link" [ngClass]="[order.flagDelete? 'pi pi-plus p-0 m-0 nav-link':'pi pi-times p-0 m-0 nav-link']" style="font-size: 2em" (click)="onRemoveClick(order.orderId)"></i>
+            </td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="summary">
+          <div class="p-0" align="right">
+            <div>
+              <button type="button" class="btn btn-primary btn-sm w-50" style="max-width:150px" [disabled]="!canSave()" (click)="onSaveClick()">
+                Save
+              </button>
+              <button type="button" class="btn btn-secondary btn-sm w-25 ml-1" style="max-width:100px" (click)="onCancel()">
+                Cancel
+              </button>
+            </div>
+          </div>
+        </ng-template>
+      </p-table>
+    </div>
+  </p-panel>
+  
+  <p-overlayPanel #addCatPan [dismissable]="true" [showCloseIcon]="true" [style]="{'position':'absolute'}" [appendTo]="'body'">
+    <div *ngIf="addCatPan.visible">
+      <ng-container *ngTemplateOutlet="categoriesPan"></ng-container>
+    </div>
+  </p-overlayPanel>
+  </div>
+
+<ng-template #categoriesPan>
+    <p-accordion>
+      <div *ngFor="let category of unusedCategories; index as i">
+          <p-accordionTab>
+            <p-header>
+              <b class="component-header-text">{{category.id}} - {{category.description}}</b>
+            </p-header>
+            <div class="p-1">
+              <div>
+                <b>Dimensions:</b> {{category.size}}
+              </div>
+              <div>
+                <b> Description:</b> {{category.description}}
+              </div>
+              <div class="d-inline">
+                <b>Number of pairs: </b><p-spinner size="4" #totalPairSpin [min]="0" placeholder="0"></p-spinner>
+                <div align="right">
+                  <button type="button" [disabled]="totalPairSpin.value? totalPairSpin.value<1:true" class="btn btn-primary btn-sm btn-lg m-2" (click)="onPickDone(category,totalPairSpin.value,addCatPan)">
+                    Done
+                  </button>
+                </div>
+              </div>
+            </div>
+          </p-accordionTab>
+      </div>
+    </p-accordion>
+</ng-template>

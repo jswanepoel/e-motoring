@@ -1,0 +1,14 @@
+.img-map-area {
+  position: relative;
+}
+
+  .img-map-area canvas,
+  .img-map-area img {
+    position: absolute;
+  }
+
+  .img-map-area img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }

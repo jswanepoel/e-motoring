@@ -1,0 +1,52 @@
+
+
+<div class="shell">
+  <div class="center-block block-margin" style="width:100%;">
+    <div class="card" style="height:100%;">
+
+      <div class="card-header sub-header p-2">
+        <span class="component-header-text">Identify Import Certificate</span>
+        <span><button class="component-header-button" type="button" pButton icon="fa fa-refresh" pTooltip="Reset to original state" tooltipPosition="top"></button></span>
+        <span><button class="component-header-button" type="button" pButton icon="fa fa-info" pTooltip="Information" tooltipPosition="top"></button></span>
+      </div>
+
+      <div class="card-body card-h100 " [ngClass]="{'parentCardBody': bodyCenter === true}">
+        <div class="template-shell-control">
+
+
+          <div class="d-flex justify-content-start form-group" style="text-align: right;">
+            <label for="staticEmail" style="font-weight:bold" class="col-sm-2 col-form-label">Certificate Number:</label>
+            <i class="fa fa-search" style="margin:4px 4px 0 0; color:white"> </i>
+            <input type="text" pInputText class="form-control" size="50" placeholder="Search" style="width:30%">
+            <button class="btn btn-primary ml-3"> <i class="fa fa-search" style="color:white"></i></button>
+          </div>
+
+
+
+          <div *ngFor="let headers of parentHeadersReal; let i = index" [attr.data-index]="i">
+            <div class="d-flex justify-content-center">
+              <div class="col-2 mt-2">
+                <label for="id">{{parentHeaders[i]}}</label>
+              </div>
+              <div class="col-3 mt-2">
+                <input pInputText id="id" class="w-100 form-control" [(ngModel)]="cars[0][headers]" disabled />
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div *ngIf="includeFooter">
+        <div class="d-flex card-footer p-2" style="text-align:right;">
+          <div style="display:inline-block; width:100%;">
+            <button type="button" class="btn btn-primary mr-2"><i class="fa fa-recycle mr-1"></i>Do Something Normal</button>
+            <button type="button" class="btn btn-success"><i class="fa fa-bullseye mr-1"></i>Do Something Positive</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

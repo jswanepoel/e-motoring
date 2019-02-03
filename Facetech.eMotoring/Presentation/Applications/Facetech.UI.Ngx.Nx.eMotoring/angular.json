@@ -1,0 +1,738 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "",
+  "projects": {
+    "e-motoring": {
+      "root": "apps/e-motoring/",
+      "sourceRoot": "apps/e-motoring/src",
+      "projectType": "application",
+      "prefix": "facetech",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "wwwroot/apps/e-motoring",
+            "index": "apps/e-motoring/src/index.html",
+            "main": "apps/e-motoring/src/main.ts",
+            "polyfills": "apps/e-motoring/src/polyfills.ts",
+            "tsConfig": "apps/e-motoring/tsconfig.app.json",
+            "assets": [
+              "apps/e-motoring/src/favicon.ico",
+              "apps/e-motoring/src/assets"
+            ],
+            "styles": [
+              "apps/e-motoring/src/main.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/nova-light/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/quill/dist/quill.core.css",
+              "node_modules/quill/dist/quill.snow.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "scripts": [
+              "node_modules/quill/dist/quill.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/chart.js/dist/Chart.js",
+              "node_modules/signalr/jquery.signalR.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/e-motoring/src/environments/environment.ts",
+                  "with": "apps/e-motoring/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "serviceWorker": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "e-motoring:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "e-motoring:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "e-motoring:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/e-motoring/src/test.ts",
+            "polyfills": "apps/e-motoring/src/polyfills.ts",
+            "tsConfig": "apps/e-motoring/tsconfig.spec.json",
+            "karmaConfig": "apps/e-motoring/karma.conf.js",
+            "styles": [
+              "apps/e-motoring/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "apps/e-motoring/src/favicon.ico",
+              "apps/e-motoring/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/e-motoring/tsconfig.app.json",
+              "apps/e-motoring/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "e-motoring-e2e": {
+      "root": "apps/e-motoring-e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/e-motoring-e2e/protractor.conf.js",
+            "devServerTarget": "e-motoring:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "e-motoring:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/e-motoring-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "e-motoring-admin": {
+      "root": "apps/e-motoring-admin/",
+      "sourceRoot": "apps/e-motoring-admin/src",
+      "projectType": "application",
+      "prefix": "Facetech.UI.Ngx.Nx.eMotoring",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/e-motoring-admin",
+            "index": "apps/e-motoring-admin/src/index.html",
+            "main": "apps/e-motoring-admin/src/main.ts",
+            "polyfills": "apps/e-motoring-admin/src/polyfills.ts",
+            "tsConfig": "apps/e-motoring-admin/tsconfig.app.json",
+            "assets": [
+              "apps/e-motoring-admin/src/favicon.ico",
+              "apps/e-motoring-admin/src/assets"
+            ],
+            "styles": [
+              "apps/e-motoring-admin/src/styles.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/nova-light/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/chart.js/dist/Chart.js",
+              "node_modules/signalr/jquery.signalR.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/e-motoring-admin/src/environments/environment.ts",
+                  "with": "apps/e-motoring-admin/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "e-motoring-admin:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "e-motoring-admin:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "e-motoring-admin:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/e-motoring-admin/src/test.ts",
+            "polyfills": "apps/e-motoring-admin/src/polyfills.ts",
+            "tsConfig": "apps/e-motoring-admin/tsconfig.spec.json",
+            "karmaConfig": "apps/e-motoring-admin/karma.conf.js",
+            "styles": [
+              "apps/e-motoring-admin/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "apps/e-motoring-admin/src/favicon.ico",
+              "apps/e-motoring-admin/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/e-motoring-admin/tsconfig.app.json",
+              "apps/e-motoring-admin/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "e-motoring-admin-e2e": {
+      "root": "apps/e-motoring-admin-e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/e-motoring-admin-e2e/protractor.conf.js",
+            "devServerTarget": "e-motoring-admin:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "e-motoring-admin:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/e-motoring-admin-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "e-motoring-mobile": {
+      "root": "apps/e-motoring-mobile/",
+      "sourceRoot": "apps/e-motoring-mobile/src",
+      "projectType": "application",
+      "prefix": "ngx",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/e-motoring-mobile",
+            "index": "apps/e-motoring-mobile/src/index.html",
+            "main": "apps/e-motoring-mobile/src/main.ts",
+            "polyfills": "apps/e-motoring-mobile/src/polyfills.ts",
+            "tsConfig": "apps/e-motoring-mobile/tsconfig.app.json",
+            "assets": [
+              "apps/e-motoring-mobile/src/favicon.ico",
+              "apps/e-motoring-mobile/src/assets"
+            ],
+            "styles": [
+              "apps/e-motoring-mobile/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/e-motoring-mobile/src/environments/environment.ts",
+                  "with": "apps/e-motoring-mobile/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "e-motoring-mobile:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "e-motoring-mobile:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "e-motoring-mobile:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/e-motoring-mobile/src/test.ts",
+            "polyfills": "apps/e-motoring-mobile/src/polyfills.ts",
+            "tsConfig": "apps/e-motoring-mobile/tsconfig.spec.json",
+            "karmaConfig": "apps/e-motoring-mobile/karma.conf.js",
+            "styles": [
+              "apps/e-motoring-mobile/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "apps/e-motoring-mobile/src/favicon.ico",
+              "apps/e-motoring-mobile/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/e-motoring-mobile/tsconfig.app.json",
+              "apps/e-motoring-mobile/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "e-motoring-mobile-e2e": {
+      "root": "apps/e-motoring-mobile-e2e",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/e-motoring-mobile-e2e/protractor.conf.js",
+            "devServerTarget": "e-motoring-mobile:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "e-motoring-mobile:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/e-motoring-mobile-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "domain": {
+      "root": "libs/domain",
+      "sourceRoot": "libs/domain/src",
+      "projectType": "library",
+      "prefix": "ngx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/domain/tsconfig.lib.json",
+            "project": "libs/domain/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/domain/src/test.ts",
+            "tsConfig": "libs/domain/tsconfig.spec.json",
+            "karmaConfig": "libs/domain/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/domain/tsconfig.lib.json",
+              "libs/domain/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "core": {
+      "root": "libs/core",
+      "sourceRoot": "libs/core/src",
+      "projectType": "library",
+      "prefix": "ngx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/core/tsconfig.lib.json",
+            "project": "libs/core/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/core/src/test.ts",
+            "tsConfig": "libs/core/tsconfig.spec.json",
+            "karmaConfig": "libs/core/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/core/tsconfig.lib.json",
+              "libs/core/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "widgets": {
+      "root": "libs/widgets",
+      "sourceRoot": "libs/widgets/src",
+      "projectType": "library",
+      "prefix": "ngx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/widgets/tsconfig.lib.json",
+            "project": "libs/widgets/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/widgets/src/test.ts",
+            "tsConfig": "libs/widgets/tsconfig.spec.json",
+            "karmaConfig": "libs/widgets/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/widgets/tsconfig.lib.json",
+              "libs/widgets/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "server": {
+      "root": "libs/server",
+      "sourceRoot": "libs/server/src",
+      "projectType": "library",
+      "prefix": "ngx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/server/tsconfig.lib.json",
+            "project": "libs/server/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/server/src/test.ts",
+            "tsConfig": "libs/server/tsconfig.spec.json",
+            "karmaConfig": "libs/server/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/server/tsconfig.lib.json",
+              "libs/server/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "common-ui": {
+      "root": "libs/common-ui",
+      "sourceRoot": "libs/common-ui/src",
+      "projectType": "library",
+      "prefix": "ngx",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/common-ui/src/test.ts",
+            "tsConfig": "libs/common-ui/tsconfig.spec.json",
+            "karmaConfig": "libs/common-ui/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/common-ui/tsconfig.lib.json",
+              "libs/common-ui/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "process-a": {
+      "root": "libs/process-a",
+      "sourceRoot": "libs/process-a/src",
+      "projectType": "library",
+      "prefix": "ngx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/process-a/tsconfig.lib.json",
+            "project": "libs/process-a/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/process-a/src/test.ts",
+            "tsConfig": "libs/process-a/tsconfig.spec.json",
+            "karmaConfig": "libs/process-a/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/process-a/tsconfig.lib.json",
+              "libs/process-a/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "process-b": {
+      "root": "libs/process-b",
+      "sourceRoot": "libs/process-b/src",
+      "projectType": "library",
+      "prefix": "Facetech.UI.Ngx.Nx.eMotoring",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/process-b/src/test.ts",
+            "tsConfig": "libs/process-b/tsconfig.spec.json",
+            "karmaConfig": "libs/process-b/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/process-b/tsconfig.lib.json",
+              "libs/process-b/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "process-c": {
+      "root": "libs/process-c",
+      "sourceRoot": "libs/process-c/src",
+      "projectType": "library",
+      "prefix": "ngx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/process-c/tsconfig.lib.json",
+            "project": "libs/process-c/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/process-c/src/test.ts",
+            "tsConfig": "libs/process-c/tsconfig.spec.json",
+            "karmaConfig": "libs/process-c/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/process-c/tsconfig.lib.json",
+              "libs/process-c/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "process-d": {
+      "root": "libs/process-d",
+      "sourceRoot": "libs/process-d/src",
+      "projectType": "library",
+      "prefix": "Facetech.UI.Ngx.Nx.eMotoring",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/process-d/src/test.ts",
+            "tsConfig": "libs/process-d/tsconfig.spec.json",
+            "karmaConfig": "libs/process-d/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/process-d/tsconfig.lib.json",
+              "libs/process-d/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "process-e": {
+      "root": "libs/process-e",
+      "sourceRoot": "libs/process-e/src",
+      "projectType": "library",
+      "prefix": "ngx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/process-e/tsconfig.lib.json",
+            "project": "libs/process-e/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/process-e/src/test.ts",
+            "tsConfig": "libs/process-e/tsconfig.spec.json",
+            "karmaConfig": "libs/process-e/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/process-e/tsconfig.lib.json",
+              "libs/process-e/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      },
+      "schematics": {}
+    }
+  },
+  "defaultProject": "e-motoring",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
+}

@@ -1,0 +1,170 @@
+<div class="shell">
+  <div class="center-block block-margin" style="width:100%;">
+    <div class="card" style="height:100%;">
+      <div class="card-header sub-header p-2">
+        <span class="component-header-text">Payments and Receipts<i class=" fa-sm" pTooltip="Busy" tooltipPosition="top"></i></span>
+        <span><button class="component-header-button" pButton icon="fa fa-refresh" pTooltip="Reset to original state" tooltipPosition="top"></button></span>
+        <span><button class="component-header-button" pButton icon="fa fa-info" pTooltip="Information" tooltipPosition="top"></button></span>
+      </div>
+      <!--<ng-template #popInstructions>
+        <ul class="list-unstyled">
+          <li *ngFor="let instruction of instructions">{{instruction}}</li>
+        </ul>
+      </ng-template>-->
+      <div class="card-body parentCardBody">
+        <div class="template-shell-control" #contentSize>
+
+          <!--Scan QR Panel-->
+          <p-panel [toggleable]="false" [ngClass]="(currentStep=='0')?'active-panel':''">
+            <p-header>
+              <span class="component-header-text">Scan Payment QR</span>
+            </p-header>
+            <div class="ui-grid">
+              <div class="ui-grid-col-12">
+                <div *ngIf="!qrCodeScanned && workingTransactions.length<1">
+                  <ngx-dynamic-form #QRForm [formDefinition]="formDefinitions[1]" [questionData]="questionData" [header]="formDefinitions[1].formName"></ngx-dynamic-form>
+                  <p-button class="p-2" (onClick)="qrCodeScanDone()" [disabled]="!QRForm.form.valid" label="Done" style="float:right" *ngIf="!qrCodeScanned && workingTransactions.length<1"></p-button>
+                </div>
+                <div *ngIf="qrCodeScanned && workingTransactions.length>0">
+                  <div class="mt-2 form-row question">
+                    <div class="question" style="min-width:300px;">
+                      <label>Scanned Code: </label>
+                    </div>
+                    <div class="question d-flex justify-content-center">
+                      <input pInputText
+                             type="number"
+                             readonly
+                             [disabled]="true"
+                             [value]="scannedQRCode" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </p-panel>
+
+          <!--Entity Details Panel-->
+          <p-panel [toggleable]="false" *ngIf="qrCodeScanned" [ngClass]="(currentStep=='1')?'active-panel':''">
+            <p-header>
+              <span class="component-header-text">Entity Details</span>
+            </p-header>
+            <div class="ui-grid">
+              <div class="ui-grid-col-12">
+                Details of the related entity.
+              </div>
+              <div>
+                <p-button class="p-2" (onClick)="generateOPS()" label="Done" style="float:right" *ngIf="!(workingTransactions.length>0)"></p-button>
+              </div>
+            </div>
+          </p-panel>
+
+          <!--Outstanding fees panel-->
+          <p-panel [toggleable]="!makingPayment" [collapsed]="false" *ngIf="(workingTransactions.length>0) && qrCodeScanned" [ngClass]="(currentStep=='2')?'active-panel':''">
+            <p-header>
+              <span class="component-header-text">Outstanding payments for {{'John'+' '+'Snow'}} , {{' 8205241451088'}}</span>
+            </p-header>
+            <ngx-fee-select-table [transactions]="workingTransactions"
+                                [headers]="headers"
+                                (transactionSelected)="transactionsSelected($event)"
+                                [disableSelection]="makingPayment">
+            </ngx-fee-select-table>
+            <div class="ui-grid">
+              <div class="ui-grid-row-1" style="text-align:right">
+                <p-button class="m-2"
+                          [disabled]="selectedTransactions.length<1"
+                          *ngIf="!makingPayment"
+                          (onClick)="capturePayment()"
+                          label="Collect selected fees">
+                </p-button>
+              </div>
+            </div>
+          </p-panel>
+
+          <!--Payment Capture panel-->
+          <p-panel *ngIf="makingPayment" [ngClass]="(currentStep=='3')?'active-panel':''">
+            <p-header>
+              <span class="component-header-text">Capture payment</span>
+            </p-header>
+            <div *ngIf="selectedTransactions.length>0" class="ui-grid">
+              <div class="ui-grid-col-12" style="text-align: right;">
+                <div class="ui-grid-row-2 p-2">
+                  <label>
+                    <b>Method of payment: &nbsp;</b>
+                  </label>
+                  <p-dropdown #paymentTypeQ [options]="getLookup('transactionTypes')"
+                              [(ngModel)]="paymentData.paymentType"
+                              optionLabel="label"
+                              [disabled]="paymentSuccess"
+                              required="true"
+                              placeholder="Select payment type">
+                  </p-dropdown>
+                </div>
+                <div *ngIf="paymentData.paymentType" class="ui-grid-row-2 p-2">
+                  <label>
+                    <b>{{paymentData.paymentType.label}} Amount Tendered by Entity: Rs&nbsp;</b>
+                  </label>
+                  <input pInputText
+                         [disabled]="paymentSuccess||paymentData.paymentType.label!='Cash'"
+                         type="number"
+                         [(ngModel)]="paymentData.paymentAmount" />
+                </div>
+                <div class="ui-grid-row-2 p-2">
+                  <label>
+                    <b>Send reciept as: &nbsp;</b>
+                  </label>
+                  <p-dropdown #NotificationTypeQ [options]="getLookup('notificationTypes')"
+                              [(ngModel)]="paymentData.notificationType"
+                              optionLabel="label"
+                              [disabled]="paymentSuccess"
+                              required="true"
+                              placeholder="Select Option">
+                  </p-dropdown>
+                </div>
+                <div *ngIf="((paymentData.paymentAmount - getTotalAmount())>=0)&&paymentData.paymentType.label=='Cash'" class="ui-grid-row-2 p-2 mb-3">
+                  <label>Change Due: Rs&nbsp;</label>
+                  <input pInputText
+                         type="number"
+                         readonly
+                         [value]="paymentData.paymentAmount - getTotalAmount()" />
+                </div>
+                <div class="ui-grid-row-1">
+                  <p-button (onClick)="changeSelected()"
+                            label="Change selections"
+                            styleClass="ui-button-warning m-1"
+                            style="float:left"
+                            [ngStyle]="{'display':paymentSuccess?'none':''}">
+                  </p-button>
+                  <p-button *ngIf="(paymentData.paymentAmount - getTotalAmount())>=0"
+                            (onClick)="makePayment()" label="Accept Payment"
+                            styleClass="ui-button-success m-1"
+                            style="float:right"
+                            [disabled]="paymentData.notificationType==null"
+                            [ngStyle]="{'display':paymentSuccess?'none':''}">
+                  </p-button>
+                  <div [ngStyle]="{'display':paymentSuccess?'':'none'}">
+                    <p-button (onClick)="printReceipt()"
+                              label="Print Receipt"
+                              styleClass="ui-button-warn m-1"
+                              style="float:right">
+                    </p-button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </p-panel>
+
+          <p-button *ngIf="qrCodeScanned" class="p-2" (onClick)="cancelAll()" label="Discard Transaction" styleClass="ui-button-danger m-1"></p-button>
+        </div>
+      </div>
+      <!--<div *ngIf="includeFooter">
+        <div class="d-flex card-footer p-2" style="text-align:right;">
+          <div style="display:inline-block; width:100%;">
+            <button type="button" class="btn btn-primary mr-2"><i class="fa fa-recycle mr-1"></i>Do Something Normal</button>
+            <button type="button" class="btn btn-success"><i class="fa fa-bullseye mr-1"></i>Do Something Positive</button>
+          </div>
+        </div>
+      </div>-->
+    </div>
+  </div>
+</div>
+

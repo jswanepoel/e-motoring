@@ -1,0 +1,17 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "Facetech.UI.Ngx.Nx.eMotoring",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "Facetech.UI.Ngx.Nx.eMotoring",
+      "kebab-case"
+    ]
+  }
+}

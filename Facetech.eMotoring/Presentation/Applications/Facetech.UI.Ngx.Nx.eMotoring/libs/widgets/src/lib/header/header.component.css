@@ -1,0 +1,19 @@
+header {
+  height: 41px !important;
+}
+
+.profile-option div:hover {
+  background-color: lightgray;
+}
+
+.cogs-button:hover {
+  transform: scale(1.1);
+}
+
+.cogs-button:active {
+  transform: scale(0.9);
+}
+
+.profile-option div:active {
+  transform: scale(0.9);
+}

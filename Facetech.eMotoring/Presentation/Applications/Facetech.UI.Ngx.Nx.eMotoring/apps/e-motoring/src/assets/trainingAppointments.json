@@ -1,0 +1,158 @@
+{
+  "data": [
+    {
+      "data": {
+        "id": "1",
+        "location": "Office A",
+        "date": "Fri Jan 18 2019 08:00:00 GMT+0200 (South Africa Standard Time)",
+        "hasChildren": true,
+        "available": "10"
+      },
+      "children": [
+        {
+          "data": {
+            "id": "1",
+            "username": 15773334,
+            "name": "Robles Chang",
+            "company": "BMW",
+            "email": "robleschang@geekus.com",
+            "response": "Attending"
+          }
+        },
+        {
+          "data": {
+            "id": "5",
+            "username": 15773807,
+            "name": "Donald Trump",
+            "company": "POTUS",
+            "email": "shimforbrain@jass.com",
+            "response": "Attending"
+          }
+        },
+        {
+          "data": {
+            "id": "6",
+            "username": 15773305,
+            "name": "Johnston Turner",
+            "company": "BUZZMAKER",
+            "email": "johnstonturner@buzzmaker.com",
+            "response": "Attending"
+          }
+        },
+        {
+          "data": {
+            "id": "2",
+            "username": 15773334,
+            "name": "John Doe",
+            "company": "BMW",
+            "email": "robleschang@geekus.com",
+            "response": "Attending"
+          }
+        },
+        {
+          "data": {
+            "id": "3",
+            "username": 15773807,
+            "name": "Lenny Mol",
+            "company": "POTUS",
+            "email": "shimforbrain@jass.com",
+            "response": "Attending"
+          }
+        },
+        {
+          "data": {
+            "id": "4",
+            "username": 15773305,
+            "name": "Piet Pompies",
+            "company": "BUZZMAKER",
+            "email": "johnstonturner@buzzmaker.com",
+            "response": "Attending"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "id": "3",
+        "location": "Office A",
+        "date": "Fri Jan 18 2019 08:00:00 GMT+0200 (South Africa Standard Time)",
+        "hasChildren": true,
+        "available": "3"
+      },
+      "children": [
+        {
+          "data": {
+            "id": "1",
+            "username": 15773334,
+            "name": "Marco Chang",
+            "company": "GEEKUS",
+            "email": "robleschang@geekus.com",
+            "response": "Attending"
+          }
+        },
+        {
+          "data": {
+            "id": "5",
+            "username": 15773807,
+            "name": "Wade Harr",
+            "company": "QIAO",
+            "email": "lethaholder@qiao.com",
+            "response": "Attending"
+          }
+        },
+        {
+          "data": {
+            "id": "6",
+            "username": 15773305,
+            "name": "Adrian Turner",
+            "company": "BUZZMAKER",
+            "email": "johnstonturner@buzzmaker.com",
+            "response": "Attending"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "id": "2",
+        "location": "Office B",
+        "date": "Fri Jan 18 2019 08:00:00 GMT+0200 (South Africa Standard Time)",
+        "hasChildren": true,
+        "available": "15"
+      },
+      "children": [
+        {
+          "data": {
+            "id": "2",
+            "username": 15773135,
+            "name": "Glass Reyes",
+            "company": "ZILLANET",
+            "email": "glassreyes@zillanet.com",
+            "response": "Unconfirmed"
+          }
+        },
+        {
+          "data": {
+            "id": "3",
+            "username": 15773155,
+            "name": "Lorraine Wilkins",
+            "company": "ECRATIC",
+            "email": "lorrainewilkins@ecratic.com",
+            "response": "Unconfirmed"
+          }
+        },
+        {
+          "data": {
+            "id": "4",
+            "username": 15773640,
+            "name": "Levine Hicks",
+            "company": "FROLIX",
+            "email": "levinehicks@frolix.com",
+            "response": "Attending"
+          }
+        }
+      ]
+    }
+  ]
+}
+

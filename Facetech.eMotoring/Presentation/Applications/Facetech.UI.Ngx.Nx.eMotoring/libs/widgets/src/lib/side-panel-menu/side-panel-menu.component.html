@@ -1,0 +1,17 @@
+<div *ngIf="status">
+  <nav class="navbar navbar-dark" style="position:absolute; top:-1%; left:145px; z-index:2;">
+    <button style="border: none;background:none" class="navbar-toggler" (click)="trigger()">
+      <span class="pi pi-bars hamb" style="color:white; text-shadow:2px 2px black;"></span>
+    </button>
+  </nav>
+  <div class="">
+    <p-panelMenu [multiple]="false"
+                 class="side-panel-menu scrollbar scrollbar-primary" *ngIf="hamburger"
+                 [@slideInOut]
+                 [model]="menuItems"
+                 [style]="{'width':'200px','height':sidePanelCalc(),'padding-left':'1.5px', 'background-color':'white'}">
+    </p-panelMenu>
+  </div>
+</div>
+
+

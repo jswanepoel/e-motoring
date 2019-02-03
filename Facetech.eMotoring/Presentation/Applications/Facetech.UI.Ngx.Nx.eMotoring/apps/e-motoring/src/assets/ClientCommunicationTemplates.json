@@ -1,0 +1,35 @@
+{
+  "data":
+  [
+    {
+      "id": 1,
+      "Category": "ProcessA",
+      "Type": "Email",
+      "Data": "Greetings fellow citizen."
+    },
+    {
+      "id": 2,
+      "Category": "ProcessA",
+      "Type": "SMS",
+      "Data": "Hallo"
+    },
+    {
+      "id": 3,
+      "Category": "ProcessB",
+      "Type": "Email",
+      "Data": "Top o the mornin to ya"
+    },
+    {
+      "id": 4,
+      "Category": "ProcessC",
+      "Type": "SMS",
+      "Data": "Good morning"
+    },
+    {
+      "id": 5,
+      "Category": "ProcessD",
+      "Type": "Email",
+      "Data": "Hello from the other side..."
+    }
+  ]
+}

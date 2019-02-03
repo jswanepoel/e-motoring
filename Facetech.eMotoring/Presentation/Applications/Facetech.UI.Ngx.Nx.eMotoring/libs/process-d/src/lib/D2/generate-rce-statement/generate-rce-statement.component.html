@@ -1,0 +1,123 @@
+<!--<div class="shell">
+  <div class="center-block block-margin" style="width:100%;">
+    <div class="card" style="height:100%;">
+
+      <div class="card-header sub-header p-2">
+        <span class="component-header-text">Shift Managment <i class=" fa-sm" pTooltip="Busy" tooltipPosition="top"></i></span>
+        <span><button class="component-header-button" pButton icon="fa fa-refresh" pTooltip="Reset to original state" tooltipPosition="top"></button></span>
+        <span><button class="component-header-button" pButton icon="fa fa-info" pTooltip="Information" tooltipPosition="top"></button></span>
+      </div>
+
+      <ng-template #popInstructions>
+        <ul class="list-unstyled">
+          <li *ngFor="let instruction of instructions">{{instruction}}</li>
+        </ul>
+      </ng-template>
+
+      <div class="card-body parentCardBody">
+        <div class="template-shell-control" #contentSize>
+            <div class="ui-grid">
+              <div class="ui-grid-col-12">
+                <ngx-dynamic-form #formDir1 [formDefinition]="formDefinitions[0]" [questionData]="questionData" [header]="formDefinitions[0].formName"></ngx-dynamic-form>
+                <div class="ui-grid-row-2">
+                  <p-button class="p-2" (onClick)="paymentTypeSelect()" *ngIf="!paymentTypeSelected" [disabled]="!formDir1.form.valid" label="Done" style="float:right"></p-button>
+                </div>
+              </div>
+            </div>
+              <div class="ui-grid-col-12">
+                <ngx-dynamic-form #formDir2 [formDefinition]="formDefinitions[1]" [questionData]="questionData" [header]="formDefinitions[1].formName"></ngx-dynamic-form>
+
+                <div class="ui-grid-row-2">
+                  <p-button class="p-2" (onClick)="getStatement()" [disabled]="!formDir2.form.valid||(formDir2.form.get('identificationType').value==null)" label="Generate Statment" style="float:right"></p-button>
+                </div>
+              </div>
+            </div>
+          <p-panel header="Outstanding payments for {{'Person Name'+' '+'Surname'}} , {{_formDir2.form.get('identificationNumber').value||'NaN'}}"
+                   [toggleable]="!makingPayment"
+                   [collapsed]="false"
+                   *ngIf="workingTransactions.length>0 && (_formDir2?_formDir2.form.valid:false)">
+            <h6>Outstanding payments for {{'Person Name'+' '+'Surname'}} , {{_formDir2.form.get('identificationNumber').value||'NaN'}}</h6>
+            <p-table [columns]="headers"
+                     [value]="workingTransactions"
+                     [(selection)]="selectedTransactions"
+                     dataKey="id"
+                     [scrollable]="true"
+                     scrollHeight="200px">
+              <ng-template pTemplate="header" let-columns>
+                <tr>
+                  <th style="width: 3em">
+                    <p-tableHeaderCheckbox [disabled]="makingPayment"></p-tableHeaderCheckbox>
+                  </th>
+                  <th *ngFor="let col of columns">
+                    {{col.header}}
+                  </th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-rowData let-columns="columns">
+                <tr [pSelectableRow]="rowData">
+                  <td style="width: 3em">
+                    <p-tableCheckbox [value]="rowData" [disabled]="makingPayment"></p-tableCheckbox>
+                  </td>
+                  <td *ngFor="let col of columns">
+                    <p *ngIf="(col.field!='taxpercentage')&&(col.field != 'feetype_lookupvalue_id')">
+                      {{rowData[col.field]}}
+                    </p>
+                    <p *ngIf="col.field=='taxpercentage'">
+                      {{(rowData['amount']*(rowData['taxpercentage']/100))+' '}}
+                      ({{rowData[col.field]}}%)
+                    </p>
+                    <p *ngIf="col.field == 'feetype_lookupvalue_id'">
+                      {{getLookupLabel(rowData[col.field],'feeTypes')}}
+                    </p>
+                    <p *ngIf="col.field=='total'">
+                      {{rowData['amount']+(rowData['amount']*(rowData['taxpercentage']/100))}}
+                    </p>
+                  </td>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="summary">
+                <div *ngIf="selectedTransactions.length>0" class="ui-grid">
+                  <div class="ui-grid-col-12" style="text-align: right;">
+                    <div class="ui-grid-row-2">
+                      <label>Total Payable for Selected Transactions  (Excl. Tax): Rs&nbsp;</label>
+                      <input pInputText
+                             type="number"
+                             readonly
+                             value="{{(getTotalAmount()||0) - (getTotalTax()||0)}}" />
+                    </div><div class="ui-grid-row-2">
+                      <div class="ui-grid-row-2">
+                        <label>Tax Amount: Rs&nbsp; </label>
+                        <input pInputText
+                               type="number"
+                               readonly
+                               value="{{getTotalTax()||0}}" />
+                      </div>
+                      <label>Total Payable for Selected Transactions  (Incl. Tax): Rs&nbsp; </label>
+                      <input pInputText
+                             type="number"
+                             readonly
+                             value="{{getTotalAmount()||0}}" />
+                    </div>
+                    <p-button *ngIf="!makingPayment" (onClick)="capturePayment()" label="Make payment">
+
+                    </p-button>
+                  </div>
+                </div>
+              </ng-template>
+            </p-table>
+          </p-panel>
+        </div>
+      </div>
+
+      <div *ngIf="includeFooter">
+        <div class="d-flex card-footer p-2" style="text-align:right;">
+          <div style="display:inline-block; width:100%;">
+            <button type="button" class="btn btn-primary mr-2"><i class="fa fa-recycle mr-1"></i>Do Something Normal</button>
+            <button type="button" class="btn btn-success"><i class="fa fa-bullseye mr-1"></i>Do Something Positive</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>-->

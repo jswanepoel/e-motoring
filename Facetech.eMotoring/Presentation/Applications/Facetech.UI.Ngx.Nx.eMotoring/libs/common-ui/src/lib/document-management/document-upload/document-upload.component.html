@@ -1,0 +1,64 @@
+<!--<figure *ngIf="picked">
+  <figcaption>
+    File:
+    <strong>{{picked.name}}</strong>
+    <br> {{picked.size}} bytes
+  </figcaption>
+</figure>-->
+<!--<button
+        type="button"
+        ngxFilePicker
+        accept="image/*"
+        [filter]="filterFileBeforeReading"
+        (readStart)="onReadStart($event)"
+        (filePick)="onFilePicked($event)"
+        (readEnd)="onReadEnd($event)">
+  Upload
+</button>-->
+<!--{{status}}-->
+
+<div class="shell">
+  <div class="center-block block-margin" style="width:100%;">
+    <div class="card" style="height:100%;">
+
+      <div class="card-header sub-header p-2">
+        <span class="component-header-text">Document Upload</span>
+        <span><button class="component-header-button" type="button" pButton icon="fa fa-refresh" pTooltip="Reset to original state" tooltipPosition="top"></button></span>
+        <span><button class="component-header-button" type="button" pButton icon="fa fa-info" pTooltip="Information" tooltipPosition="top"></button></span>
+      </div>
+
+      <div class="" [ngClass]="{'parentCardBody': bodyCenter === true}">
+        <div class="template-shell-control" #contentSize>
+          <div class="dashboard">
+            <div class="d-flex flex-wrap justify-content-between mt-1">
+
+              <div class="col-6 p-1">
+                <div class="shadow-sm card">
+                  <div class="card-header sub-header p-2">
+                    <span class="component-header-text">Documents</span>
+                    <span><button class="component-header-button" type="button" pButton icon="fa fa-refresh" pTooltip="Reset to original state" tooltipPosition="top"></button></span>
+                  </div>
+                  <div class="card-body p-0 card-h100">
+                    <div class="m-2">
+                      <ngx-data-table title={{title}}
+                                      model={{filename}}
+                                      tableTools={{tableTools}}
+                                      headers={{headers}}
+                                      action = "upload"
+                       ></ngx-data-table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 p-1">
+                <ngx-pdf-viewer></ngx-pdf-viewer>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

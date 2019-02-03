@@ -1,0 +1,34 @@
+.column {
+  float: left;
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+#twoColumnLayout > div {
+  flex: 1;
+}
+
+.left {
+  padding: 1em;
+  background-color: #337ab7;
+}
+
+.right {
+  padding: 1em;
+  background-color: #5cb85c;
+}
+
+.parent {
+  display: flex;
+  overflow: hidden;
+  margin: 1em 0;
+  color: #fff;
+  border: 1px solid #333;
+  align-items: center;
+}

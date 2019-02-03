@@ -1,0 +1,3344 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>facetech.ui.ngx.nx.e-motoring documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">facetech.ui.ngx.nx.e-motoring documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>DocumentCaptureComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>libs/common-ui/src/lib/document-capture/document-capture.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>ngx-document-capture</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./document-capture.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./document-capture.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#captureButtonEnabled">captureButtonEnabled</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#captureButtonText">captureButtonText</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#captureIcon">captureIcon</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#clearButtonEnabled">clearButtonEnabled</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#clearIcon">clearIcon</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#currentDocument">currentDocument</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#currentPageNumber">currentPageNumber</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#dataImageURL">dataImageURL</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#dataImageURL$">dataImageURL$</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#documents">documents</a>
+                            </li>
+                            <li>
+                                <a href="#elementSize">elementSize</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#firstButtonEnabled">firstButtonEnabled</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#firstIcon">firstIcon</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getImageSnapshotRef">getImageSnapshotRef</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#instructions">instructions</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#lastButtonEnabled">lastButtonEnabled</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#lastIcon">lastIcon</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#nextButtonEnabled">nextButtonEnabled</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#nextIcon">nextIcon</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#onDeviceInitRef">onDeviceInitRef</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#onDeviceNotActiveRef">onDeviceNotActiveRef</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#previousButtonEnabled">previousButtonEnabled</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#previousIcon">previousIcon</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#refreshIcon">refreshIcon</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#reinitializeButtonEnabled">reinitializeButtonEnabled</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#startCaptureRef">startCaptureRef</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#totalNumberOfPages">totalNumberOfPages</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#addDocument">addDocument</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#addDummyDocuments">addDummyDocuments</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#calculatePreviewPageHeight">calculatePreviewPageHeight</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#calculatePreviewPageWidth">calculatePreviewPageWidth</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#changeNotification">changeNotification</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#clear">clear</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#clearCapturedImages">clearCapturedImages</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#displayLastScannedPage">displayLastScannedPage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#firstCapturedImage">firstCapturedImage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getEnumValue">getEnumValue</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getImageSnaphot">getImageSnaphot</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#lastCapturedImage">lastCapturedImage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#nextCapturedImage">nextCapturedImage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#previousCapturedImage">previousCapturedImage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#reinitializeDevice">reinitializeDevice</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setParams">setParams</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setupComponentButtons">setupComponentButtons</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setupComponentIcons">setupComponentIcons</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#startCapture">startCapture</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#stopCapture">stopCapture</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#toDataImageBase64">toDataImageBase64</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#toImageDataURL">toImageDataURL</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#completionStatusIcon">completionStatusIcon</a>
+                            </li>
+                            <li>
+                                <a href="#crudType">crudType</a>
+                            </li>
+                            <li>
+                                <a href="#id">id</a>
+                            </li>
+                            <li>
+                                <a href="#instructionIcon">instructionIcon</a>
+                            </li>
+                            <li>
+                                <a href="#isCompleted">isCompleted</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                                <span class="modifier">Public</span>
+                        <code>constructor(route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, biometricService: <a href="../injectables/BiometricService.html">BiometricService</a>, sessionDataService: <a href="../injectables/SessionDataService.html">SessionDataService</a>, applicantRequestService: <a href="../injectables/ApplicantRequestService.html">ApplicantRequestService</a>, zone: <a href="https://angular.io/api/core/NgZone" target="_blank">NgZone</a>, config: <a href="../interfaces/Car.html">NgbCarouselConfig</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:76</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>biometricService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/BiometricService.html" target="_self" >BiometricService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>sessionDataService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/SessionDataService.html" target="_self" >SessionDataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>applicantRequestService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/ApplicantRequestService.html" target="_self" >ApplicantRequestService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>zone</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/NgZone" target="_blank" >NgZone</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>config</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../interfaces/Car.html" target="_self" >NgbCarouselConfig</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="completionStatusIcon"></a>
+                        <code>completionStatusIcon</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:35</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="crudType"></a>
+                        <code>crudType</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../miscellaneous/enumerations.html#CrudType" target="_self" >CrudType</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>CrudType.Update</code>
+                        </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:69</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="id"></a>
+                        <code>id</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:68</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="instructionIcon"></a>
+                        <code>instructionIcon</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:34</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="isCompleted"></a>
+                        <code>isCompleted</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>false</code>
+                        </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:33</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addDocument"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            addDocument
+                            </b>
+                            <a href="#addDocument"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>addDocument(documentInfo: <a href="../classes/DocumentInfo.html">DocumentInfo</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="338" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:338</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>documentInfo</td>
+                                                        <td>
+                                                                    <code><a href="../classes/DocumentInfo.html" target="_self" >DocumentInfo</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addDummyDocuments"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            addDummyDocuments
+                            </b>
+                            <a href="#addDummyDocuments"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>addDummyDocuments()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="365" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:365</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="calculatePreviewPageHeight"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            calculatePreviewPageHeight
+                            </b>
+                            <a href="#calculatePreviewPageHeight"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>calculatePreviewPageHeight()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="375" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:375</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="calculatePreviewPageWidth"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            calculatePreviewPageWidth
+                            </b>
+                            <a href="#calculatePreviewPageWidth"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>calculatePreviewPageWidth()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="380" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:380</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="changeNotification"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            changeNotification
+                            </b>
+                            <a href="#changeNotification"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>changeNotification()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="356" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:356</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="clear"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            clear
+                            </b>
+                            <a href="#clear"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>clear()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="371" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:371</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="clearCapturedImages"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            clearCapturedImages
+                            </b>
+                            <a href="#clearCapturedImages"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>clearCapturedImages()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="306" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:306</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayLastScannedPage"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            displayLastScannedPage
+                            </b>
+                            <a href="#displayLastScannedPage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>displayLastScannedPage()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="278" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:278</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="firstCapturedImage"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            firstCapturedImage
+                            </b>
+                            <a href="#firstCapturedImage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>firstCapturedImage()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="246" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:246</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getEnumValue"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            getEnumValue
+                            </b>
+                            <a href="#getEnumValue"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getEnumValue(params: <a href="https://angular.io/api/router/Params" target="_blank">Params</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="187" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:187</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>params</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Params" target="_blank" >Params</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../miscellaneous/enumerations.html#CrudType" target="_self" >CrudType</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getImageSnaphot"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            getImageSnaphot
+                            </b>
+                            <a href="#getImageSnaphot"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getImageSnaphot()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="230" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:230</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lastCapturedImage"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            lastCapturedImage
+                            </b>
+                            <a href="#lastCapturedImage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>lastCapturedImage()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="258" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:258</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="nextCapturedImage"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            nextCapturedImage
+                            </b>
+                            <a href="#nextCapturedImage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>nextCapturedImage()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="290" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:290</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnDestroy"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            ngOnDestroy
+                            </b>
+                            <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ngOnDestroy()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="319" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:319</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Async</span>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:109</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="previousCapturedImage"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            previousCapturedImage
+                            </b>
+                            <a href="#previousCapturedImage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>previousCapturedImage()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="262" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:262</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="reinitializeDevice"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            reinitializeDevice
+                            </b>
+                            <a href="#reinitializeDevice"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>reinitializeDevice()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="237" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:237</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setParams"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            setParams
+                            </b>
+                            <a href="#setParams"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>setParams()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="182" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:182</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setupComponentButtons"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            setupComponentButtons
+                            </b>
+                            <a href="#setupComponentButtons"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>setupComponentButtons()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="97" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:97</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setupComponentIcons"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            setupComponentIcons
+                            </b>
+                            <a href="#setupComponentIcons"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>setupComponentIcons()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="92" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:92</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="startCapture"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            startCapture
+                            </b>
+                            <a href="#startCapture"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>startCapture()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="214" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:214</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="stopCapture"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            stopCapture
+                            </b>
+                            <a href="#stopCapture"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>stopCapture()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="220" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:220</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="toDataImageBase64"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            toDataImageBase64
+                            </b>
+                            <a href="#toDataImageBase64"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>toDataImageBase64(image: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="352" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:352</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>image</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="toImageDataURL"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            toImageDataURL
+                            </b>
+                            <a href="#toImageDataURL"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>toImageDataURL(dataURI)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="197" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:197</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>dataURI</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="captureButtonEnabled"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            captureButtonEnabled
+                            </b>
+                            <a href="#captureButtonEnabled"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>captureButtonEnabled:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:50</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="captureButtonText"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            captureButtonText
+                            </b>
+                            <a href="#captureButtonText"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>captureButtonText:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;Capture&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:51</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="captureIcon"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            captureIcon
+                            </b>
+                            <a href="#captureIcon"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>captureIcon:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>faPlusCircle</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:41</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="clearButtonEnabled"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            clearButtonEnabled
+                            </b>
+                            <a href="#clearButtonEnabled"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>clearButtonEnabled:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:49</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="clearIcon"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            clearIcon
+                            </b>
+                            <a href="#clearIcon"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>clearIcon:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>faTrash</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:42</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currentDocument"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            currentDocument
+                            </b>
+                            <a href="#currentDocument"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>currentDocument:     <code><a href="../classes/DocumentInfo.html" target="_self" >DocumentInfo</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/DocumentInfo.html" target="_self" >DocumentInfo</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>null</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:57</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currentPageNumber"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            currentPageNumber
+                            </b>
+                            <a href="#currentPageNumber"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>currentPageNumber:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:54</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dataImageURL"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            dataImageURL
+                            </b>
+                            <a href="#dataImageURL"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>dataImageURL:     <code>BehaviorSubject&lt;string&gt;</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>BehaviorSubject&lt;string&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new BehaviorSubject&lt;string&gt;(&#x27;&#x27;)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:60</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dataImageURL$"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            dataImageURL$
+                            </b>
+                            <a href="#dataImageURL$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>dataImageURL$:     <code>Observable&lt;string&gt;</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Observable&lt;string&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>this.dataImageURL.asObservable()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:61</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="documents"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            documents
+                            </b>
+                            <a href="#documents"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>documents:     <code><a href="../classes/DocumentInfo.html" target="_self" >DocumentInfo[]</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/DocumentInfo.html" target="_self" >DocumentInfo[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:58</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="elementSize"></a>
+                        <span class="name">
+                            <b>
+                            elementSize
+                            </b>
+                            <a href="#elementSize"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>elementSize:     <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;elementSize&#x27;)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:70</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="firstButtonEnabled"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            firstButtonEnabled
+                            </b>
+                            <a href="#firstButtonEnabled"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>firstButtonEnabled:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:45</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="firstIcon"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            firstIcon
+                            </b>
+                            <a href="#firstIcon"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>firstIcon:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>faAngleDoubleLeft</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:39</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getImageSnapshotRef"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            getImageSnapshotRef
+                            </b>
+                            <a href="#getImageSnapshotRef"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>getImageSnapshotRef:     <code>Subscription</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>null</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:65</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="instructions"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            instructions
+                            </b>
+                            <a href="#instructions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>instructions:     <code>string[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    &#x27;Select document type to be scanned.&#x27;,
+    &#x27;Place document to be scanned in scanner.&#x27;,
+    &#x27;Click &quot;Capture&quot; to scan document.&#x27;
+  ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:72</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lastButtonEnabled"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            lastButtonEnabled
+                            </b>
+                            <a href="#lastButtonEnabled"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>lastButtonEnabled:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:48</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lastIcon"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            lastIcon
+                            </b>
+                            <a href="#lastIcon"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>lastIcon:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>faAngleDoubleRight</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:40</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="nextButtonEnabled"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            nextButtonEnabled
+                            </b>
+                            <a href="#nextButtonEnabled"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>nextButtonEnabled:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:47</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="nextIcon"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            nextIcon
+                            </b>
+                            <a href="#nextIcon"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>nextIcon:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>faAngleRight</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onDeviceInitRef"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            onDeviceInitRef
+                            </b>
+                            <a href="#onDeviceInitRef"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>onDeviceInitRef:     <code>Subscription</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>null</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:63</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onDeviceNotActiveRef"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            onDeviceNotActiveRef
+                            </b>
+                            <a href="#onDeviceNotActiveRef"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>onDeviceNotActiveRef:     <code>Subscription</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>null</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:64</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="previousButtonEnabled"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            previousButtonEnabled
+                            </b>
+                            <a href="#previousButtonEnabled"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>previousButtonEnabled:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:46</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="previousIcon"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            previousIcon
+                            </b>
+                            <a href="#previousIcon"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>previousIcon:     <code>IconDefinition</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>IconDefinition</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>faAngleLeft</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="refreshIcon"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            refreshIcon
+                            </b>
+                            <a href="#refreshIcon"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>refreshIcon:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>faSyncAlt</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="reinitializeButtonEnabled"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            reinitializeButtonEnabled
+                            </b>
+                            <a href="#reinitializeButtonEnabled"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>reinitializeButtonEnabled:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:52</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="startCaptureRef"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            startCaptureRef
+                            </b>
+                            <a href="#startCaptureRef"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>startCaptureRef:     <code>Subscription</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>null</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:66</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="totalNumberOfPages"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            totalNumberOfPages
+                            </b>
+                            <a href="#totalNumberOfPages"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>totalNumberOfPages:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">libs/common-ui/src/lib/document-capture/document-capture.component.ts:55</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, OnDestroy, Output, NgZone, ViewChild, Type, Input, ElementRef } from &#x27;@angular/core&#x27;;
+import { Subscription, BehaviorSubject, Observable } from &#x27;rxjs&#x27;;
+import { NgbCarouselConfig } from &#x27;@ng-bootstrap/ng-bootstrap&#x27;;
+import { ActivatedRoute, Params } from &#x27;@angular/router&#x27;;
+
+// Icons
+import { faGraduationCap, faTasks, faCheck, IconDefinition } from &#x27;@fortawesome/free-solid-svg-icons&#x27;;
+import { faAngleRight, faAngleDoubleRight, faAngleLeft, faAngleDoubleLeft, faTrash, faPlusCircle, faSyncAlt } from &#x27;@fortawesome/free-solid-svg-icons&#x27;;
+
+// Models
+import { CrudType } from &#x27;../../models/enums/crud-type&#x27;;
+import { IDocumentDetail } from &#x27;../../models/interfaces/document-detail.interface&#x27;;
+import { DocumentInfo } from &#x27;../../models/document-info&#x27;;
+
+// Services
+
+import { ApplicantRequestService, ApplicantDocumentRequest } from &#x27;../../models/interfaces/applicant-request.interface&#x27;;
+import { BiometricService } from &#x27;../../service/biometric/biometric.service&#x27;;
+import { SessionDataService } from &#x27;../../Service/session-data/session-data.service&#x27;;
+
+// Constants
+const dataImageBase64: string &#x3D; &#x27;data:image/jpeg;base64,&#x27;;
+const blankPage: string &#x3D; &#x60;${dataImageBase64}R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw&#x3D;&#x3D;&#x60;;
+const photoPlaceholder: string &#x3D; &#x27;../../../assets/document.png&#x27;;
+
+
+@Component({
+  selector: &#x27;ngx-document-capture&#x27;,
+  templateUrl: &#x27;./document-capture.component.html&#x27;,
+  styleUrls: [&#x27;./document-capture.component.css&#x27;]
+})
+export class DocumentCaptureComponent implements OnInit, OnDestroy {
+  @Input() isCompleted: any &#x3D; false;
+  @Input() instructionIcon: any;
+  @Input() completionStatusIcon: any;
+
+  public previousIcon: IconDefinition &#x3D; faAngleLeft;
+  public nextIcon: any &#x3D; faAngleRight;
+  public firstIcon: any &#x3D; faAngleDoubleLeft;
+  public lastIcon: any &#x3D; faAngleDoubleRight;
+  public captureIcon: any &#x3D; faPlusCircle;
+  public clearIcon: any &#x3D; faTrash;
+  public refreshIcon: any &#x3D; faSyncAlt;
+
+  public firstButtonEnabled &#x3D; false;
+  public previousButtonEnabled &#x3D; false;
+  public nextButtonEnabled &#x3D; false;
+  public lastButtonEnabled &#x3D; false;
+  public clearButtonEnabled &#x3D; false;
+  public captureButtonEnabled &#x3D; false;
+  public captureButtonText &#x3D; &quot;Capture&quot;;
+  public reinitializeButtonEnabled &#x3D; false;
+
+  public currentPageNumber: number &#x3D; 0;
+  public totalNumberOfPages: number &#x3D; 0;
+
+  public currentDocument: DocumentInfo &#x3D; null;
+  private documents: DocumentInfo[] &#x3D; [];
+
+  private dataImageURL: BehaviorSubject&lt;string&gt; &#x3D; new BehaviorSubject&lt;string&gt;(&#x27;&#x27;);
+  private dataImageURL$: Observable&lt;string&gt; &#x3D; this.dataImageURL.asObservable();
+
+  private onDeviceInitRef: Subscription &#x3D; null;
+  private onDeviceNotActiveRef: Subscription &#x3D; null;
+  private getImageSnapshotRef: Subscription &#x3D; null;
+  private startCaptureRef: Subscription &#x3D; null;
+
+  @Input() id: any;
+  @Input() crudType: CrudType &#x3D; CrudType.Update;
+  @ViewChild(&#x27;elementSize&#x27;) elementSize: ElementRef; // Needed for method calculateScrollPanelHeight()
+
+  public instructions: string[] &#x3D; [
+    &#x27;Select document type to be scanned.&#x27;,
+    &#x27;Place document to be scanned in scanner.&#x27;,
+    &#x27;Click &quot;Capture&quot; to scan document.&#x27;
+  ];
+
+  public constructor(
+    private route: ActivatedRoute,
+    private biometricService: BiometricService,
+    private sessionDataService: SessionDataService,
+    private applicantRequestService: ApplicantRequestService,
+    private zone: NgZone,
+    config: NgbCarouselConfig) {
+    config.interval &#x3D; 0;
+    config.showNavigationArrows &#x3D; false;
+    config.showNavigationIndicators &#x3D; false;
+
+    sessionDataService.setItem(&#x27;testKey&#x27;, &#x27;testValue&#x27;);
+  }
+
+  private setupComponentIcons() {
+    this.instructionIcon &#x3D; this.documents.length &gt; 0 ? faCheck : faGraduationCap;
+    this.completionStatusIcon &#x3D; faTasks;
+  }
+
+  private setupComponentButtons() {
+    this.zone.run(() &#x3D;&gt; {
+      this.clearButtonEnabled &#x3D; false;
+      this.clearButtonEnabled &#x3D; this.documents.length &gt; 0 ? true : false;
+      this.previousButtonEnabled &#x3D; this.documents.length &gt; 1 ? true : false;
+      this.nextButtonEnabled &#x3D; this.documents.length &gt; 1 ? true : false;
+
+      this.firstButtonEnabled &#x3D; this.previousButtonEnabled;
+      this.lastButtonEnabled &#x3D; this.nextButtonEnabled;
+    });
+  }
+
+  public async ngOnInit() {
+
+
+    //this.stopCapture();
+    //let listOfdocuments: DocumentInfo[];
+    if (this.sessionDataService.getValue(&#x27;documents&#x27;)) {
+      this.documents &#x3D; this.sessionDataService.getValue(&#x27;documents&#x27;) as DocumentInfo[];
+
+      let index: number &#x3D; this.documents.findIndex((value) &#x3D;&gt; value.isCurrent);
+
+      this.currentDocument &#x3D; this.documents[index];
+      this.currentPageNumber &#x3D; index + 1;
+      this.totalNumberOfPages &#x3D; this.documents.length;
+    }
+
+    if (this.documents.length &lt; 1) {
+      this.clearCapturedImages();
+    } else {
+      console.log(&#x27;3.  this.documents.length &#x3D; &#x27; + this.documents.length);
+    }
+
+    this.setupComponentIcons();
+    this.setupComponentButtons();
+
+    this.biometricService.connectSignalR();
+    await this.biometricService.initializeNewDevice(&#x27;DOCUMENTSCANNING.STREAM.WIA&#x27;);
+
+    this.onDeviceInitRef &#x3D; this.biometricService.onDeviceInit()
+      .subscribe(() &#x3D;&gt; {
+        this.zone.run(() &#x3D;&gt; {
+          this.captureButtonEnabled &#x3D; true;
+          this.captureButtonText &#x3D; &quot;Capture&quot;;
+          this.reinitializeButtonEnabled &#x3D; true;
+          console.log(&#x27;Device Initialized&#x27;);
+        });
+      });
+
+    this.onDeviceNotActiveRef &#x3D; this.biometricService.onDeviceNotActive()
+      .subscribe(() &#x3D;&gt; {
+        this.zone.run(() &#x3D;&gt; {
+          this.captureButtonEnabled &#x3D; true;
+          this.reinitializeButtonEnabled &#x3D; true;
+          this.captureButtonText &#x3D; &quot;Capture&quot;;
+        });
+      });
+
+    this.getImageSnapshotRef &#x3D; this.biometricService.getImageSnapshot()
+      .subscribe((img) &#x3D;&gt; {
+        this.zone.run(() &#x3D;&gt; {
+          if (img) {
+            this.addDocument(new DocumentInfo(this.toDataImageBase64(img), &#x27;&#x27;, true));
+            this.toImageDataURL(this.toDataImageBase64(img));
+
+            this.isCompleted &#x3D; this.documents.length &gt; 0 ? true : false;
+            this.completionStatusIcon &#x3D; this.isCompleted ? faCheck : faTasks;
+
+            this.displayLastScannedPage();
+            this.setupComponentButtons();
+          }
+        });
+      });
+
+    this.dataImageURL$.subscribe((thumbnail) &#x3D;&gt; {
+      if (thumbnail) {
+        this.documents.find((value) &#x3D;&gt; value.isCurrent).thumbnail &#x3D; thumbnail;
+        this.currentDocument &#x3D; this.documents.find((value) &#x3D;&gt; value.isCurrent);
+
+        this.sessionDataService.setItem(&#x27;documents&#x27;, this.documents);
+        console.log(&#x27;Page moved to memory...&#x27;);
+      }
+    })
+  }
+
+  private setParams(): void {
+    this.route.params.subscribe((params) &#x3D;&gt; this.id &#x3D; params.id);
+    console.log(&#x60;${this.id}&#x60;);
+  }
+
+  private getEnumValue(params: Params): CrudType {
+    let crudType: CrudType &#x3D; CrudType.None;
+    if (&#x27;crudtype&#x27; in params) {
+      crudType &#x3D; CrudType[params.crudtype.replace(
+        params.crudtype.charAt(0),
+        params.crudtype.charAt(0).toUpperCase()).toString()] as CrudType;
+    }
+    return crudType;
+  }
+
+  private toImageDataURL(dataURI) {
+    var image &#x3D; new Image();
+    image.crossOrigin &#x3D; &quot;Anonymous&quot;;
+
+    let canvas: HTMLCanvasElement &#x3D; document.createElement(&quot;canvas&quot;);
+    canvas.width &#x3D; 400;
+    canvas.height &#x3D; 500;
+    var context &#x3D; canvas.getContext(&quot;2d&quot;);
+
+    image.onload &#x3D; () &#x3D;&gt; {
+      context.drawImage(image, 0, 0, image.width, image.height, 0, 0, 400, 500);
+      this.dataImageURL.next(canvas.toDataURL(&#x27;image/jpeg&#x27;));
+    }
+
+    image.src &#x3D; dataURI;
+  }
+
+  public startCapture() {
+    this.startCaptureRef &#x3D; this.biometricService.startCapture().subscribe(() &#x3D;&gt; {
+      console.log(&#x27;startCapture&#x27;);
+    });
+  }
+
+  public stopCapture(): void {
+    this.biometricService
+      .stopCapture()
+      .subscribe(() &#x3D;&gt; {
+        this.zone.run(() &#x3D;&gt; {
+          //this.reset();
+        });
+      });
+  }
+
+  public getImageSnaphot() {
+    this.captureButtonEnabled &#x3D; false;
+    this.captureButtonText &#x3D; &#x27;Acquiring...&#x27;;
+    this.reinitializeButtonEnabled &#x3D; false;
+    this.startCapture();
+  }
+
+  public reinitializeDevice() {
+    this.zone.run(() &#x3D;&gt; {
+      this.captureButtonEnabled &#x3D; false;
+      this.reinitializeButtonEnabled &#x3D; false;
+      this.captureButtonText &#x3D; &#x27;Initializing...&#x27;;
+      this.biometricService.initializeNewDevice(&#x27;DOCUMENTSCANNING.STREAM.WIA&#x27;);
+    });
+  }
+
+  public firstCapturedImage() {
+    let currentIndex: number &#x3D; this.documents.findIndex((value) &#x3D;&gt; value.isCurrent);
+    this.documents[currentIndex].isCurrent &#x3D; false;
+
+    currentIndex &#x3D; 0;
+
+    this.documents[currentIndex].isCurrent &#x3D; true;
+    this.sessionDataService.setItem(&#x27;documents&#x27;, this.documents);
+    this.currentDocument &#x3D; this.documents[currentIndex];
+    this.currentPageNumber &#x3D; currentIndex + 1;
+  }
+
+  public lastCapturedImage() {
+    this.displayLastScannedPage();
+  }
+
+  public previousCapturedImage() {
+    let currentIndex: number &#x3D; this.documents.findIndex((value) &#x3D;&gt; value.isCurrent);
+    this.documents[currentIndex].isCurrent &#x3D; false;
+
+    currentIndex--;
+
+    if (currentIndex &lt; 0) {
+      currentIndex &#x3D; this.documents.length - 1;
+    }
+
+    this.documents[currentIndex].isCurrent &#x3D; true;
+    this.sessionDataService.setItem(&#x27;documents&#x27;, this.documents);
+    this.currentDocument &#x3D; this.documents[currentIndex];
+    this.currentPageNumber &#x3D; currentIndex + 1;
+  }
+
+  private displayLastScannedPage() {
+    let currentIndex: number &#x3D; this.documents.findIndex((value) &#x3D;&gt; value.isCurrent);
+    this.documents[currentIndex].isCurrent &#x3D; false;
+
+    currentIndex &#x3D; this.documents.length - 1;
+
+    this.documents[currentIndex].isCurrent &#x3D; true;
+    this.sessionDataService.setItem(&#x27;documents&#x27;, this.documents);
+    this.currentDocument &#x3D; this.documents[currentIndex];
+    this.currentPageNumber &#x3D; currentIndex + 1;
+  }
+
+  public nextCapturedImage() {
+    let currentIndex: number &#x3D; this.documents.findIndex((value) &#x3D;&gt; value.isCurrent);
+    this.documents[currentIndex].isCurrent &#x3D; false;
+
+    currentIndex++;
+
+    if (currentIndex &gt; this.documents.length - 1) {
+      currentIndex &#x3D; 0;
+    }
+
+    this.documents[currentIndex].isCurrent &#x3D; true;
+    this.sessionDataService.setItem(&#x27;documents&#x27;, this.documents);
+    this.currentDocument &#x3D; this.documents[currentIndex];
+    this.currentPageNumber &#x3D; currentIndex + 1;
+  }
+
+  public clearCapturedImages() {
+    this.documents &#x3D; [];
+    this.sessionDataService.setItem(&#x27;documents&#x27;, this.documents);
+    this.currentPageNumber &#x3D; 0;
+    this.totalNumberOfPages &#x3D; 0;
+    this.currentDocument &#x3D; new DocumentInfo(blankPage, blankPage, true);
+
+    this.isCompleted &#x3D; this.documents.length &gt; 0 ? true : false;
+    this.completionStatusIcon &#x3D; this.isCompleted ? faCheck : faTasks;
+
+    this.setupComponentButtons();
+  }
+
+  public ngOnDestroy(): void {
+    if (this.onDeviceInitRef) {
+      this.onDeviceInitRef.unsubscribe();
+    }
+
+    if (this.onDeviceNotActiveRef) {
+      this.onDeviceNotActiveRef.unsubscribe();
+    }
+
+    if (this.getImageSnapshotRef) {
+      console.log(&#x27;this.getImageSnapshotRef.unsubscribe();&#x27;);
+      this.getImageSnapshotRef.unsubscribe();
+    }
+
+    if (this.startCaptureRef) {
+      this.startCaptureRef.unsubscribe();
+    }
+  }
+
+  private addDocument(documentInfo: DocumentInfo): void {
+    if (documentInfo) {
+      if (documentInfo.isCurrent &#x3D;&#x3D; true) {
+        this.documents.forEach((value) &#x3D;&gt; {
+          value.isCurrent &#x3D; false;
+        });
+      }
+
+      this.documents.push(documentInfo);
+      this.currentPageNumber &#x3D; this.documents.length;
+      this.totalNumberOfPages &#x3D; this.documents.length;
+    }
+  }
+
+  private toDataImageBase64(image: string): string {
+    return &#x60;${dataImageBase64}${image}&#x60;;
+  }
+
+  public changeNotification(): void {
+    this.clear();
+    this.addDummyDocuments();
+    this.documents.forEach((value, idx, array) &#x3D;&gt; {
+      console.log(&#x27;ChangeNotification()&#x27;);
+      this.applicantRequestService.addApplicantDocument(new ApplicantDocumentRequest(null, idx, value.image));
+    });
+  }
+
+  private addDummyDocuments(): void {
+    this.documents.push(new DocumentInfo(photoPlaceholder, photoPlaceholder, false));
+    this.documents.push(new DocumentInfo(photoPlaceholder, photoPlaceholder, false));
+    this.documents.push(new DocumentInfo(photoPlaceholder, photoPlaceholder, false));
+  }
+
+  private clear(): void {
+    this.documents.length &#x3D; 0;
+  }
+
+  public calculatePreviewPageHeight(): number {
+    let calculatedheight &#x3D; this.elementSize.nativeElement.offsetHeight - 221;
+    return calculatedheight &lt; 200 ? 200 : calculatedheight; //608;
+  }
+
+  public calculatePreviewPageWidth(): number {
+    let calculatedheight &#x3D; this.elementSize.nativeElement.offsetHeight - 221;
+    return calculatedheight &lt; 200 ? 200 / 1.41429 : calculatedheight / 1.41429; //430;
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;center-block block-margin&quot; style&#x3D;&quot;width:100%;height:100%&quot; #elementSize&gt;
+  &lt;div class&#x3D;&quot;card&quot; style&#x3D;&quot;height:100%;&quot;&gt;
+
+    &lt;div class&#x3D;&quot;card-header sub-header&quot;&gt;
+      &lt;span class&#x3D;&quot;component-header-text&quot;&gt;Document Scanning &lt;i class&#x3D;&quot;fa fa-hourglass-half fa-sm&quot; pTooltip&#x3D;&quot;Busy&quot; tooltipPosition&#x3D;&quot;top&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+      &lt;span&gt;&lt;button class&#x3D;&quot;component-header-button&quot; type&#x3D;&quot;button&quot; pButton [disabled]&#x3D;&quot;!clearButtonEnabled&quot; (click)&#x3D;&quot;clearCapturedImages()&quot; icon&#x3D;&quot;fa fa-refresh&quot; pTooltip&#x3D;&quot;Reset to original state&quot; tooltipPosition&#x3D;&quot;top&quot;&gt;&lt;/button&gt;&lt;/span&gt;
+      &lt;span&gt;&lt;button class&#x3D;&quot;component-header-button&quot; type&#x3D;&quot;button&quot; pButton icon&#x3D;&quot;fa fa-info&quot; pTooltip&#x3D;&quot;Information&quot; style&#x3D;&quot;&quot; tooltipPosition&#x3D;&quot;top&quot;&gt;&lt;/button&gt;&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+      &lt;ng-template #popInstructions&gt;
+        &lt;ol&gt;
+          &lt;li *ngFor&#x3D;&quot;let instruction of instructions&quot;&gt;{{instruction}}&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/ng-template&gt;
+
+      &lt;div class&#x3D;&quot;d-flex w-100 justify-content-center mb-3&quot;&gt;
+        &lt;div class&#x3D;&quot;ngx-page d-flex&quot; [ngStyle]&#x3D;&quot;{&#x27;height.px&#x27;: calculatePreviewPageHeight(), &#x27;width.px&#x27;: calculatePreviewPageWidth()}&quot;&gt;
+          &lt;ngx-image-zoom [thumbImage]&#x3D;[(currentDocument.thumbnail)]
+                          [fullImage]&#x3D;[(currentDocument.image)]
+                          [enableScrollZoom]&#x3D;&quot;true&quot;&gt;
+          &lt;/ngx-image-zoom&gt;
+          &lt;div class&#x3D;&quot;small text-center align-self-end w-100 p-1&quot;&gt;
+            Page {{currentPageNumber}} of {{totalNumberOfPages}}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!--[enableLens]&#x3D;&quot;true&quot;
+      [lensWidth]&#x3D;&quot;225&quot;
+      [lensHeight]&#x3D;&quot;125&quot;--&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;d-flex&quot; style&#x3D;&quot;text-align:center;&quot;&gt;
+        &lt;div style&#x3D;&quot;display:inline-block; width:100%;&quot;&gt;
+          &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary mr-1&quot; [disabled]&#x3D;&quot;!firstButtonEnabled&quot; (click)&#x3D;&quot;firstCapturedImage()&quot;&gt;&lt;fa-icon [icon]&#x3D;firstIcon&gt;&lt;/fa-icon&gt;&lt;/button&gt;
+          &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary mr-1&quot; [disabled]&#x3D;&quot;!previousButtonEnabled&quot; (click)&#x3D;&quot;previousCapturedImage()&quot;&gt;&lt;fa-icon [icon]&#x3D;previousIcon&gt;&lt;/fa-icon&gt;&lt;/button&gt;
+          &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary mr-1&quot; [disabled]&#x3D;&quot;!nextButtonEnabled&quot; (click)&#x3D;&quot;nextCapturedImage()&quot;&gt;&lt;fa-icon [icon]&#x3D;nextIcon&gt;&lt;/fa-icon&gt;&lt;/button&gt;
+          &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot; [disabled]&#x3D;&quot;!lastButtonEnabled&quot; (click)&#x3D;&quot;lastCapturedImage()&quot;&gt;&lt;fa-icon [icon]&#x3D;lastIcon&gt;&lt;/fa-icon&gt;&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!--&lt;div class&#x3D;&quot;d-flex card-footer p-2&quot; style&#x3D;&quot;text-align:right;&quot;&gt;
+      &lt;div style&#x3D;&quot;display:inline-block; width:100%;&quot;&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary mr-2&quot; style&#x3D;&quot;width:152px;&quot; [disabled]&#x3D;&quot;!reinitializeButtonEnabled&quot; (click)&#x3D;&quot;reinitializeDevice()&quot;&gt;&lt;i class&#x3D;&quot;fa fa-recycle mr-1&quot;&gt;&lt;/i&gt;Reinitialise&lt;/button&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-success&quot; style&#x3D;&quot;width:152px;&quot; [disabled]&#x3D;&quot;!captureButtonEnabled&quot; (click)&#x3D;&quot;getImageSnaphot()&quot;&gt;&lt;i class&#x3D;&quot;fa fa-bullseye mr-1&quot;&gt;&lt;/i&gt;{{captureButtonText}}&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;--&gt;
+
+    &lt;div class&#x3D;&quot;d-flex card-footer p-2&quot; style&#x3D;&quot;text-align:right;&quot;&gt;
+      &lt;div style&#x3D;&quot;display:inline-block; width:100%;&quot;&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary footerFixedButton mr-2&quot; (click)&#x3D;&quot;reinitializeDevice()&quot; [disabled]&#x3D;&quot;!reinitializeButtonEnabled&quot;&gt;&lt;i class&#x3D;&quot;fa fa-recycle mr-1&quot;&gt;&lt;/i&gt;Reinitialise Device&lt;/button&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-success footerFixedButton&quot; (click)&#x3D;&quot;getImageSnaphot()&quot; [disabled]&#x3D;&quot;!captureButtonEnabled&quot;&gt;&lt;i class&#x3D;&quot;fa fa-bullseye mr-1&quot;&gt;&lt;/i&gt;{{captureButtonText}}&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./document-capture.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.bg-faceNewColorForTestingPurposes {
+  background-color: #000000 !important;
+}
+
+
+.ngx-page {
+  background-color: white;
+  box-shadow: 0 0 0.2cm rgba(0,0,0,0.5);
+}
+
+  .ngx-page[size&#x3D;&quot;A6&quot;] {
+    width: 12.5cm;
+    height: 15.8cm;
+  }
+
+
+
+
+
+.displayDiv {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+}
+
+.p-control {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.p-body {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="center-block block-margin" style="width:100%;height:100%" #elementSize>  <div class="card" style="height:100%;">    <div class="card-header sub-header p-2">      <span class="component-header-text">Document Scanning <i class="fa fa-hourglass-half fa-sm" pTooltip="Busy" tooltipPosition="top"></i></span>      <span><button class="component-header-button" type="button" pButton [disabled]="!clearButtonEnabled" (click)="clearCapturedImages()" icon="fa fa-refresh" pTooltip="Reset to original state" tooltipPosition="top"></button></span>      <span><button class="component-header-button" type="button" pButton icon="fa fa-info" pTooltip="Information" style="" tooltipPosition="top"></button></span>    </div>    <div class="card-body">      <ng-template #popInstructions>        <ol>          <li *ngFor="let instruction of instructions">{{instruction}}</li>        </ol>      </ng-template>      <div class="d-flex w-100 justify-content-center mb-3">        <div class="ngx-page d-flex" [ngStyle]="{\'height.px\': calculatePreviewPageHeight(), \'width.px\': calculatePreviewPageWidth()}">          <ngx-image-zoom [thumbImage]=[(currentDocument.thumbnail)]                          [fullImage]=[(currentDocument.image)]                          [enableScrollZoom]="true">          </ngx-image-zoom>          <div class="small text-center align-self-end w-100 p-1">            Page {{currentPageNumber}} of {{totalNumberOfPages}}          </div>        </div>        <!--[enableLens]="true"      [lensWidth]="225"      [lensHeight]="125"-->      </div>      <div class="d-flex" style="text-align:center;">        <div style="display:inline-block; width:100%;">          <button type="button" class="btn btn-primary mr-1" [disabled]="!firstButtonEnabled" (click)="firstCapturedImage()"><fa-icon [icon]=firstIcon></fa-icon></button>          <button type="button" class="btn btn-primary mr-1" [disabled]="!previousButtonEnabled" (click)="previousCapturedImage()"><fa-icon [icon]=previousIcon></fa-icon></button>          <button type="button" class="btn btn-primary mr-1" [disabled]="!nextButtonEnabled" (click)="nextCapturedImage()"><fa-icon [icon]=nextIcon></fa-icon></button>          <button type="button" class="btn btn-primary" [disabled]="!lastButtonEnabled" (click)="lastCapturedImage()"><fa-icon [icon]=lastIcon></fa-icon></button>        </div>      </div>    </div>    <!--<div class="d-flex card-footer p-2" style="text-align:right;">      <div style="display:inline-block; width:100%;">        <button type="button" class="btn btn-primary mr-2" style="width:152px;" [disabled]="!reinitializeButtonEnabled" (click)="reinitializeDevice()"><i class="fa fa-recycle mr-1"></i>Reinitialise</button>        <button type="button" class="btn btn-success" style="width:152px;" [disabled]="!captureButtonEnabled" (click)="getImageSnaphot()"><i class="fa fa-bullseye mr-1"></i>{{captureButtonText}}</button>      </div>    </div>-->    <div class="d-flex card-footer p-2" style="text-align:right;">      <div style="display:inline-block; width:100%;">        <button type="button" class="btn btn-primary footerFixedButton mr-2" (click)="reinitializeDevice()" [disabled]="!reinitializeButtonEnabled"><i class="fa fa-recycle mr-1"></i>Reinitialise Device</button>        <button type="button" class="btn btn-success footerFixedButton" (click)="getImageSnaphot()" [disabled]="!captureButtonEnabled"><i class="fa fa-bullseye mr-1"></i>{{captureButtonText}}</button>      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'BiometricFingerPrintComponent', 'selector': 'biometric-finger-print'},{'name': 'BreadcrumbsComponent', 'selector': 'ngx-breadcrumbs'},{'name': 'ContactDetailsComponent', 'selector': 'ngx-contact-details'},{'name': 'DataTableComponent', 'selector': 'ngx-data-table'},{'name': 'DocumentCaptureComponent', 'selector': 'ngx-document-capture'},{'name': 'DocumentUploadComplexComponent', 'selector': 'ngx-document-upload-complex'},{'name': 'DocumentUploadComponent', 'selector': 'ngx-document-upload'},{'name': 'DynamicFormComponent', 'selector': 'ngx-dynamic-form'},{'name': 'DynamicQuestionComponent', 'selector': 'ngx-question'},{'name': 'FooterComponent', 'selector': 'ngx-footer'},{'name': 'HeaderComponent', 'selector': 'ngx-header'},{'name': 'HomeComponent', 'selector': 'ngx-home'},{'name': 'IdentityComponent', 'selector': 'ngx-identity'},{'name': 'ImageMapAreaComponent', 'selector': 'ngx-image-map-area'},{'name': 'NotificationComponent', 'selector': 'ngx-notification'},{'name': 'NumberplateOrderComponent', 'selector': 'ngx-numberplate-order'},{'name': 'PageNotFoundComponent', 'selector': 'ngx-page-not-found'},{'name': 'PanelMenuComponent', 'selector': 'ngx-panel-menu'},{'name': 'PdfViewComponent', 'selector': 'ngx-pdf-viewer'},{'name': 'PhotoCaptureComponent', 'selector': 'facetech-photo-capture'},{'name': 'RecommendationComponent', 'selector': 'ngx-recommendation'},{'name': 'RegistrationComponent', 'selector': 'ngx-registration'},{'name': 'RepresentativeTransferComponent', 'selector': 'ngx-representative-transfer'},{'name': 'ScheduleCalendarComponent', 'selector': 'ngx-schedule-calendar'},{'name': 'ScheduleCalendarTestpageComponent', 'selector': 'ngx-schedule-calendar-testpage'},{'name': 'SignatoryCaptureComponent', 'selector': 'ngx-signatory-capture'},{'name': 'SignatureCaptureComponent', 'selector': 'facetech-signature-capture'},{'name': 'SpinnerComponent', 'selector': 'ngx-spinner'},{'name': 'TemplateClientMessagesComponent', 'selector': 'ngx-template-client-messages'},{'name': 'TemplateEditorComponent', 'selector': 'ngx-template-editor'},{'name': 'TemplateShellComponent', 'selector': 'ngx-template-shell'},{'name': 'TrainingManagmentComponent', 'selector': 'ngx-training-managment'},{'name': 'TransactionCommentsComponent', 'selector': 'ngx-transaction-comments'},{'name': 'TransactionListComponent', 'selector': 'ngx-transaction-list'},{'name': 'UiBlockComponent', 'selector': 'ngx-ui-block'}];
+    var DIRECTIVES = [{'name': 'FocusDirective', 'selector': '[elementFocus]'}];
+    var ACTUAL_COMPONENT = {'name': 'DocumentCaptureComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'DocumentCaptureComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

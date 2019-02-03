@@ -1,0 +1,40 @@
+<div class="shell">
+  <div class="center-block block-margin" style="width:100%;">
+    <div class="card" style="height:100%;">
+
+      <div class="card-header sub-header p-2">
+        <span class="component-header-text">Register Interests</span>
+        <span><button class="component-header-button" type="button" pButton icon="fa fa-refresh" pTooltip="Reset to original state" style="color:var(--icon-color)" tooltipPosition="top"></button></span>
+        <span><button class="component-header-button" type="button" pButton icon="fa fa-info" pTooltip="Information" style="color:var(--icon-color)" tooltipPosition="top"></button></span>
+      </div>
+
+      <div class="card-body card-h100 " [ngClass]="{'parentCardBody': bodyCenter === true}">
+        <div class="template-shell-control" #contentSize>
+          <!--<div class="m-1" style="display:block;">-->
+          <p-pickList [source]="selectedEntityA.persons"
+                      [target]="selectedEntityB.persons"
+                      sourceHeader="{{selectedEntityA.interestType}}"
+                      targetHeader="{{selectedEntityB.interestType}}"
+                      [responsive]="true"
+                      filterBy="name"
+                      sourceFilterPlaceholder="Search"
+                      targetFilterPlaceholder="Search"
+                      [showSourceControls]="false"
+                      [showTargetControls]="false"
+                      [sourceStyle]="{'height':'580px'}"
+                      [targetStyle]="{'height':'580px'}"
+                      [style]="{'min-width':'80%'}">
+            <ng-template let-person pTemplate="item">
+              <div style="display:flex; justify-content:space-between;border: 1px solid gray; border-radius: 8px;padding:6px;">
+                {{person.name}}
+              </div>
+            </ng-template>
+
+          </p-pickList>
+          <!--</div>-->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

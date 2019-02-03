@@ -1,0 +1,20 @@
+.bg-faceNewColorForTestingPurposes {
+  background-color: #000000 !important;
+}
+
+.myCardStyel{
+  background-color:darkgreen;
+}
+
+.photoNodeSelected {
+  background-color: green;
+}
+
+.photoNodeNotSelected {
+  background-color: red;
+}
+
+.streamingImage {
+  background-color: white;
+  box-shadow: 0 0 0.2cm rgba(0,0,0,0.5);
+}

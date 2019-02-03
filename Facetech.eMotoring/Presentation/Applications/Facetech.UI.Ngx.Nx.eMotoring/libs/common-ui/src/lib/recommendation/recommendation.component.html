@@ -1,0 +1,52 @@
+<div class="center-block block-margin">
+  <p-panel>
+    <p-header>
+      <div  class="component-header-text">Recommendations</div>
+    </p-header>
+    <form [formGroup]="recommendationForm" (ngSubmit)="onSubmit(recommendationForm.value)">
+      <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+        <div class="ui-grid-row mt-2 ">
+          <div class="ui-grid-col-6">
+            <b>Shortcoming</b>
+          </div>
+        </div>
+        <div class="ui-grid-row m-0">
+          <div class="ui-grid-col-12">
+            <!--<textarea pInputTextarea style="width:100%;height:100%" formControlName="shortComing" [(ngModel)]="shortComing"></textarea>-->
+            <textarea pInputTextarea style="width:100%;height:100%" formControlName="shortComing"></textarea>
+          </div>
+        </div>
+        <div *ngIf="!recommendationForm.invalid && recommendationForm.controls['shortComing'].value.length>0" class="ui-grid-row mt-2">
+          <div class="ui-grid-col-2">
+            <b>Severity</b>
+          </div>
+          <div class="ui-grid-col-5">
+            <!--<p-dropdown [options]="severities" [(ngModel)]="selectedSeverity" formControlName="severity" [autoWidth]="false"></p-dropdown>-->
+            <p-dropdown [options]="severities" formControlName="severity" [autoWidth]="false"></p-dropdown>
+          </div>
+        </div>
+        <div class="ui-grid-row mt-2 ">
+          <div class="ui-grid-col-6">
+            <b>Recommendation</b>
+          </div>
+        </div>
+        <div class="ui-grid-row m-0 ">
+          <div class="ui-grid-col-12">
+            <!--<textarea pInputTextarea style="width:100%;height:100%" formControlName="recommendation" [(ngModel)]="recommendation"></textarea>-->
+            <textarea pInputTextarea style="width:100%;height:100%" formControlName="recommendation"></textarea>
+          </div>
+        </div>
+        <div class="ui-grid-col-12 ui-grid-row justify-content-end mr-2">
+          <p-message class="m-1" severity="error" text="Too short"
+                     *ngIf="(recommendationForm.controls['shortComing'].touched && !recommendationForm.controls['shortComing'].valid)
+                     || (recommendationForm.controls['recommendation'].touched && !recommendationForm.controls['recommendation'].valid)">
+          </p-message>
+          <p-button class="mr-2 ml-2" type="submit" label="Submit" [disabled]="recommendationForm.invalid"></p-button>
+        </div>
+        <div class="ui-grid-row" style="text-align:center;margin-top:20px" *ngIf="submitted">
+          Thank you for your suggestion
+        </div>
+      </div>
+    </form>
+  </p-panel>
+</div>

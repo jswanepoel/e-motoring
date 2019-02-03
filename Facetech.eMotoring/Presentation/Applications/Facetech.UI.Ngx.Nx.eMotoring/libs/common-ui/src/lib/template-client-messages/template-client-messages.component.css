@@ -1,0 +1,8 @@
+.status-indicator {
+  display: inline-block;
+  margin-right: -5px;
+  margin-bottom: 0px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: static;
+}

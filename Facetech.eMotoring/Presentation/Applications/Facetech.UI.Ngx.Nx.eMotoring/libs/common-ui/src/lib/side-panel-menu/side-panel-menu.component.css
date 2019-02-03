@@ -1,0 +1,47 @@
+
+.side-panel-menu {
+  padding-top: 1.5%;
+  position: relative;
+  display: block;
+  z-index: 5;
+}
+
+.ui-menuitem-text {
+  display: none !important;
+}
+
+
+button:focus {
+  outline: 0;
+}
+
+.hamb:hover {
+  transform: scale(1.1);
+}
+
+.hamb:active {
+  transform: scale(0.9);
+}
+
+
+
+.scrollbar {
+  float: left;
+  overflow-y: scroll;
+}
+
+
+
+.scrollbar-primary::-webkit-scrollbar {
+  width: 4px;
+
+}
+
+.scrollbar-primary::-webkit-scrollbar-thumb {
+ 
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--sub-bg-color);
+  
+}
+

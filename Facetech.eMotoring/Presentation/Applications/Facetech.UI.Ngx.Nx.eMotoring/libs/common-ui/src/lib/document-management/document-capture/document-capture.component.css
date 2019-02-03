@@ -1,0 +1,36 @@
+.bg-faceNewColorForTestingPurposes {
+  background-color: #000000 !important;
+}
+
+
+.ngx-page {
+  background-color: white;
+  box-shadow: 0 0 0.2cm rgba(0,0,0,0.5);
+}
+
+  .ngx-page[size="A6"] {
+    width: 12.5cm;
+    height: 15.8cm;
+  }
+
+
+
+
+
+.displayDiv {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+}
+
+.p-control {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.p-body {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}

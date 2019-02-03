@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{1D41AA06-CACC-495F-A871-F126B5B9411E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{442DC909-C0D8-4511-A887-66F77EC58113}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{3CBF4268-281F-4215-A884-868F5B7043C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{477B9A99-79C5-4AAB-A930-CA44675B6762}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Applications", "{9589F4E5-2C67-4488-8826-12C4D7DB3DC0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facetech.UI.Ngx.Nx.eMotoring", "Presentation\Applications\Facetech.UI.Ngx.Nx.eMotoring\Facetech.UI.Ngx.Nx.eMotoring.csproj", "{3BCE0CA7-E04D-4174-B9C0-6516E80F061E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3BCE0CA7-E04D-4174-B9C0-6516E80F061E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BCE0CA7-E04D-4174-B9C0-6516E80F061E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BCE0CA7-E04D-4174-B9C0-6516E80F061E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BCE0CA7-E04D-4174-B9C0-6516E80F061E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3CBF4268-281F-4215-A884-868F5B7043C5} = {442DC909-C0D8-4511-A887-66F77EC58113}
+		{477B9A99-79C5-4AAB-A930-CA44675B6762} = {442DC909-C0D8-4511-A887-66F77EC58113}
+		{9589F4E5-2C67-4488-8826-12C4D7DB3DC0} = {1D41AA06-CACC-495F-A871-F126B5B9411E}
+		{3BCE0CA7-E04D-4174-B9C0-6516E80F061E} = {9589F4E5-2C67-4488-8826-12C4D7DB3DC0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CFAC6A7D-C0AD-4704-A96E-7CEE039A3952}
+	EndGlobalSection
+EndGlobal

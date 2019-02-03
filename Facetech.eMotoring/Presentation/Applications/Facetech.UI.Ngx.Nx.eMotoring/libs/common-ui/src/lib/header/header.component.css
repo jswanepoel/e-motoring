@@ -1,0 +1,21 @@
+.profile-Option div:hover {
+  background-color:lightgray;
+}
+
+.cogs-button {
+  transform: scale(1.5);
+}
+
+.cogs-button:hover {
+  transform: scale(1.6);
+}
+
+.cogs-button:active {
+  transform: scale(1.3);
+}
+
+
+.profile-Option div:active {
+  transform: scale(0.9);
+}
+

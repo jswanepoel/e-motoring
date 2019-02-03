@@ -1,0 +1,1 @@
+var ROUTES_INDEX = {"name":"<root>","kind":"module","className":"AppModule","children":[{"name":"routes","filename":"apps/e-motoring/src/app/account/account.routing.ts","module":"AccountRoutingModule","children":[{"path":"account/login","component":"AccountLoginComponent"}],"kind":"module"}]}

@@ -1,0 +1,43 @@
+<div *ngIf="status" class="m-3 dashboard" >
+  <div class="d-flex flex-wrap">
+      <div class="p-col-12 p-sm-6 p-lg-3" [@slideInOut]="helpMenuOpen" (click)="toggleHelpMenu()">
+      <div class="shadow-sm card">
+        <p-chart type="doughnut" [data]="data"></p-chart>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+      <div class="p-col-12 p-sm-6 p-lg-3" [@slideInOut]="helpMenuOpen2" (click)="toggleHelpMenu2()">
+      <div class="shadow-sm card">
+        <p-chart type="doughnut" [data]="data"></p-chart>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+      <div class="p-col-12 p-sm-6 p-lg-3" [@slideInOut]="helpMenuOpen3" (click)="toggleHelpMenu3()">
+      <div class="shadow-sm card">
+        <p-chart type="doughnut" [data]="data"></p-chart>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+      <div class="p-col-12 p-sm-6 p-lg-3" [@slideInOut]="helpMenuOpen4" (click)="toggleHelpMenu4()">
+      <div class="shadow-sm card">
+        <p-chart type="doughnut" [data]="data"></p-chart>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+

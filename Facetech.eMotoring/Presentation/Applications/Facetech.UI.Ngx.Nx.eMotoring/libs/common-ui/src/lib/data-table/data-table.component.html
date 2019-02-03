@@ -1,0 +1,217 @@
+<div class="block-margin center-block">
+
+  <div class="d-flex justify-content-start" style="text-align: left;">
+
+  </div>
+  <div class="d-flex">
+    <div class="pl-0 pt-2 pb-2">
+      <input type="text" pInputText size="50" (input)="dp.filterGlobal($event.target.value, 'contains')">
+    </div>
+    <div class="p-2">
+      <span><button class="component-header-button mt-1" type="button" pButton icon="fa fa-search" pTooltip="Reset to original state" tooltipPosition="top"></button></span>
+    </div>
+    <div class="ml-auto p-2">
+      <div class="d-flex justify-content-end">
+        <button *ngIf="edit" (click)="showDialogToAddParent()" class="btn btn-primary fa fa-plus mr-2 ml-2" pbutton pTooltip="Accept" tooltipPosition="top"></button>
+        <button *ngIf="filterParent" class="ml-3" type="button" pButton icon="fa fa-filter" (click)="toggleFilterPVisibility()" [ngClass]="filterExpansionP ? 'ui-button-success' : 'ui-button-danger'" style="width:50%;color:white;"></button>
+      </div>
+    </div>
+    <div *ngIf="upload" class="ml-auto p-2">
+      <span ngxFilePicker accept="image/*" [filter]="filterFileBeforeReading" (readStart)="onReadStart($event)" (filePick)="onFilePicked($event)" (readEnd)="onReadEnd($event)" pbutton pTooltip="Upload"><button class="component-header-button mt-1" type="button" pButton icon="fa fa-upload"></button></span>
+    </div>
+  </div>
+
+  <p-table #dp [columns]="cols2" [value]="items" rowExpandMode="single" [(selection)]="selectedParent" dataKey={{key}} [paginator]="true" [style]="{'z-index':'1'}" [rows]=tools[0].row>
+
+    <ng-template pTemplate="header" let-columns>
+      <tr *ngIf="sortParent">
+        <th style="width: 3em" *ngIf="selectParent"><p-tableHeaderCheckbox></p-tableHeaderCheckbox></th>
+
+
+        <!--<th style="width:3em"></th>-->
+        <th *ngFor="let col2 of columns" [pSortableColumn]="col2.field">
+          {{decamelize(col2.header)}}
+          <p-sortIcon *ngIf="sortParent" [field]="col2.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+        </th>
+        <th style="width: 200px !important;" *ngIf="actionParent">
+          Actions
+        </th>
+      </tr>
+      <tr *ngIf="!sortParent">
+        <th style="width: 3em" *ngIf="selectParent"><p-tableHeaderCheckbox></p-tableHeaderCheckbox></th>
+        <th *ngFor="let col2 of columns">
+          {{decamelize(col2.header)}}
+        </th>
+        <th *ngIf="actionParent">
+          Actions
+        </th>
+      </tr>
+      <tr *ngIf="filterParent" [hidden]="filterExpansionP">
+        <th *ngIf="selectParent"></th>
+
+        <th *ngFor="let col2 of columns" [ngSwitch]="col2.field">
+          <input *ngSwitchCase=col2.header style="width:100%" pInputText type="text" (input)="dp.filter($event.target.value, col2.field, col2.filterMatchMode)">
+        </th>
+        <th  *ngIf="actionParent"></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-expanded='expanded' let-columns="columns">
+      <tr [pSelectableRow]="rowData">
+        <td *ngIf="selectParent">
+          <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+        </td>
+
+        <!--<td *ngIf="!rowData.hasChildren"></td>-->
+        <td *ngIf="rowData.hasChildren">
+          <a *ngIf="!selectParent" href="#" [pRowToggler]="rowData">
+            <i [ngClass]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'" style="color:darkgray" (click)="selectParentRow(rowData, expanded)"></i>
+          </a>
+        </td>
+        <td *ngFor="let col2 of columns">
+          {{rowData[col2.field]}}
+        </td>
+        <td *ngIf="actionParent" class="justify-content-center">
+          <div *ngIf="action == 'upload'">
+            <i class="fa fa-upload mr-2 ml-2" pbutton pTooltip="Upload" tooltipPosition="top" ngxFilePicker accept="image/*" [filter]="filterFileBeforeReading" (readStart)="onReadStart($event)" (filePick)="onFilePicked($event, rowData)" (readEnd)="onReadEnd($event)"></i>
+            <i class="fa fa-sticky-note-o mr-2 ml-2" pbutton pTooltip=" Scan" tooltipPosition="top"></i>
+            <i class="fa fa-print mr-2 ml-2" pbutton pTooltip=" Print" tooltipPosition="top"></i>
+          </div>
+          <div *ngIf="action == 'edit'">
+            <i (click)="selectParentWithButtonEdit(rowData)" class="fa fa-check mr-2 ml-2" pbutton pTooltip="Accept" tooltipPosition="top"></i>
+            <i (click)="selectParentWithButtonDel(rowData)" pTooltip="Reject" tooltipPosition="top" class="fa fa-close mr-2 ml-2" pbutton></i>
+          </div>
+          <div *ngIf="action == 'transaction'">
+            <i class="fa fa-link mr-2 ml-2" pbutton pTooltip="Go to transaction" tooltipPosition="top"></i>
+            <i pTooltip="Delete" tooltipPosition="top" class="fa fa-close mr-2 ml-2" pbutton></i>
+          </div>
+          <div *ngIf="action == 'reserve'">
+            <i class="mr-2 ml-2" pbutton pTooltip="Reserve" tooltipPosition="top">R</i>
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="rowexpansion" let-rowData let-columns="columns">
+      <tr>
+        <td [attr.colspan]="columns.length+colCount" style="background-color:lightgray">
+          <div class="ui-g ui-fluid justify-content-center" style="font-size:16px;">
+            <div class="ui-g-12">
+              <div class="ui-g">
+                <div class="ui-g-12">
+                  <div class="mt-0" *ngIf="selectionB">
+                    <!--<div *ngIf="rowData.hasChildren">
+                    </div>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <p-dialog header="Details" [(visible)]="displayDialogParentDel" [responsive]="true" showEffect="fade" [modal]="true" [width]="500">
+    <div class="ui-g ui-fluid" *ngIf="Parent">
+      <div *ngFor="let headers of parentHeaders; let i = index" [attr.data-index]="i" class="ui-g-12">
+        <div class="ui-g-4">
+          <label for="id">{{decamelize(parentHeaders[i])}}</label>
+        </div>
+        <div class="ui-g-8">
+          <input pInputText id="id" [(ngModel)]="Parent[headers]" disabled />
+        </div>
+      </div>
+    </div>
+    <div class="ui-g-4">
+      <label for="id">Reason:</label>
+    </div>
+    <div class="ui-g-8">
+      <textarea rows="4" class="form-control"></textarea>
+    </div>
+    <p-footer>
+      <div class="ui-dialog-buttonpane ui-helper-clearfix">
+        <button type="button" pButton (click)="cancel()" class="ui-button-info " label="Cancel"></button>
+        <button type="button" pButton class="ui-button-danger " icon="fa fa-close" (click)="deleteParent()" label="Reject"></button>
+      </div>
+    </p-footer>
+  </p-dialog>
+
+  <p-dialog header="Details" [(visible)]="displayDialogParentReject" [responsive]="true" showEffect="fade" [modal]="true" [width]="500">
+    <div class="ui-g ui-fluid" *ngIf="Parent">
+      <div *ngFor="let headers of parentHeaders; let i = index" [attr.data-index]="i" class="ui-g-12">
+        <div class="ui-g-4">
+          <label for="id">{{decamelize(parentHeaders[i])}}</label>
+        </div>
+        <div class="ui-g-8">
+          <input pInputText id="id" [(ngModel)]="Parent[headers]" disabled />
+        </div>
+      </div>
+    </div>
+    <p-footer>
+      <div class="ui-dialog-buttonpane ui-helper-clearfix">
+        <button type="button" pButton (click)="cancel()" class="ui-button-info " label="Cancel"></button>
+        <button type="button" pButton class="ui-button-danger " icon="fa fa-close" (click)="deleteParent()" label="Reject"></button>
+      </div>
+    </p-footer>
+  </p-dialog>
+
+
+
+
+  <p-dialog header="Details" [(visible)]="displayDialogParentEdit" [responsive]="true" showEffect="fade" [modal]="true" [width]="500">
+    <div class="ui-g ui-fluid" *ngIf="Parent">
+      <div *ngFor="let headers of parentHeaders; let i = index" [attr.data-index]="i" class="ui-g-12">
+        <div class="ui-g-4">
+          <label for="id">{{decamelize(parentHeaders[i])}}</label>
+        </div>
+        <div class="ui-g-8">
+          <input pInputText id="id" [(ngModel)]="Parent[headers]" />
+        </div>
+      </div>
+    </div>
+    <p-footer>
+      <div class="ui-dialog-buttonpane ui-helper-clearfix">
+        <button type="button" pButton (click)="cancel()" class="ui-button-info" label="cancel"></button>
+        <button type="button" pButton icon="fa fa-check" class="ui-button-success" (click)="saveParent()" label="Accept"></button>
+      </div>
+    </p-footer>
+  </p-dialog>
+
+
+  <!--<p-dialog header="Details" [(visible)]="displayDialogChildEdit" [responsive]="true" showEffect="fade" [modal]="true" [width]="500">
+    <div class="ui-g ui-fluid" *ngIf="Child">
+      <div *ngFor="let headers of childHeaders; let i = index" [attr.data-index]="i" class="ui-g-12">
+        <div class="ui-g-4">
+          <label for="id">{{childHeaders[i]}}</label>
+        </div>
+        <div class="ui-g-8">
+          <input pInputText id="id" [(ngModel)]="Child[headers]" />
+        </div>
+      </div>
+    </div>
+    <p-footer>
+      <div class="ui-dialog-buttonpane ui-helper-clearfix">
+        <button type="button" pButton (click)="cancel()" class="ui-button-info" label="cancel"></button>
+        <button type="button" pButton icon="fa fa-edit" (click)="saveChild()" label="change"></button>
+      </div>
+    </p-footer>
+  </p-dialog>
+
+  <p-dialog header="Details" [(visible)]="displayDialogChildDel" [responsive]="true" showEffect="fade" [modal]="true" [width]="500">
+    <div class="ui-g ui-fluid" *ngIf="Child">
+      <div *ngFor="let headers of childHeaders; let i = index" [attr.data-index]="i" class="ui-g-12">
+        <div class="ui-g-4">
+          <label for="id">{{childHeaders[i]}}</label>
+        </div>
+        <div class="ui-g-8">
+          <input pInputText id="id" [(ngModel)]="Child[headers]" disabled />
+        </div>
+      </div>
+    </div>
+    <p-footer>
+      <div class="ui-dialog-buttonpane ui-helper-clearfix">
+        <button type="button" pButton (click)="cancel()" class="ui-button-info " label="Cancel"></button>
+        <button type="button" pButton class="ui-button-danger " icon="fa fa-close" (click)="deleteChild()" label="Delete"></button>
+      </div>
+    </p-footer>
+  </p-dialog>-->
+</div>

@@ -1,0 +1,64 @@
+<div class="shell">
+  <div class="center-block block-margin" style="width:100%;">
+    <div class="card" style="height:100%;">
+
+      <div class="card-header sub-header p-2">
+        <span class="component-header-text">Shift Managment <i class=" fa-sm" pTooltip="Busy" tooltipPosition="top"></i></span>
+        <span><button class="component-header-button" pButton icon="fa fa-refresh" pTooltip="Reset to original state" tooltipPosition="top"></button></span>
+        <span><button class="component-header-button" pButton icon="fa fa-info" pTooltip="Information" tooltipPosition="top"></button></span>
+      </div>
+
+      <ng-template #popInstructions>
+        <ul class="list-unstyled">
+          <li *ngFor="let instruction of instructions">{{instruction}}</li>
+        </ul>
+      </ng-template>
+
+      <div class="card-body">
+        <div #contentSize>
+
+          <div class="container" style="width:100%;">
+            <p-panel [toggleable]="false">
+              <p-header>
+                <span class="component-header-text">Find Cashier</span>
+              </p-header>
+              <div class="row" *ngIf="!userFound">
+                <ngx-dynamic-form #userName [formDefinition]="formDefinitions[0]" [questionData]="null" [header]="'Test'"></ngx-dynamic-form>                
+              </div>
+              <div *ngIf="userFound" class="ui-grid-row">
+                <div>
+                  <b>User: </b> {{dataForModel.selectedUser.surname}}, {{dataForModel.selectedUser.firstName}}
+                </div>
+                <div>
+                  <b>Role: </b> {{dataForModel.selectedUser.role}}
+                </div>
+                <div>
+                  <p-button [label]="dataForModel.isOnShift?'Close Shift':'Open Shift'" (click)="changeShift()" style="float:right"></p-button>
+                </div>
+              </div>
+            </p-panel>
+            <!--Closing Shift Panel-->
+            <p-panel [toggleable]="false" *ngIf="isClosingShift">
+              <p-header>
+                <span class="component-header-text">Close Shift</span>
+              </p-header>
+            </p-panel>
+            <!--Opening Shift Panel-->
+            <ngx-open-shift *ngIf="isOpeningShift" [shiftDetails]="dataForModel"></ngx-open-shift>
+            
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="includeFooter">
+        <div class="d-flex card-footer p-2" style="text-align:right;">
+          <div style="display:inline-block; width:100%;">
+            <button *ngIf="userFound" type="button" class="btn btn-danger mr-2" style="float:left"><i class="fa fa-recycle mr-1"></i>Cancel</button>
+            <button *ngIf="!userFound"  type="button" class="btn btn-success" (click)="getCashier()"><i class="fa fa-bullseye mr-1"></i>Search</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

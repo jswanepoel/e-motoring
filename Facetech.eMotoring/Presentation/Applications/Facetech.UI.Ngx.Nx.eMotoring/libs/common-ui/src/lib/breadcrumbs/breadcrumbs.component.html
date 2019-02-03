@@ -1,0 +1,9 @@
+<!--<div *ngIf="status && menuItems[0] != null" class="bread">
+    <p-breadcrumb class="justify-content-start" [style]="{'border':'none'}" [model]="menuItems"></p-breadcrumb>
+</div>-->
+
+
+<p-breadcrumb *ngIf="isActive" class="justify-content-start bread"
+              [style]="{'border':'none'}"
+              [model]="menuItems">
+</p-breadcrumb>

@@ -1,0 +1,1764 @@
+<p-table [value]="cars">
+
+  <ng-template pTemplate="header">
+    <tr>
+      <th style="font-size:larger; text-align:center; border:double;">Sunday</th>
+      <th style="font-size:larger; text-align:center; border:double;">Monday</th>
+      <th style="font-size:larger; text-align:center; border:double;">Tuesday</th>
+      <th style="font-size:larger; text-align:center; border:double;">Wednesday</th>
+      <th style="font-size:larger; text-align:center; border:double;">Thursday</th>
+      <th style="font-size:larger; text-align:center; border:double;">Friday</th>
+      <th style="font-size:larger; text-align:center; border:double;">Saturday</th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-car>
+    <tr>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double; background-color:#cacaca;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;"></span>
+          <span style="float:right; font-weight:bold; font-size:larger;"></span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double; background-color:#cacaca;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;"></span>
+          <span style="float:right; font-weight:bold; font-size:larger;"></span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double; background-color:#cacaca;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;"></span>
+          <span style="float:right; font-weight:bold; font-size:larger;"></span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;01&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;02&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;03&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;04&nbsp;</span>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:0px; border:double; background-color:#cacaca;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double; background-color:#cacaca;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double; background-color:#cacaca;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Closed</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;05&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;06&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;07&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;08&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;09&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;10&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;11&nbsp;</span>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Closed</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;12&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;13&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;14&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;15&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;16&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;17&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;18&nbsp;</span>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Closed</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;19&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;20&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;21&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;22&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Public Holiday</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;23&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;24&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;25&nbsp;</span>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Closed</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;26&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;27&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;28&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;29&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;30&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;">Available : 9</span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;31&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double; background-color:#cacaca;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;"></span>
+          <span style="float:right; font-weight:bold; font-size:larger;"></span>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="08:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="09:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="10:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="11:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="12:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxDisabled"><p-checkbox [disabled]="true"></p-checkbox></span>
+                <input type="text" class="pCheckboxInputDisabled" style="max-width:65px; text-align:center" value="13:00" disabled>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="14:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="15:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="16:00" readonly>
+              </div>
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon pCheckboxEnabled"><p-checkbox></p-checkbox></span>
+                <input type="text" style="max-width:65px; text-align:center" value="17:00" readonly>
+              </div>
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double; background-color:#cacaca;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double; background-color:#cacaca;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;"></span>
+          <span style="float:right; font-weight:bold; font-size:larger;">&nbsp;</span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double; background-color:#cacaca;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;"></span>
+          <span style="float:right; font-weight:bold; font-size:larger;"></span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double; background-color:#cacaca;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;"></span>
+          <span style="float:right; font-weight:bold; font-size:larger;"></span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double; background-color:#cacaca;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;"></span>
+          <span style="float:right; font-weight:bold; font-size:larger;"></span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double; background-color:#cacaca;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;"></span>
+          <span style="float:right; font-weight:bold; font-size:larger;"></span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double; background-color:#cacaca;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;"></span>
+          <span style="float:right; font-weight:bold; font-size:larger;"></span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; border-top:double; background-color:#cacaca;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;"></span>
+          <span style="float:right; font-weight:bold; font-size:larger;"></span>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:0px; border-left:double; border-right:double; background-color:#cacaca;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;"></span>
+          <span style="float:right; font-weight:bold; font-size:larger;"></span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; background-color:#cacaca;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;"></span>
+          <span style="float:right; font-weight:bold; font-size:larger;"></span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; background-color:#cacaca;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;"></span>
+          <span style="float:right; font-weight:bold; font-size:larger;"></span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; background-color:#cacaca;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;"></span>
+          <span style="float:right; font-weight:bold; font-size:larger;"></span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; background-color:#cacaca;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;"></span>
+          <span style="float:right; font-weight:bold; font-size:larger;"></span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; background-color:#cacaca;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;"></span>
+          <span style="float:right; font-weight:bold; font-size:larger;"></span>
+        </div>
+      </td>
+      <td style="padding:0px; border-left:double; border-right:double; background-color:#cacaca;">
+        <div style="text-align:center;">
+          <span style="vertical-align:middle;"></span>
+          <span style="float:right; font-weight:bold; font-size:larger;"></span>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:0px; border:double; background-color:#cacaca;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double; background-color:#cacaca;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double; background-color:#cacaca;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double; background-color:#cacaca;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double; background-color:#cacaca;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double; background-color:#cacaca;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+
+      <td style="padding:0px; border:double; background-color:#cacaca;">
+        <p-scrollPanel [style]="{width: '100%', height: '95px'}">
+          <div class="d-flex justify-content-end">
+            <div class="ml-auto mr-auto schedularDisplayNode">
+            </div>
+          </div>
+        </p-scrollPanel>
+      </td>
+    </tr>
+
+  </ng-template>
+</p-table>
+
+  Your selected appointment request is for 31 January 2018 16:00 to 17:00 and 17:00 to 18:00.

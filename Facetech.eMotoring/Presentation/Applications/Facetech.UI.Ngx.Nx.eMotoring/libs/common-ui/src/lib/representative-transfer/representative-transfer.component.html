@@ -1,0 +1,55 @@
+<!--<p-pickList [source]="entityChanged.persons" [target]="entityChanged.persons">
+  <ng-template let-rep pTemplate="item">
+    <div class="ui-helper-clearfix">
+      <div style="font-size:14px;float:right;margin:15px 5px 0 0">{{rep.person.name}}- {{rep.depName}}</div>
+    </div>
+  </ng-template>
+</p-pickList>-->
+
+<div class="m-3">
+  <p-panel #pnl>
+    <p-header>
+      <div class="component-header-text">Representitve Transfer</div>
+    </p-header>
+    <div style="display:flex; justify-content:space-between;">
+      <p-selectButton class="m-1 mr-3" [options]="entityAOptions" [(ngModel)]="selectedEntityA" (onChange)="setEntityDropOptions()" optionLabel="EntityName"></p-selectButton>
+      <p-selectButton class="m-1 ml-3" [options]="entityBOptions" [(ngModel)]="selectedEntityB" (onChange)="setEntityDropOptions()" optionLabel="EntityName"></p-selectButton>
+      
+    </div>
+    <div class="m-1" style="display:block;" *ngIf="((selectedEntityA.EntityName? true:false) && (selectedEntityB.EntityName? true:false))">
+      <p-pickList [source]="selectedEntityA.persons"
+                  [target]="selectedEntityB.persons"
+                  sourceHeader="{{selectedEntityA.EntityName||'Not selected'}}"
+                  targetHeader="{{selectedEntityB.EntityName||'Not selected'}}"
+                  [responsive]="true"
+                  filterBy="name"
+                  dragdrop="true"
+                  dragdropScope="person"
+                  sourceFilterPlaceholder="Search by name"
+                  targetFilterPlaceholder="Search by name"
+                  [showSourceControls]="false"
+                  [showTargetControls]="false"
+                  [sourceStyle]="{'height':'300px'}"
+                  [targetStyle]="{'height':'300px'}"
+                  [style]="{'min-width':'80%'}"
+                  [styleClass]="component-header-text">
+        <ng-template let-person pTemplate="item">
+          <p-panel [header]="person.name">
+            <div style="display:flex; justify-content:space-between">
+              <div>
+                {{person.departmentName}}
+              </div>
+              <div style="float:right">
+                <p-toggleButton onLabel="Training" offLabel="Training" onIcon="pi pi-check" offIcon="pi pi-times" [(ngModel)]="person.trainingRequired"></p-toggleButton>
+              </div>
+            </div>
+          </p-panel>
+        </ng-template>
+      </p-pickList>
+    </div>
+  </p-panel>
+</div>
+
+
+
+

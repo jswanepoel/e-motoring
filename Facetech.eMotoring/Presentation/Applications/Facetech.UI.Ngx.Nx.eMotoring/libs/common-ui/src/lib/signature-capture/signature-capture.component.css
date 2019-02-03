@@ -1,0 +1,14 @@
+.bg-faceNewColorForTestingPurposes {
+  background-color: #000000 !important;
+}
+
+
+.ngx-page {
+  background-color: lightgray;
+  box-shadow: 0 0 0.2cm rgba(0,0,0,0.5);
+}
+
+  .ngx-page[size="Signature"] {
+    width: 10cm;
+    height: 4cm;
+  }

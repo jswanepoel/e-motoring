@@ -1,0 +1,92 @@
+<div [formGroup]="form" *ngIf="!hidden" [@slideInOutQuestion] class="mx-auto m-3" style=" max-width: 550px;">
+  <div class="form-row question">
+    <div class="question" style="min-width:280px;">
+      <label [attr.for]="question.key">{{question.label}}</label>
+    </div>
+    <div class="question d-flex justify-content-center">
+      <div [ngStyle]="{'background-color':(form.controls[question.key].valid || form.controls[question.key].disabled ) ? 'green' : 'red' }" style="z-index:1;" class="p-1 status-indicator"></div>
+
+      <div [ngSwitch]="question.controlType">
+
+        <input #questionRef *ngSwitchCase="'textbox'"
+               pInputText
+               [formControlName]="question.key"
+               [id]="question.key"
+               [type]="question.type" />
+
+        <textarea #questionRef *ngSwitchCase="'textarea'"
+                  [id]="question.key"
+                  [formControlName]="question.key"
+                  style="width: 252px; height: 105px; resize: none; padding-left: 6px; margin-bottom:-6px;"
+                  placeholder="{{question.questionOptions.placeHolder ? question.questionOptions.placeHolder : ''}}"
+                  [maxlength]="question.questionOptions.maxlength" >
+        </textarea>
+
+        <p-dropdown #questionRef *ngSwitchCase="'dropdown'"
+                    [options]="question.questionOptions.multiOptions"
+                    [id]="question.key"
+                    [formControlName]="question.key"
+                    optionLabel="label"
+                    [placeholder]="question.questionOptions.placeHolder">
+        </p-dropdown>
+
+        <p-inputMask #questionRef *ngSwitchCase="'inputMask'"
+                     [autoClear]="false"
+                     [mask]="attributes.mask||'No mask set'"
+                     [formControlName]="question.key"
+                     [id]="question.key"
+                     [unmask]="true">
+        </p-inputMask>
+
+        <p-listbox #questionRef *ngSwitchCase="'listbox'"
+                   [options]="question.questionOptions.multiOptions"
+                   [formControlName]="question.key"
+                   [id]="question.key"></p-listbox>
+
+        <p-calendar #questionRef *ngSwitchCase="'date'"
+                    [formControlName]="question.key"
+                    placeholder="DD/MM/YYYY"
+                    [id]="question.key"
+                    [showIcon]="true"
+                    class="input-calendar"></p-calendar>
+
+        <div *ngSwitchCase="'radio'">
+          <div class="radioContainer">
+            <div *ngFor="let option of question.questionOptions.multiOptions||[{value:'Loading',label:'Loading'}]">
+              <div class="pt-1 pb-1 pl-2">
+                <p-radioButton #questionRef
+                               [name]="question.key"
+                               [value]="option.value"
+                               [label]="option.label"
+                               [formControlName]="question.key"></p-radioButton>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="mt-1 mr-1 w-100" *ngIf="form.controls[question.key].dirty && !form.controls[question.key].valid " [@slideInValidation]>
+      <p-message [ngStyle]="{'float':'right'}" severity="error" text="{{question.label}} {{question.errorText? question.errorText : 'is invalid!'}}"></p-message>
+    </div>
+    <div *ngIf="_isLoading">
+      <p-progressSpinner [style]="{width: '20px', height: '20px'}" strokeWidth="5" fill="#FFFF" animationDuration=".5s"></p-progressSpinner>
+    </div>
+  </div>
+</div>
+
+
+
+<!--<div class="ui-grid-row mt-2 ">
+  <div class="ui-grid-col-6">
+    Stakeholder Surname *:
+  </div>
+  <div [ngStyle]="{'background-color':userform.controls['surname'].valid ? 'green' : 'red' }" style="z-index:1;" class="p-1 status-indicator"></div>
+  <div class="ui-grid-col-6">
+    <input pInputText type="text" formControlName="surname" (focus)="question[1] = false " (blur)="question[1] = true" placeholder="Required" />
+    <div *ngIf="question[1]" [@slideInOut]>
+      <p-message severity="error" text="This field is required" *ngIf="question[1]&&!userform.controls['surname'].valid&&userform.controls['surname'].dirty"></p-message>
+    </div>
+  </div>
+</div>-->

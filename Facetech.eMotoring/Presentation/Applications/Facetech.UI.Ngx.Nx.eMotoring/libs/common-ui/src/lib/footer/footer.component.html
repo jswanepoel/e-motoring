@@ -1,0 +1,11 @@
+<div *ngIf="status">
+  <div *ngIf="menuItem[0] != null" style="display:inline-block; position:relative; width:100%; text-align:center; align-content:center;">
+    <button type="button" class="btn btn-danger btn-sm mr-2 mt-2 mb-2" (click)="cancel()" style="box-shadow:2px 2px black;"><i class="fa fa-ban mr-1"></i>Cancel</button>
+    <button type="button" class="btn btn btn-primary btn-sm mr-2 mt-2 mb-2" (click)="prev()" style="width:35px;box-shadow:2px 2px black;"><i class="fa fa-angle-left"></i><!--<fa-icon class="fa fa-angle-left font-weight-bold"></fa-icon>--></button>
+    <button type="button" class="btn btn btn-primary btn-sm mr-2 mt-2 mb-2" (click)="next()" style="width:35px;box-shadow:2px 2px black;"><i class="fa fa-angle-right"></i><!--<fa-icon class="fa fa-angle-right font-weight-bold"></fa-icon>--></button>
+    <button type="button" class="btn btn-success btn-sm mt-2 mb-2" style="box-shadow:2px 2px black;"  disabled><i class="fa fa-cloud mr-1"></i>Submit</button>
+  </div>
+</div>
+
+
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>

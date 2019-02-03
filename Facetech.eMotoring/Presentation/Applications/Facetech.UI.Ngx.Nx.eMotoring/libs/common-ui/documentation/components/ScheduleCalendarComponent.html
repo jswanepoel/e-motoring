@@ -1,0 +1,1272 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>facetech.ui.ngx.nx.e-motoring documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">facetech.ui.ngx.nx.e-motoring documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ScheduleCalendarComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>libs/common-ui/src/lib/schedule-calendar/schedule-calendar.component.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>ngx-schedule-calendar</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./schedule-calendar.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./schedule-calendar.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#availableSlotsForModel">availableSlotsForModel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#canGoToNextMonth">canGoToNextMonth</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#canGoToPreviousMonth">canGoToPreviousMonth</a>
+                            </li>
+                            <li>
+                                <a href="#cars">cars</a>
+                            </li>
+                            <li>
+                                <a href="#contentSize">contentSize</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#currentMonthYear">currentMonthYear</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#scheduleCalendarModel">scheduleCalendarModel</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#calculateCardBodyHeight">calculateCardBodyHeight</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#nextMonth">nextMonth</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#previousMonth">previousMonth</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#setAvailableSlots">setAvailableSlots</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#includeFooter">includeFooter</a>
+                            </li>
+                            <li>
+                                <a href="#scheduleCalendarModel">scheduleCalendarModel</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#setScheduleCalendarModel">setScheduleCalendarModel</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">libs/common-ui/src/lib/schedule-calendar/schedule-calendar.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="includeFooter"></a>
+                        <code>includeFooter</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>false</code>
+                        </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">libs/common-ui/src/lib/schedule-calendar/schedule-calendar.component.ts:12</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="scheduleCalendarModel"></a>
+                        <code>scheduleCalendarModel</code>
+                    </td>
+                    <td class="col-md-10">
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">libs/common-ui/src/lib/schedule-calendar/schedule-calendar.component.ts:19</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="calculateCardBodyHeight"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            calculateCardBodyHeight
+                            </b>
+                            <a href="#calculateCardBodyHeight"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>calculateCardBodyHeight()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">libs/common-ui/src/lib/schedule-calendar/schedule-calendar.component.ts:93</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="nextMonth"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            nextMonth
+                            </b>
+                            <a href="#nextMonth"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>nextMonth()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">libs/common-ui/src/lib/schedule-calendar/schedule-calendar.component.ts:84</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">libs/common-ui/src/lib/schedule-calendar/schedule-calendar.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="previousMonth"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            previousMonth
+                            </b>
+                            <a href="#previousMonth"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>previousMonth()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">libs/common-ui/src/lib/schedule-calendar/schedule-calendar.component.ts:72</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setAvailableSlots"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            setAvailableSlots
+                            </b>
+                            <a href="#setAvailableSlots"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>setAvailableSlots(workingDate: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">libs/common-ui/src/lib/schedule-calendar/schedule-calendar.component.ts:47</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>workingDate</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="availableSlotsForModel"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            availableSlotsForModel
+                            </b>
+                            <a href="#availableSlotsForModel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>availableSlotsForModel:     <code>any[][]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>any[][]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">libs/common-ui/src/lib/schedule-calendar/schedule-calendar.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="canGoToNextMonth"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            canGoToNextMonth
+                            </b>
+                            <a href="#canGoToNextMonth"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>canGoToNextMonth:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">libs/common-ui/src/lib/schedule-calendar/schedule-calendar.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="canGoToPreviousMonth"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            canGoToPreviousMonth
+                            </b>
+                            <a href="#canGoToPreviousMonth"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>canGoToPreviousMonth:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">libs/common-ui/src/lib/schedule-calendar/schedule-calendar.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cars"></a>
+                        <span class="name">
+                            <b>
+                            cars
+                            </b>
+                            <a href="#cars"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>cars:     <code><a href="../interfaces/Car.html" target="_self" >Car[]</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/Car.html" target="_self" >Car[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">libs/common-ui/src/lib/schedule-calendar/schedule-calendar.component.ts:10</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="contentSize"></a>
+                        <span class="name">
+                            <b>
+                            contentSize
+                            </b>
+                            <a href="#contentSize"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>contentSize:     <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;contentSize&#x27;)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">libs/common-ui/src/lib/schedule-calendar/schedule-calendar.component.ts:11</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currentMonthYear"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            currentMonthYear
+                            </b>
+                            <a href="#currentMonthYear"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>currentMonthYear:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">libs/common-ui/src/lib/schedule-calendar/schedule-calendar.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="scheduleCalendarModel"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            scheduleCalendarModel
+                            </b>
+                            <a href="#scheduleCalendarModel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>scheduleCalendarModel:     <code><a href="../classes/ScheduleCalendar.html" target="_self" >ScheduleCalendar</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/ScheduleCalendar.html" target="_self" >ScheduleCalendar</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">libs/common-ui/src/lib/schedule-calendar/schedule-calendar.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setScheduleCalendarModel"></a>
+                        <span class="name"><b>setScheduleCalendarModel</b><a href="#setScheduleCalendarModel"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>setScheduleCalendarModel(scheduleCalendarModel)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">libs/common-ui/src/lib/schedule-calendar/schedule-calendar.component.ts:19</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>scheduleCalendarModel</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, ViewChild, ElementRef, Input } from &#x27;@angular/core&#x27;;
+import { ScheduleCalendar } from &#x27;../../models/schedule-calendar&#x27;;
+
+@Component({
+  selector: &#x27;ngx-schedule-calendar&#x27;,
+  templateUrl: &#x27;./schedule-calendar.component.html&#x27;,
+  styleUrls: [&#x27;./schedule-calendar.component.css&#x27;]
+})
+export class ScheduleCalendarComponent {
+  cars: Car[];
+  @ViewChild(&#x27;contentSize&#x27;) contentSize: ElementRef; // Base Template : Needed for &#x27;offset&#x27; calculation in method calculateCardBodyHeight()
+  @Input() includeFooter: boolean &#x3D; false; // Base Template : Needed for &#x27;offset&#x27; calculation in method calculateCardBodyHeight()
+  public currentMonthYear: string &#x3D; &#x27;&#x27;;
+  public scheduleCalendarModel: ScheduleCalendar;
+  public availableSlotsForModel: any[][];
+  public canGoToPreviousMonth: boolean;
+  public canGoToNextMonth: boolean;
+
+  @Input(&#x27;scheduleCalendarModel&#x27;) set setScheduleCalendarModel(scheduleCalendarModel: ScheduleCalendar) {
+    if (!scheduleCalendarModel.availableSlots) {
+      scheduleCalendarModel.date &#x3D; new Date(scheduleCalendarModel.date.getFullYear(), scheduleCalendarModel.date.getMonth(), 1);
+      this.setAvailableSlots(scheduleCalendarModel.date);
+    }
+    else {
+      this.availableSlotsForModel &#x3D; scheduleCalendarModel.availableSlots;
+    }
+
+    this.scheduleCalendarModel &#x3D; new ScheduleCalendar(scheduleCalendarModel.date, this.availableSlotsForModel, scheduleCalendarModel.canCycle);
+    this.currentMonthYear &#x3D; this.scheduleCalendarModel.date.toLocaleDateString(&quot;en&quot;, { month: &quot;long&quot;, year: &quot;numeric&quot; }); // https://www.andiamo.co.uk/resources/iso-language-codes
+
+    this.canGoToPreviousMonth &#x3D; false;
+    this.canGoToNextMonth &#x3D; true;
+  }
+
+  constructor() {
+  }
+
+  ngOnInit() {
+    this.cars &#x3D; [
+      {
+        &quot;brand&quot;: &quot;abc&quot;,
+        &quot;color&quot;: &quot;yellow&quot;
+      }
+    ];
+  }
+
+  public setAvailableSlots(workingDate: Date): void {
+
+    let monthStartDayOfWeek &#x3D; new Date(workingDate.getFullYear(), workingDate.getMonth(), 1).getDay();
+    let daysInMonth &#x3D; new Date(workingDate.getFullYear(), workingDate.getMonth() + 1, 0).getDate();
+
+    this.availableSlotsForModel &#x3D; new Array();
+
+    var i: number;
+    for (i &#x3D; 0; i &lt;&#x3D; 41; i++) {
+      if (i &lt; monthStartDayOfWeek) {
+        this.availableSlotsForModel.push([null, null, false]);
+      }
+      else {
+        if (i &lt;&#x3D; (daysInMonth + monthStartDayOfWeek - 1)) {
+          this.availableSlotsForModel.push([new Date(workingDate.getFullYear(), workingDate.getMonth(), i - monthStartDayOfWeek + 1), 0, false]);
+        }
+        else {
+          this.availableSlotsForModel.push([null, null, false]);
+        }
+      }
+    }
+
+    return;
+  }
+
+  public previousMonth(): void {
+    this.scheduleCalendarModel.date &#x3D; new Date(this.scheduleCalendarModel.date.getFullYear(), this.scheduleCalendarModel.date.getMonth() - 1, 1);
+
+    this.setAvailableSlots(this.scheduleCalendarModel.date);
+    this.scheduleCalendarModel &#x3D; new ScheduleCalendar(this.scheduleCalendarModel.date, this.availableSlotsForModel, this.scheduleCalendarModel.canCycle);
+    this.currentMonthYear &#x3D; this.scheduleCalendarModel.date.toLocaleDateString(&quot;en&quot;, { month: &quot;long&quot;, year: &quot;numeric&quot; }); // https://www.andiamo.co.uk/resources/iso-language-codes
+
+    if ((this.scheduleCalendarModel.date.getFullYear() &#x3D;&#x3D; new Date().getFullYear()) &amp;&amp; (this.scheduleCalendarModel.date.getMonth() &#x3D;&#x3D; new Date().getMonth())) {
+      this.canGoToPreviousMonth &#x3D; false;
+    }
+  }
+
+  public nextMonth(): void {
+    this.canGoToPreviousMonth &#x3D; true;
+    this.scheduleCalendarModel.date &#x3D; new Date(this.scheduleCalendarModel.date.getFullYear(), this.scheduleCalendarModel.date.getMonth() + 1, 1);
+    this.setAvailableSlots(this.scheduleCalendarModel.date);
+    this.scheduleCalendarModel &#x3D; new ScheduleCalendar(this.scheduleCalendarModel.date, this.availableSlotsForModel, this.scheduleCalendarModel.canCycle);
+    this.currentMonthYear &#x3D; this.scheduleCalendarModel.date.toLocaleDateString(&quot;en&quot;, { month: &quot;long&quot;, year: &quot;numeric&quot; }); // https://www.andiamo.co.uk/resources/iso-language-codes
+  }
+
+  // Base Template method : Do not alter
+  public calculateCardBodyHeight(): number {
+    let offset &#x3D; 0;
+
+    if (this.contentSize.nativeElement.offsetHeight &gt; 665) {
+      offset &#x3D; this.includeFooter ? 127 : 144;
+    }
+    else {
+      offset &#x3D; this.includeFooter ? 127 : 72;
+    }
+
+    let calculatedheight &#x3D; window.innerHeight - 72 - offset;
+
+    //let calculatedheight &#x3D; 0;
+    //if (this.contentSize.nativeElement.offsetHeight &gt; 665) {
+    //  calculatedheight &#x3D; window.innerHeight - 72 - offset; //176 -
+    //}
+    //else {
+    //  calculatedheight &#x3D; window.innerHeight - offset; //176 -
+    //}
+
+    return calculatedheight &lt; 200 ? 200 : calculatedheight;
+  }
+
+}
+
+export interface Car {
+  brand;
+  color;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;shell&quot;&gt;
+  &lt;div class&#x3D;&quot;center-block block-margin&quot; style&#x3D;&quot;width:100%;&quot;&gt;
+    &lt;div class&#x3D;&quot;card&quot; style&#x3D;&quot;height:100%;&quot;&gt;
+
+      &lt;div class&#x3D;&quot;card-header sub-header&quot;&gt;
+        &lt;span class&#x3D;&quot;component-header-text&quot;&gt;Slots Available&lt;/span&gt;
+        &lt;span&gt;&lt;button class&#x3D;&quot;component-header-button&quot; type&#x3D;&quot;button&quot; pButton icon&#x3D;&quot;fa fa-refresh&quot; pTooltip&#x3D;&quot;Reset to original state&quot; tooltipPosition&#x3D;&quot;top&quot;&gt;&lt;/button&gt;&lt;/span&gt;
+        &lt;span&gt;&lt;button class&#x3D;&quot;component-header-button&quot; type&#x3D;&quot;button&quot; pButton icon&#x3D;&quot;fa fa-info&quot; pTooltip&#x3D;&quot;Information&quot; tooltipPosition&#x3D;&quot;top&quot;&gt;&lt;/button&gt;&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;!--&lt;ng-template #popInstructions&gt;
+    &lt;ul class&#x3D;&quot;list-unstyled&quot;&gt;
+      &lt;li *ngFor&#x3D;&quot;let instruction of instructions&quot;&gt;{{instruction}}&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/ng-template&gt;--&gt;
+
+      &lt;div class&#x3D;&quot;mt-2&quot; style&#x3D;&quot;text-align:center;&quot;&gt;&lt;h2&gt;{{currentMonthYear}}&lt;/h2&gt;&lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;d-flex mb-7&quot; style&#x3D;&quot;color:white;&quot;&gt;
+        &lt;div class&#x3D;&quot;flex-even bg-primary ml-1 mt-1&quot; style&#x3D;&quot;height:25px; text-align:center;&quot;&gt;Sun&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even bg-primary ml-1 mt-1&quot; style&#x3D;&quot;height:25px; text-align:center;&quot;&gt;Mon&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even bg-primary ml-1 mt-1&quot; style&#x3D;&quot;height:25px; text-align:center;&quot;&gt;Tue&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even bg-primary ml-1 mt-1&quot; style&#x3D;&quot;height:25px; text-align:center;&quot;&gt;Wed&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even bg-primary ml-1 mt-1&quot; style&#x3D;&quot;height:25px; text-align:center;&quot;&gt;Thu&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even bg-primary ml-1 mt-1&quot; style&#x3D;&quot;height:25px; text-align:center;&quot;&gt;Fri&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even bg-primary ml-1 mt-1 mr-1&quot; style&#x3D;&quot;height:25px; text-align:center;&quot;&gt;Sat&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;d-flex mb-7&quot;&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[0][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[0][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[1][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[1][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[2][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[2][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[3][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[3][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[4][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[4][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[5][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[5][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 mr-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[6][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[6][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;d-flex mb-7&quot;&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[0][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{scheduleCalendarModel.availableSlots[0][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[0][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[1][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[1][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[1][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[2][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[2][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[2][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[3][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[3][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[3][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[4][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[4][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[4][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[5][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[5][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[5][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mr-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[6][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[6][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[6][1] : &#x27;&#x27;}}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;d-flex mb-7&quot;&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[7][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[7][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[8][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[8][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[9][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[9][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[10][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[10][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[11][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[11][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[12][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[12][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 mr-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[13][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[13][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;d-flex mb-7&quot;&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[7][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[7][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[7][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[8][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[8][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[8][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[9][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[9][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[9][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[10][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[10][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[10][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[11][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[11][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[11][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[12][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[12][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[12][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mr-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[13][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[13][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[13][1] : &#x27;&#x27;}}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;d-flex mb-7&quot;&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[14][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[14][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[15][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[15][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[16][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[16][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[17][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[17][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[18][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[18][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[19][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[19][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 mr-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[20][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[20][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;d-flex mb-7&quot;&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[14][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[14][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[14][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[15][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[15][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[15][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[16][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[16][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[16][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[17][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[17][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[17][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[18][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[18][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[18][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[19][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[19][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[19][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mr-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[20][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[20][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[20][1] : &#x27;&#x27;}}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;d-flex mb-7&quot;&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[21][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[21][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[22][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[22][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[23][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[23][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[24][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[24][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[25][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[25][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[26][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[26][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 mr-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[27][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[27][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;d-flex mb-7&quot;&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[21][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[21][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[21][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[22][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[22][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[22][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[23][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[23][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[23][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[24][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[24][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[24][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[25][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[25][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[25][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[26][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[26][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[26][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mr-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[27][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[27][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[27][1] : &#x27;&#x27;}}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;d-flex mb-7&quot;&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[28][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[28][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[29][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[29][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[30][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[30][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[31][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[31][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[32][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[32][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[33][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[33][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 mr-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[34][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[34][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;d-flex mb-7&quot;&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[28][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[28][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[28][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[29][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[29][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[29][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[30][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[30][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[30][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[31][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[31][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[31][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[32][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[32][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[32][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[33][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[33][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[33][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mr-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[34][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[34][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[34][1] : &#x27;&#x27;}}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;d-flex mb-7&quot;&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[35][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[35][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[36][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[36][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[37][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[37][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[38][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[38][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[39][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[39][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[40][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[40][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mt-1 mr-1 calendarNodeHeader&quot;&gt;&lt;div *ngIf&#x3D;&quot;scheduleCalendarModel.availableSlots[41][0]&quot;&gt;{{this.scheduleCalendarModel.availableSlots[41][0].getDate()}}&amp;nbsp;&lt;/div&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;d-flex mb-7&quot;&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mb-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[35][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[35][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[35][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mb-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[36][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[36][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[36][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mb-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[37][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[37][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[37][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mb-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[38][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[38][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[38][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mb-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[39][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[39][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[39][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mb-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[40][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[40][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[40][1] : &#x27;&#x27;}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex-even ml-1 mb-1 mr-1 p-2 calendarNodeContent&quot; [ngClass]&#x3D;&quot;scheduleCalendarModel.availableSlots[41][2] ? &#x27;calendarNodeSelected&#x27; : &#x27;&#x27;&quot;&gt;{{this.scheduleCalendarModel.availableSlots[41][1] &gt; 0 ? this.scheduleCalendarModel.availableSlots[41][1] : &#x27;&#x27;}}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div *ngIf&#x3D;&quot;includeFooter &amp;&amp; this.scheduleCalendarModel.canCycle&quot;&gt;
+        &lt;div class&#x3D;&quot;d-flex card-footer p-2&quot; style&#x3D;&quot;text-align:center;&quot;&gt;
+          &lt;div style&#x3D;&quot;display:inline-block; width:100%;&quot;&gt;
+            &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn btn-primary btn-sm mr-2&quot; style&#x3D;&quot;width:35px;&quot; (click)&#x3D;&quot;previousMonth()&quot; [attr.disabled]&#x3D;&quot;canGoToPreviousMonth ? null : &#x27;disabled&#x27;&quot;&gt;&lt;fa-icon class&#x3D;&quot;fa fa-angle-left font-weight-bold&quot;&gt;&lt;/fa-icon&gt;&lt;/button&gt;
+            &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn btn-primary btn-sm&quot; style&#x3D;&quot;width:35px;&quot; (click)&#x3D;&quot;nextMonth()&quot; [attr.disabled]&#x3D;&quot;canGoToNextMonth ? null : &#x27;disabled&#x27;&quot;&gt;&lt;fa-icon class&#x3D;&quot;fa fa-angle-right font-weight-bold&quot;&gt;&lt;/fa-icon&gt;&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./schedule-calendar.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.pCheckboxEnabled {
+  background-color: #ffffff !important;
+  height: 28px !important;
+  min-width: 26px !important;
+  max-width: 26px !important;
+  padding-left: 2px !important;
+  padding-top: 2px !important;
+}
+
+.pCheckboxDisabled {
+  background-color: #cacaca !important;
+  border-color: #979797 !important;
+  border-style: solid;
+  border-width: 1px;
+  height: 28px !important;
+  min-width: 26px !important;
+  max-width: 26px !important;
+  padding-left: 2px !important;
+  padding-top: 2px !important;
+}
+
+.pCheckboxInputDisabled {
+  background-color: #cacaca !important;
+  border-color: #979797 !important;
+  border-style: solid;
+  border-width: 1px;
+  height: 28px;
+}
+
+.schedularDisplayNode {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="shell">  <div class="center-block block-margin" style="width:100%;">    <div class="card" style="height:100%;">      <div class="card-header sub-header p-2">        <span class="component-header-text">Slots Available</span>        <span><button class="component-header-button" type="button" pButton icon="fa fa-refresh" pTooltip="Reset to original state" tooltipPosition="top"></button></span>        <span><button class="component-header-button" type="button" pButton icon="fa fa-info" pTooltip="Information" tooltipPosition="top"></button></span>      </div>      <!--<ng-template #popInstructions>    <ul class="list-unstyled">      <li *ngFor="let instruction of instructions">{{instruction}}</li>    </ul>  </ng-template>-->      <div class="mt-2" style="text-align:center;"><h2>{{currentMonthYear}}</h2></div>      <div class="d-flex mb-7" style="color:white;">        <div class="flex-even bg-primary ml-1 mt-1" style="height:25px; text-align:center;">Sun</div>        <div class="flex-even bg-primary ml-1 mt-1" style="height:25px; text-align:center;">Mon</div>        <div class="flex-even bg-primary ml-1 mt-1" style="height:25px; text-align:center;">Tue</div>        <div class="flex-even bg-primary ml-1 mt-1" style="height:25px; text-align:center;">Wed</div>        <div class="flex-even bg-primary ml-1 mt-1" style="height:25px; text-align:center;">Thu</div>        <div class="flex-even bg-primary ml-1 mt-1" style="height:25px; text-align:center;">Fri</div>        <div class="flex-even bg-primary ml-1 mt-1 mr-1" style="height:25px; text-align:center;">Sat</div>      </div>      <div class="d-flex mb-7">        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[0][0]">{{this.scheduleCalendarModel.availableSlots[0][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[1][0]">{{this.scheduleCalendarModel.availableSlots[1][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[2][0]">{{this.scheduleCalendarModel.availableSlots[2][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[3][0]">{{this.scheduleCalendarModel.availableSlots[3][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[4][0]">{{this.scheduleCalendarModel.availableSlots[4][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[5][0]">{{this.scheduleCalendarModel.availableSlots[5][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 mr-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[6][0]">{{this.scheduleCalendarModel.availableSlots[6][0].getDate()}}&nbsp;</div></div>      </div>      <div class="d-flex mb-7">        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[0][2] ? \'calendarNodeSelected\' : \'\'">{{scheduleCalendarModel.availableSlots[0][1] > 0 ? this.scheduleCalendarModel.availableSlots[0][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[1][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[1][1] > 0 ? this.scheduleCalendarModel.availableSlots[1][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[2][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[2][1] > 0 ? this.scheduleCalendarModel.availableSlots[2][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[3][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[3][1] > 0 ? this.scheduleCalendarModel.availableSlots[3][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[4][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[4][1] > 0 ? this.scheduleCalendarModel.availableSlots[4][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[5][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[5][1] > 0 ? this.scheduleCalendarModel.availableSlots[5][1] : \'\'}}</div>        <div class="flex-even ml-1 mr-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[6][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[6][1] > 0 ? this.scheduleCalendarModel.availableSlots[6][1] : \'\'}}</div>      </div>      <div class="d-flex mb-7">        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[7][0]">{{this.scheduleCalendarModel.availableSlots[7][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[8][0]">{{this.scheduleCalendarModel.availableSlots[8][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[9][0]">{{this.scheduleCalendarModel.availableSlots[9][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[10][0]">{{this.scheduleCalendarModel.availableSlots[10][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[11][0]">{{this.scheduleCalendarModel.availableSlots[11][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[12][0]">{{this.scheduleCalendarModel.availableSlots[12][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 mr-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[13][0]">{{this.scheduleCalendarModel.availableSlots[13][0].getDate()}}&nbsp;</div></div>      </div>      <div class="d-flex mb-7">        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[7][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[7][1] > 0 ? this.scheduleCalendarModel.availableSlots[7][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[8][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[8][1] > 0 ? this.scheduleCalendarModel.availableSlots[8][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[9][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[9][1] > 0 ? this.scheduleCalendarModel.availableSlots[9][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[10][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[10][1] > 0 ? this.scheduleCalendarModel.availableSlots[10][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[11][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[11][1] > 0 ? this.scheduleCalendarModel.availableSlots[11][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[12][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[12][1] > 0 ? this.scheduleCalendarModel.availableSlots[12][1] : \'\'}}</div>        <div class="flex-even ml-1 mr-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[13][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[13][1] > 0 ? this.scheduleCalendarModel.availableSlots[13][1] : \'\'}}</div>      </div>      <div class="d-flex mb-7">        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[14][0]">{{this.scheduleCalendarModel.availableSlots[14][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[15][0]">{{this.scheduleCalendarModel.availableSlots[15][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[16][0]">{{this.scheduleCalendarModel.availableSlots[16][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[17][0]">{{this.scheduleCalendarModel.availableSlots[17][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[18][0]">{{this.scheduleCalendarModel.availableSlots[18][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[19][0]">{{this.scheduleCalendarModel.availableSlots[19][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 mr-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[20][0]">{{this.scheduleCalendarModel.availableSlots[20][0].getDate()}}&nbsp;</div></div>      </div>      <div class="d-flex mb-7">        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[14][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[14][1] > 0 ? this.scheduleCalendarModel.availableSlots[14][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[15][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[15][1] > 0 ? this.scheduleCalendarModel.availableSlots[15][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[16][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[16][1] > 0 ? this.scheduleCalendarModel.availableSlots[16][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[17][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[17][1] > 0 ? this.scheduleCalendarModel.availableSlots[17][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[18][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[18][1] > 0 ? this.scheduleCalendarModel.availableSlots[18][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[19][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[19][1] > 0 ? this.scheduleCalendarModel.availableSlots[19][1] : \'\'}}</div>        <div class="flex-even ml-1 mr-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[20][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[20][1] > 0 ? this.scheduleCalendarModel.availableSlots[20][1] : \'\'}}</div>      </div>      <div class="d-flex mb-7">        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[21][0]">{{this.scheduleCalendarModel.availableSlots[21][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[22][0]">{{this.scheduleCalendarModel.availableSlots[22][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[23][0]">{{this.scheduleCalendarModel.availableSlots[23][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[24][0]">{{this.scheduleCalendarModel.availableSlots[24][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[25][0]">{{this.scheduleCalendarModel.availableSlots[25][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[26][0]">{{this.scheduleCalendarModel.availableSlots[26][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 mr-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[27][0]">{{this.scheduleCalendarModel.availableSlots[27][0].getDate()}}&nbsp;</div></div>      </div>      <div class="d-flex mb-7">        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[21][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[21][1] > 0 ? this.scheduleCalendarModel.availableSlots[21][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[22][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[22][1] > 0 ? this.scheduleCalendarModel.availableSlots[22][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[23][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[23][1] > 0 ? this.scheduleCalendarModel.availableSlots[23][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[24][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[24][1] > 0 ? this.scheduleCalendarModel.availableSlots[24][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[25][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[25][1] > 0 ? this.scheduleCalendarModel.availableSlots[25][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[26][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[26][1] > 0 ? this.scheduleCalendarModel.availableSlots[26][1] : \'\'}}</div>        <div class="flex-even ml-1 mr-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[27][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[27][1] > 0 ? this.scheduleCalendarModel.availableSlots[27][1] : \'\'}}</div>      </div>      <div class="d-flex mb-7">        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[28][0]">{{this.scheduleCalendarModel.availableSlots[28][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[29][0]">{{this.scheduleCalendarModel.availableSlots[29][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[30][0]">{{this.scheduleCalendarModel.availableSlots[30][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[31][0]">{{this.scheduleCalendarModel.availableSlots[31][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[32][0]">{{this.scheduleCalendarModel.availableSlots[32][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[33][0]">{{this.scheduleCalendarModel.availableSlots[33][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 mr-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[34][0]">{{this.scheduleCalendarModel.availableSlots[34][0].getDate()}}&nbsp;</div></div>      </div>      <div class="d-flex mb-7">        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[28][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[28][1] > 0 ? this.scheduleCalendarModel.availableSlots[28][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[29][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[29][1] > 0 ? this.scheduleCalendarModel.availableSlots[29][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[30][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[30][1] > 0 ? this.scheduleCalendarModel.availableSlots[30][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[31][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[31][1] > 0 ? this.scheduleCalendarModel.availableSlots[31][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[32][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[32][1] > 0 ? this.scheduleCalendarModel.availableSlots[32][1] : \'\'}}</div>        <div class="flex-even ml-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[33][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[33][1] > 0 ? this.scheduleCalendarModel.availableSlots[33][1] : \'\'}}</div>        <div class="flex-even ml-1 mr-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[34][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[34][1] > 0 ? this.scheduleCalendarModel.availableSlots[34][1] : \'\'}}</div>      </div>      <div class="d-flex mb-7">        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[35][0]">{{this.scheduleCalendarModel.availableSlots[35][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[36][0]">{{this.scheduleCalendarModel.availableSlots[36][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[37][0]">{{this.scheduleCalendarModel.availableSlots[37][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[38][0]">{{this.scheduleCalendarModel.availableSlots[38][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[39][0]">{{this.scheduleCalendarModel.availableSlots[39][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[40][0]">{{this.scheduleCalendarModel.availableSlots[40][0].getDate()}}&nbsp;</div></div>        <div class="flex-even ml-1 mt-1 mr-1 calendarNodeHeader"><div *ngIf="scheduleCalendarModel.availableSlots[41][0]">{{this.scheduleCalendarModel.availableSlots[41][0].getDate()}}&nbsp;</div></div>      </div>      <div class="d-flex mb-7">        <div class="flex-even ml-1 mb-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[35][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[35][1] > 0 ? this.scheduleCalendarModel.availableSlots[35][1] : \'\'}}</div>        <div class="flex-even ml-1 mb-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[36][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[36][1] > 0 ? this.scheduleCalendarModel.availableSlots[36][1] : \'\'}}</div>        <div class="flex-even ml-1 mb-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[37][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[37][1] > 0 ? this.scheduleCalendarModel.availableSlots[37][1] : \'\'}}</div>        <div class="flex-even ml-1 mb-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[38][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[38][1] > 0 ? this.scheduleCalendarModel.availableSlots[38][1] : \'\'}}</div>        <div class="flex-even ml-1 mb-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[39][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[39][1] > 0 ? this.scheduleCalendarModel.availableSlots[39][1] : \'\'}}</div>        <div class="flex-even ml-1 mb-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[40][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[40][1] > 0 ? this.scheduleCalendarModel.availableSlots[40][1] : \'\'}}</div>        <div class="flex-even ml-1 mb-1 mr-1 p-2 calendarNodeContent" [ngClass]="scheduleCalendarModel.availableSlots[41][2] ? \'calendarNodeSelected\' : \'\'">{{this.scheduleCalendarModel.availableSlots[41][1] > 0 ? this.scheduleCalendarModel.availableSlots[41][1] : \'\'}}</div>      </div>      <div *ngIf="includeFooter && this.scheduleCalendarModel.canCycle">        <div class="d-flex card-footer p-2" style="text-align:center;">          <div style="display:inline-block; width:100%;">            <button type="button" class="btn btn btn-primary btn-sm mr-2" style="width:35px;" (click)="previousMonth()" [attr.disabled]="canGoToPreviousMonth ? null : \'disabled\'"><fa-icon class="fa fa-angle-left font-weight-bold"></fa-icon></button>            <button type="button" class="btn btn btn-primary btn-sm" style="width:35px;" (click)="nextMonth()" [attr.disabled]="canGoToNextMonth ? null : \'disabled\'"><fa-icon class="fa fa-angle-right font-weight-bold"></fa-icon></button>          </div>        </div>      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'BiometricFingerPrintComponent', 'selector': 'biometric-finger-print'},{'name': 'BreadcrumbsComponent', 'selector': 'ngx-breadcrumbs'},{'name': 'ContactDetailsComponent', 'selector': 'ngx-contact-details'},{'name': 'DataTableComponent', 'selector': 'ngx-data-table'},{'name': 'DocumentCaptureComponent', 'selector': 'ngx-document-capture'},{'name': 'DocumentUploadComplexComponent', 'selector': 'ngx-document-upload-complex'},{'name': 'DocumentUploadComponent', 'selector': 'ngx-document-upload'},{'name': 'DynamicFormComponent', 'selector': 'ngx-dynamic-form'},{'name': 'DynamicQuestionComponent', 'selector': 'ngx-question'},{'name': 'FooterComponent', 'selector': 'ngx-footer'},{'name': 'HeaderComponent', 'selector': 'ngx-header'},{'name': 'HomeComponent', 'selector': 'ngx-home'},{'name': 'IdentityComponent', 'selector': 'ngx-identity'},{'name': 'ImageMapAreaComponent', 'selector': 'ngx-image-map-area'},{'name': 'NotificationComponent', 'selector': 'ngx-notification'},{'name': 'NumberplateOrderComponent', 'selector': 'ngx-numberplate-order'},{'name': 'PageNotFoundComponent', 'selector': 'ngx-page-not-found'},{'name': 'PanelMenuComponent', 'selector': 'ngx-panel-menu'},{'name': 'PdfViewComponent', 'selector': 'ngx-pdf-viewer'},{'name': 'PhotoCaptureComponent', 'selector': 'facetech-photo-capture'},{'name': 'RecommendationComponent', 'selector': 'ngx-recommendation'},{'name': 'RegistrationComponent', 'selector': 'ngx-registration'},{'name': 'RepresentativeTransferComponent', 'selector': 'ngx-representative-transfer'},{'name': 'ScheduleCalendarComponent', 'selector': 'ngx-schedule-calendar'},{'name': 'ScheduleCalendarTestpageComponent', 'selector': 'ngx-schedule-calendar-testpage'},{'name': 'SignatoryCaptureComponent', 'selector': 'ngx-signatory-capture'},{'name': 'SignatureCaptureComponent', 'selector': 'facetech-signature-capture'},{'name': 'SpinnerComponent', 'selector': 'ngx-spinner'},{'name': 'TemplateClientMessagesComponent', 'selector': 'ngx-template-client-messages'},{'name': 'TemplateEditorComponent', 'selector': 'ngx-template-editor'},{'name': 'TemplateShellComponent', 'selector': 'ngx-template-shell'},{'name': 'TrainingManagmentComponent', 'selector': 'ngx-training-managment'},{'name': 'TransactionCommentsComponent', 'selector': 'ngx-transaction-comments'},{'name': 'TransactionListComponent', 'selector': 'ngx-transaction-list'},{'name': 'UiBlockComponent', 'selector': 'ngx-ui-block'}];
+    var DIRECTIVES = [{'name': 'FocusDirective', 'selector': '[elementFocus]'}];
+    var ACTUAL_COMPONENT = {'name': 'ScheduleCalendarComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ScheduleCalendarComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

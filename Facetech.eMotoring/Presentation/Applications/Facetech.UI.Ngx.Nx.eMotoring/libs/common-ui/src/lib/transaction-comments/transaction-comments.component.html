@@ -1,0 +1,83 @@
+<div class="center-block block-margin" style="height:100%;" #elementSize>
+
+  <div class="card" style="height:100%;">
+
+    <div class="card-header sub-header p-2">
+      <span class="component-header-text">Transaction comments</span>
+      <span *ngIf="!addingNewComment"><button class="component-header-button" type="button" (click)="displayNewCommentNode()" pButton icon="fa fa-commenting-o"></button></span>
+      <span *ngIf="addingNewComment"><button class="component-header-button" type="button" pButton icon="fa fa-commenting-o" disabled></button></span>
+      <span><button class="component-header-button" type="button" (click)="collapseAll()" pButton icon="fa fa-level-up fa-flip-horizontal"></button></span>
+      <span><button class="component-header-button" type="button" (click)="expandAll()" pButton icon="fa fa-level-down"></button></span>
+    </div>
+
+    <p-scrollPanel [style]="{width: '100%', 'height':calculateScrollPanelHeight(), 'margin-top':'5px'}" styleClass="custom">
+      <div class="mt-3 mb-3">
+        <p-treeTable [value]="transactionComments">
+          <ng-template pTemplate="body" let-rowNode let-rowData="rowData">
+            <tr>
+              <td class="commentNodeCell">
+                <div class="d-flex justify-content-start">
+                  <div>
+                    <p-treeTableToggler [rowNode]="rowNode"></p-treeTableToggler>
+                    <span class="btn btn-sm ml-1" icon="pi pi-clear" *ngIf="!rowData.hasChildren && rowData.indentationLevel == '1'"></span>
+                  </div>
+                  <div class="roundCorners commentNodeBubble">
+                    <span class="roundCornersTop commentNodeHeader"
+                          [ngClass]="rowData.indentationLevel == '1' ? 'level1Node' : rowData.indentationLevel == '2' ? 'level2Node' : rowData.indentationLevel == '3' ? 'level3Node' : 'level4Node'">
+                      {{rowData.header}}
+                    </span>
+                    <div class="includeWhiteSpace">{{rowData.message}}</div>
+
+                    <div class="commentNodeMessage">
+                      <span class="iconSpan">
+                        <i class="btn btn-sm fa p-0"
+                           [ngClass]="rowData.collapsed ? 'fa-reply' : 'fa-ban'"
+                           [style.color]="rowData.collapsed ? '#0079f9' : 'red'"
+                           (click)="toggleComment(rowData)"></i>
+                      </span>
+                      <div [ngClass]="rowData.collapsed ? 'collapse' : 'collapse show'">
+                        <textarea class="commentTextarea" [elementFocus]="!rowData.collapsed" pInputTextarea [(ngModel)]="rowData.replyMessage">{{rowData.replyMessage}}</textarea>
+                        <span class="iconSpan">
+                          <i *ngIf="rowData.replyMessage"
+                             class="btn btn-sm fa fa-paper-plane p-0 positiveIcon"
+                             (click)="submitReplyComment(rowData)"></i>
+                          <i *ngIf="!rowData.replyMessage"
+                             class="btn btn-sm fa fa-paper-plane p-0 positiveIcon"
+                             [ngClass]="rowData.replyMessage ? '' : 'disabled'">
+                          </i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+          </ng-template>
+        </p-treeTable>
+      </div>
+    </p-scrollPanel>
+
+
+    <div *ngIf="addingNewComment">
+      <div class="card m-2">
+        <div class="card-header sub-header p-2">
+          <span class="ui-panel-title component-header-text">Add new comment</span>
+        </div>
+        <div class="roundCorners newCommentNodeBubble">
+          <span class="iconSpan">
+            <i class="btn btn-sm fa fa-ban p-0 negativeIcon" (click)="clearNewComment()"></i>
+          </span>
+          <div>
+            <textarea class="commentTextarea" [elementFocus]="addingNewComment" pInputTextarea [(ngModel)]="newComment">{{newComment}}</textarea>
+          </div>
+          <span style="display:block;text-align:right;vertical-align:top;">
+            <i *ngIf="newComment" class="btn btn-sm fa fa-paper-plane p-0 positiveIcon" style="margin-top:-7px;" (click)="submitNewComment(newComment)"></i>
+            <i *ngIf="!newComment" class="btn btn-sm fa fa-paper-plane p-0 positiveIcon" style="margin-top:-7px;" ngClass="disabled"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

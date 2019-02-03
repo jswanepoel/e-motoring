@@ -1,0 +1,733 @@
+<div class="shell">
+  <div class="center-block block-margin" style="width:100%;height:var(--div-size)">
+    <div class="card" style="height:100%;">
+
+      <div class="card-header sub-header p-2">
+        <span class="component-header-text">Schedule</span>
+        <span><button class="component-header-button" type="button" pButton icon="fa fa-refresh" pTooltip="Reset to original state" tooltipPosition="top"></button></span>
+        <span><button class="component-header-button" type="button" pButton icon="fa fa-info" pTooltip="Information" tooltipPosition="top"></button></span>
+      </div>
+
+      <div class="card-body card-h100 " [ngClass]="{'parentCardBody': bodyCenter === true}">
+        <div class="template-shell-control">
+
+          <p-table #dt
+                   [columns]="parentHeaders"
+                   [value]="selectedParentGroup"
+                   selectionMode="single"
+                   dataKey="data.id"
+                   [(selection)]="selectedParent"
+                   [paginator]="isPaginatorVisible('parent')"
+                   [rows]="5">
+            <ng-template pTemplate="caption">
+              <h4>
+                <b style="color:white">{{parentHeader||'Parent Header'}}</b>
+              </h4>
+              <div style="display:flex;justify-content:space-around">
+                <div>
+                  <b style="color:white">
+                    Offices:
+                  </b>
+                  <p-dropdown #locs
+                              [options]="locationOptions"
+                              [style]="{ 'min-width': '100px' }"
+                              [(ngModel)]="selectedParentGroup"></p-dropdown>
+                </div>
+                <div>
+                  <div *ngIf="filterByDate">
+                    <b style="color:white">
+                      Date:
+                    </b>
+                    <p-calendar [style]="{'min-width':'500px'}" [(ngModel)]="selectedDate" dateFormat="dd MM yy"></p-calendar>
+                  </div>
+                  <p-toggleButton onLabel="Show All" offLabel="Choose Date" [(ngModel)]="filterByDate">
+                  </p-toggleButton>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template pTemplate="header" let-columns>
+              <tr class="border border-primary">
+                <th style="width:3em"></th>
+                <th *ngFor="let col of columns">
+                  {{col.header}}
+                </th>
+                <th>Actions</th>
+              </tr>
+            </ng-template>
+            <!--Parent Body Start-->
+            <ng-template pTemplate="body" let-rowData let-columns="columns">
+              <tr *ngIf="filterByDate?(getDate(rowData.data['date'])==selectedDate.toLocaleDateString()):true" [pSelectableRow]="rowData">
+                <td>
+                  <a *ngIf="rowData.children.length>0" href="#" [pRowToggler]="rowData">
+                    <i pTooltip="View participants" (click)="expandParent(rowData)" [ngClass]="(activeParent===rowData) ? 'pi pi-chevron-down' : 'pi pi-chevron-right'" style="color:darkgray"></i>
+                  </a>
+                </td>
+                <td *ngFor="let col of columns">
+                  <p *ngIf="col.field === '#calculatedAttend'">
+                    {{ rowData.children.length }}
+                  </p>
+                  <p *ngIf="col.field === '#calculatedStat'">
+                    {{
+                    rowData.children.length < rowData.data['available']
+                    ? rowData.data['available'] -
+                    rowData.children.length +
+                    ' available slots'
+                    : 'Fully booked'
+                    }}
+                  </p>
+                  <p *ngIf="col.header === 'Date'">
+                    {{ getDate(rowData.data[col.field]) }}
+                  </p>
+                  <p *ngIf="col.header === 'Time'">
+                    {{ getTime(rowData.data[col.field]) }}
+                  </p>
+                  <p *ngIf="col.header !== 'Date' && col.header !== 'Time'"
+                     style="overflow:hidden;">
+                    {{ rowData.data[col.field] }}
+                  </p>
+                </td>
+                <td *ngIf="_actionParent">
+                  <div>
+                    <span style="float:right">
+                      <i (click)="childAction('add',rowData)"
+                         pTooltip="Add Participant"
+                         tooltipPosition="left"
+                         class="fa fa-plus mr-2 ml-2"
+                         pbutton></i>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr *ngIf="activeParent===rowData" style="background-color:#007ad9">
+                <td [attr.colspan]="columns.length+2">
+                  <ng-container *ngTemplateOutlet="childData"></ng-container>
+                </td>
+              </tr>
+            </ng-template>
+            <!--Parent Body End-->
+          </p-table>
+
+          <!--Child Body Start-->
+          <ng-template #childData>
+            <p-table #dt
+                     [columns]="childHeaders"
+                     [value]="activeParent.children"
+                     [paginator]="isPaginatorVisible('child')"
+                     [(selection)]="selectedChild"
+                     selectionMode="single"
+                     dataKey="data.id"
+                     [rows]="5"
+                     [resizableColumns]="true">
+              <ng-template pTemplate="caption">
+                <h4>
+                  <b style="color:white">{{activeParent.data.date | date:'medium'||'Child Header'}}</b>
+                </h4>
+              </ng-template>
+              <ng-template pTemplate="header" let-columns>
+                <tr>
+                  <th *ngFor="let col of columns" pResizableColumn>
+                    {{col.header}}
+                  </th>
+                  <th *ngIf="_actionChild">Actions</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body"
+                           let-rowData
+                           let-columns="columns">
+                <tr *ngIf="rowData.data.company==userCompany; else otherCompany" [pSelectableRow]="rowData">
+                  <td *ngFor="let col of columns"
+                      style="overflow:hidden;text-overflow:ellipsis">
+                    <div>
+                      {{ rowData.data[col.field] }}
+                    </div>
+                  </td>
+                  <td *ngIf="_actionChild"
+                      class="justify-content-center">
+                    <i (click)="childAction('remove',rowData)"
+                       pTooltip="Remove"
+                       tooltipPosition="top"
+                       class="fa fa-close mr-2 ml-2"
+                       pbutton></i>
+                  </td>
+                </tr>
+                <ng-template #otherCompany>
+                  <tr [pSelectableRow]="rowData.data" style="background-color:gray">
+                    <td *ngFor="let col of columns" style="overflow:hidden;text-overflow:ellipsis;">
+                      <div>
+                        {{'Not an employee of '+userCompany}}
+                      </div>
+                    </td>
+                    <td *ngIf="_actionChild"
+                        class="justify-content-center">
+                      {{'none'}}
+                    </td>
+                  </tr>
+                </ng-template>
+              </ng-template>
+            </p-table>
+          </ng-template>
+
+        </div>
+      </div>
+
+      <div *ngIf="includeFooter">
+        <div class="d-flex card-footer p-2" style="text-align:right;">
+          <div style="display:inline-block; width:100%;">
+            <button type="button" class="btn btn-primary mr-2"><i class="fa fa-recycle mr-1"></i>Do Something Normal</button>
+            <button type="button" class="btn btn-success"><i class="fa fa-bullseye mr-1"></i>Do Something Positive</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!--Child Body End-->
+<!--Action Dialogs Start-->
+<p-dialog header="Details"
+          [(visible)]="childDialogs.displayDialogChildEdit"
+          [responsive]="true"
+          showEffect="fade"
+          [modal]="true"
+          [width]="300"
+          [contentStyle]="{'overflow':'visible'}">
+  <div class="ui-g ui-fluid" *ngIf="childDialogs.displayDialogChildEdit">
+    <div *ngFor="let headers of childHeaders; let i = index"
+         [attr.data-index]="i"
+         class="ui-g-12">
+      <div class="ui-g-4">
+        <label for="id">{{ headers.header }}</label>
+      </div>
+      <div class="ui-g-8">
+        <input pInputText id="id" [(ngModel)]="newChild[headers.field]" />
+      </div>
+    </div>
+  </div>
+  <p-footer>
+    <div class="ui-dialog-buttonpane ui-helper-clearfix">
+      <button type="button"
+              pButton
+              (click)="cancel()"
+              class="ui-button-info"
+              label="cancel"></button>
+      <button type="button"
+              pButton
+              icon="fa fa-edit"
+              (click)="saveChild()"
+              label="Save"></button>
+    </div>
+  </p-footer>
+</p-dialog>
+
+<p-dialog header="Details" [(visible)]="childDialogs.displayDialogChildDel" [responsive]="true" showEffect="fade" [modal]="true" [width]="'30%'">
+  <div class="ui-g ui-fluid" *ngIf="activeChild">
+    <div class="ui-g-12">
+      <div *ngFor="let header of childHeaders">
+        <div class="ui-g-4">
+          <label for="id">{{header.header}}</label>
+        </div>
+        <div class="ui-g-8">
+          <input pInputText id="id" [(ngModel)]="activeChild[header.field]" disabled />
+        </div>
+      </div>
+      <div class="ui-g-4">
+        <label for="reasonArea">{{'Reason: '}}</label>
+      </div>
+      <div class="ui-g-8">
+        <textarea [(ngModel)]="reasonForRemoval" name="name" pInputTextarea required></textarea>
+      </div>
+      <div class="ui-g-4">
+      </div>
+      <div class="ui-g-8">
+        <span *ngIf="(reasonForRemoval.length<10)&&(reasonForRemoval.length>0)" style="position:absolute;color:red;text-wrap:normal">The reason is too short {{'('+ reasonForRemoval.length+'/10)'}}</span>
+
+      </div>
+    </div>
+  </div>
+
+  <p-footer>
+    <div class="ui-dialog-buttonpane ui-helper-clearfix">
+      <button type="button" pButton (click)="cancel()" class="ui-button-info " label="Cancel"></button>
+      <button type="submit" pButton class="ui-button-danger " [disabled]="reasonForRemoval.length<10" icon="fa fa-close" (click)="deleteChild()" label="Remove"></button>
+    </div>
+  </p-footer>
+</p-dialog>
+<!--Action Dialogs End-->
+<!-- I will leave the below parent action dialogs here for use later -->
+<!--<p-dialog header="{{_newParent?'Schedual new training session':'Alter training session'}}"
+          [(visible)]="parentDialogs.displayDialogParentEdit"
+          [responsive]="true"
+          showEffect="fade"
+          [modal]="true"
+          [width]="300"
+          [contentStyle]="{'overflow':'visible'}"
+          [positionTop]="75"
+          >
+  <div class="ui-g ui-fluid" *ngIf="newParent">
+    <div *ngFor="let field of parentFields;"
+         class="ui-g-12">
+      <div class="ui-g-4">
+        <label for="id">{{ field.label }}</label>
+      </div>
+      <div class="ui-g-8">
+        <input *ngIf="field.field !== 'date'"
+               pInputText
+               id="id"
+               [(ngModel)]="newParent[field.field]" />
+        <p-calendar *ngIf="field.label === 'Date'"
+                    [(ngModel)]="newParent.date"
+                    [showTime] ="true"
+                    dateFormat="dd MM yy"></p-calendar>
+        <p *ngIf="field.label === 'Time'">{{getTime(newParent.date)}}</p>
+      </div>
+    </div>
+  </div>
+  <p-footer>
+    <div class="ui-dialog-buttonpane ui-helper-clearfix">
+      <button type="button"
+              pButton
+              (click)="cancel()"
+              class="ui-button-info"
+              label="cancel"></button>
+      <button type="button"
+              pButton
+              icon="fa fa-check"
+              class="ui-button-success"
+              (click)="saveParent(newParent)"
+              label="Accept"></button>
+    </div>
+  </p-footer>
+</p-dialog>-->
+<!--<p-table [columns]="_parentHeaders"
+         [value]="selectedParentGroup"
+         selectionMode="single"
+         dataKey="id"
+         [(selection)]="selectedParent"
+         [paginator]="true"
+         [rows]="5">
+  <ng-template pTemplate="caption">
+    {{parentHeader||'Parent Header'}}
+  </ng-template>
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th *ngFor="let col of columns">
+        {{col.header}}
+      </th>
+      <th *ngIf="allowActions">Actions</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr [pSelectableRow]="rowData">
+      <td *ngFor="let col of columns">
+        <p *ngIf="col.field === '#calculatedAttend'">
+          {{ rowData.children.length }}
+        </p>
+        <p *ngIf="col.field === '#calculatedStat'">
+          {{
+                    rowData.children.length < rowData['available']
+                    ? rowData['available'] -
+                    rowData.children.length +
+                    ' available slots'
+                    : 'Fully booked'
+          }}
+        </p>
+        <p *ngIf="col.header === 'Date'">
+          {{ getDate(rowData[col.field]) }}
+        </p>
+        <p *ngIf="col.header === 'Time'">
+          {{ getTime(rowData[col.field]) }}
+        </p>
+        <p *ngIf="col.header !== 'Date' && col.header !== 'Time'"
+           style="overflow:hidden;text-overflow:ellipsis">
+          {{ rowData[col.field] }}
+        </p>
+      </td>
+
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="summary">
+    <ng-container *ngTemplateOutlet="childData"></ng-container>
+  </ng-template>
+</p-table>
+
+
+<ng-template #childData>
+  <p-table #dt
+           [columns]="_childHeaders"
+           [value]="selectedParent.children"
+           [paginator]="true"
+           [(selection)]="selectedChild"
+           [rows]="5">
+    <ng-template *ngIf="_gFilterChild" pTemplate="caption">
+      <h4>
+        <b style="color:white">{{childHeader||'Child Header'}}</b>
+      </h4>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th *ngFor="let col of columns">
+          {{col.header}}
+        </th>
+        <th *ngIf="allowActions">Actions</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body"
+                 let-rowData
+                 let-columns="columns">
+      <tr [pSelectableRow]="rowData">
+        <td *ngFor="let col of columns"
+            style="overflow:hidden;text-overflow:ellipsis">
+          {{ rowData[col.field]||'' }}
+        </td>
+        <td *ngIf="_actionChild"
+            class="justify-content-center">
+          <i (click)="selectChildWithButtonEdit(rowData)"
+             class="fa fa-check mr-2 ml-2"
+             pbutton
+             pTooltip="Accept"
+             tooltipPosition="top"></i>
+          <i (click)="selectChildWithButtonDel(rowData)"
+             pTooltip="Reject"
+             tooltipPosition="top"
+             class="fa fa-close mr-2 ml-2"
+             pbutton></i>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</ng-template>
+
+
+
+
+<div class="center-block block-margin">
+  <p-table #dp
+           [columns]="_parentHeaders"
+           [value]="selectedParentGroup"
+           rowExpandMode="single"
+           dataKey="id"
+           [(selection)]="selectedParent"
+           [paginator]="true"
+           [rows]="5">
+    <ng-template *ngIf="_gFilterParent" pTemplate="caption">
+      <div>
+        <h4><b style="color:white">Training sessions</b></h4>
+        <div>
+          <p-dropdown #locs
+                      [options]="locationOptions"
+                      [style]="{ 'min-width': '100px' }"
+                      [(ngModel)]="selectedParentGroup"></p-dropdown>
+        </div>
+        <div style="text-align: right;">
+          <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+          <button class="ml-3"
+                  type="button"
+                  pButton
+                  icon="fa fa-plus"
+                  (click)="showDialogToAddParent()"
+                  style="width:5%"></button>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+      <tr *ngIf="_sortParent">
+        <th style="width: 3em" *ngIf="_selectParent">
+          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+        </th>
+        <th style="width:3em"></th>
+        <th *ngFor="let col2 of columns" [pSortableColumn]="col2.field">
+          {{ col2.header }}
+          <p-sortIcon *ngIf="_sortParent"
+                      [field]="col2.field"
+                      ariaLabel="Activate to sort"
+                      ariaLabelDesc="Activate to sort in descending order"
+                      ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body"
+                 let-rowData
+                 let-expanded="expanded"
+                 let-columns="columns">
+      <tr [pSelectableRow]="rowData">
+        <td *ngIf="_selectParent">
+          <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+        </td>
+        <td>
+          <a *ngIf="!_selectParent" href="#" [pRowToggler]="rowData">
+            <i [ngClass]="
+                 expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'
+                 "
+               style="color:darkgray"
+               (click)="selectParentRow(rowData, expanded)"></i>
+          </a>
+        </td>
+        <td *ngFor="let col2 of columns">
+          <p *ngIf="col2.field === '#calculatedAttend'">
+            {{ rowData.children.length }}
+          </p>
+          <p *ngIf="col2.field === '#calculatedStat'">
+            {{
+                    rowData.children.length < rowData['available']
+                    ? rowData['available'] -
+                    rowData.children.length +
+                    ' available slots'
+                    : 'Fully booked'
+            }}
+          </p>
+          <p *ngIf="col2.header === 'Date'">
+            {{ getDate(rowData[col2.field]) }}
+          </p>
+          <p *ngIf="col2.header === 'Time'">
+            {{ getTime(rowData[col2.field]) }}
+          </p>
+          <p *ngIf="col2.header !== 'Date' && col2.header !== 'Time'"
+             style="overflow:hidden;text-overflow:ellipsis">
+            {{ rowData[col2.field] }}
+          </p>
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="rowexpansion" let-rowData let-columns="columns">
+      <tr>
+        <td [attr.colspan]="columns.length + 1"
+            style="background-color:lightgray">
+          <div class="ui-g ui-fluid justify-content-center"
+               style="font-size:16px;">
+            <div class="ui-g-12">
+              <div class="ui-g">
+                <div class="ui-g-12">
+                  <div class="mt-0" *ngIf="_selectionB">
+                    <div *ngIf="rowData.children ? true : false">
+                      <p-table #dt
+                               [columns]="_childHeaders"
+                               [value]="rowData.children"
+                               [paginator]="true"
+                               [(selection)]="selectedChild"
+                               [rows]="5">
+                        <ng-template *ngIf="_gFilterChild" pTemplate="caption">
+                          <h4><b style="color:white">Participants</b></h4>
+                          <div class="d-flex justify-content-end"
+                               style="text-align: right">
+                            <i class="fa fa-search"
+                               style="margin:4px 4px 0 0"></i>
+                            <input type="text"
+                                   pInputText
+                                   size="50"
+                                   placeholder="Global Filter"
+                                   (input)="
+                                            dt.filterGlobal($event.target.value, 'contains')
+                                            "
+                                   style="width:30%" />
+                          </div>
+                        </ng-template>
+                        <ng-template pTemplate="header" let-columns>
+      <tr *ngIf="_sortChild">
+        <th style="width:3em"></th>
+        <th *ngIf="_selectChild" style="width: 3em">
+          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+        </th>
+        <th *ngFor="let col of columns"
+            [pSortableColumn]="col.field">
+          {{ col.header }}
+          <p-sortIcon *ngIf="_sortChild"
+                      [field]="col.field"
+                      ariaLabel="Activate to sort"
+                      ariaLabelDesc="Activate to sort in descending order"
+                      ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+        </th>
+        <th *ngIf="_actionChild">Actions</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body"
+                 let-rowData
+                 let-columns="columns">
+      <tr [pSelectableRow]="rowData">
+        <td>
+          <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+        </td>
+        <td *ngFor="let col of columns"
+            style="overflow:hidden;text-overflow:ellipsis">
+          {{ rowData[col.field] }}
+        </td>
+        <td *ngIf="_actionChild"
+            class="justify-content-center">
+          <i (click)="selectChildWithButtonEdit(rowData)"
+             class="fa fa-check mr-2 ml-2"
+             pbutton
+             pTooltip="Accept"
+             tooltipPosition="top"></i>
+          <i (click)="selectChildWithButtonDel(rowData)"
+             pTooltip="Reject"
+             tooltipPosition="top"
+             class="fa fa-close mr-2 ml-2"
+             pbutton></i>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+           </div>
+           </div>
+           </div>
+           </div>
+           </div>
+           </td>
+           </tr>
+        </ng-template>
+        </p-table>
+     </div>
+<p-dialog header="Details"
+          [(visible)]="parentDialogs.displayDialogParentDel"
+          [responsive]="true"
+          showEffect="fade"
+          [modal]="true"
+          [width]="300">
+  <div class="ui-g ui-fluid" *ngIf="expandedParent">
+    <div *ngFor="let headers of _parentHeaders; let i = index"
+         [attr.data-index]="i"
+         class="ui-g-12">
+      <div class="ui-g-4">
+        <label for="id">{{ headers.header }}</label>
+      </div>
+      <div class="ui-g-8">
+        <input pInputText
+               id="id"
+               [(ngModel)]="expandedParent[headers.field]"
+               disabled />
+      </div>
+    </div>
+  </div>
+  <div class="ui-g-4"><label for="id">Reason:</label></div>
+  <div class="ui-g-8"><textarea rows="4" class="form-control"></textarea></div>
+  <p-footer>
+    <div class="ui-dialog-buttonpane ui-helper-clearfix">
+      <button type="button"
+              pButton
+              (click)="cancel()"
+              class="ui-button-info "
+              label="Cancel"></button>
+      <button type="button"
+              pButton
+              class="ui-button-danger "
+              icon="fa fa-close"
+              (click)="deleteParent()"
+              label="Reject"></button>
+    </div>
+  </p-footer>
+</p-dialog>
+<p-dialog header="Details"
+          [(visible)]="parentDialogs.displayDialogParentEdit"
+          [responsive]="true"
+          showEffect="fade"
+          [modal]="true"
+          [width]="300">
+  <div class="ui-g ui-fluid" *ngIf="expandedParent">
+    <div *ngFor="let field of _parentFields; let i = index"
+         [attr.data-index]="i"
+         class="ui-g-12">
+      <div class="ui-g-4">
+        <label for="id">{{ field.label }}</label>
+      </div>
+      <div class="ui-g-8">
+        <input *ngIf="field.label !== 'Date' && field.label !== 'Time'"
+               pInputText
+               id="id"
+               [(ngModel)]="expandedParent[field.field]" />
+        <p-calendar *ngIf="field.label === 'Date'"
+                    [(ngModel)]="expandedParent[field.field]"
+                    dateFormat="dd-mm-yy"></p-calendar>
+        <p-calendar *ngIf="field.label === 'Time'"
+                    [(ngModel)]="expandedParent[field.field]"
+                    [timeOnly]="true"
+                    hourFormat="24"></p-calendar>
+      </div>
+    </div>
+  </div>
+  <p-footer>
+    <div class="ui-dialog-buttonpane ui-helper-clearfix">
+      <button type="button"
+              pButton
+              (click)="cancel()"
+              class="ui-button-info"
+              label="cancel"></button>
+      <button type="button"
+              pButton
+              icon="fa fa-check"
+              class="ui-button-success"
+              (click)="saveParent()"
+              label="Accept"></button>
+    </div>
+  </p-footer>
+</p-dialog>
+<p-dialog header="Details"
+          [(visible)]="childDialogs.displayDialogChildEdit"
+          [responsive]="true"
+          showEffect="fade"
+          [modal]="true"
+          [width]="300">
+  <div class="ui-g ui-fluid" *ngIf="activeChild">
+    <div *ngFor="let headers of _childHeaders; let i = index"
+         [attr.data-index]="i"
+         class="ui-g-12">
+      <div class="ui-g-4">
+        <label for="id">{{ headers.header }}</label>
+      </div>
+      <div class="ui-g-8">
+        <input pInputText id="id" [(ngModel)]="activeChild[headers.field]" />
+      </div>
+    </div>
+  </div>
+  <p-footer>
+    <div class="ui-dialog-buttonpane ui-helper-clearfix">
+      <button type="button"
+              pButton
+              (click)="cancel()"
+              class="ui-button-info"
+              label="cancel"></button>
+      <button type="button"
+              pButton
+              icon="fa fa-edit"
+              (click)="saveChild()"
+              label="change"></button>
+    </div>
+  </p-footer>
+</p-dialog>
+<p-dialog header="Details"
+          [(visible)]="childDialogs.displayDialogChildDel"
+          [responsive]="true"
+          showEffect="fade"
+          [modal]="true"
+          [width]="300">
+  <div class="ui-g ui-fluid" *ngIf="activeChild">
+    <div *ngFor="let header of _childHeaders; let i = index"
+         [attr.data-index]="i"
+         class="ui-g-12">
+      <div class="ui-g-4">
+        <label for="id">{{ header.header }}</label>
+      </div>
+      <div class="ui-g-8">
+        <input pInputText
+               id="id"
+               [(ngModel)]="activeChild[header.field]"
+               disabled />
+      </div>
+    </div>
+  </div>
+  <p-footer>
+    <div class="ui-dialog-buttonpane ui-helper-clearfix">
+      <button type="button"
+              pButton
+              (click)="cancel()"
+              class="ui-button-info "
+              label="Cancel"></button>
+      <button type="button"
+              pButton
+              class="ui-button-danger "
+              icon="fa fa-close"
+              (click)="deleteChild()"
+              label="Delete"></button>
+    </div>
+  </p-footer>
+</p-dialog>-->

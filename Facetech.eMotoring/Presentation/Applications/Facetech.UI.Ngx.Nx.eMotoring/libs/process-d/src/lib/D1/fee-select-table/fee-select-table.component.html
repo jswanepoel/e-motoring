@@ -1,0 +1,67 @@
+<div class="card">
+  <p-table [columns]="headers"
+           [value]="transactions"
+           [(selection)]="selectedTransactions"
+           dataKey="id"
+           [scrollable]="true"
+           scrollHeight="200px">
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th style="width: 3em">
+          <p-tableHeaderCheckbox [disabled]="disableSelection" (click)="rowSelected()"></p-tableHeaderCheckbox>
+        </th>
+        <th *ngFor="let col of columns">
+          {{col.header}}
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+      <tr [pSelectableRow]="rowData">
+        <td style="width: 3em">
+          <p-tableCheckbox [value]="rowData" (click)="rowSelected()" [disabled]="disableSelection"></p-tableCheckbox>
+        </td>
+        <td *ngFor="let col of columns">
+          <p *ngIf="(col.field!='taxpercentage')&&(col.field != 'feetype_lookupvalue_id')">
+            {{rowData[col.field]}}
+          </p>
+          <p *ngIf="col.field=='taxpercentage'">
+            {{(rowData['amount']*(rowData['taxpercentage']/100))+' '}}
+            ({{rowData[col.field]}}%)
+          </p>
+          <p *ngIf="col.field == 'feetype_lookupvalue_id'">
+            {{getLookupLabel(rowData[col.field],'feeTypes')}}
+          </p>
+          <p *ngIf="col.field=='total'">
+            {{rowData['amount']+(rowData['amount']*(rowData['taxpercentage']/100))}}
+          </p>
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+      <div *ngIf="selectedTransactions.length>0" class="ui-grid m-1">
+        <div class="ui-grid-col-12" style="text-align: right;">
+          <div class="ui-grid-row-2">
+            <label>Total Payable for Selected Transactions  (Excl. Tax): Rs&nbsp;</label>
+            <input pInputText
+                   type="number"
+                   readonly
+                   value="{{(getTotalAmount()||0) - (getTotalTax()||0)}}" />
+          </div><div class="ui-grid-row-2">
+            <div class="ui-grid-row-2">
+              <label>Tax Amount: Rs&nbsp; </label>
+              <input pInputText
+                     type="number"
+                     readonly
+                     value="{{getTotalTax()||0}}" />
+            </div>
+            <label>Total Payable for Selected Transactions  (Incl. Tax): Rs&nbsp; </label>
+            <input pInputText
+                   type="number"
+                   readonly
+                   value="{{getTotalAmount()||0}}" />
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-table>
+</div>

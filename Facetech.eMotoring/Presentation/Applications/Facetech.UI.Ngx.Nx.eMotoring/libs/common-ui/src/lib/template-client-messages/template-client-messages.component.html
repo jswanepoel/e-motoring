@@ -1,0 +1,177 @@
+<!--<ck-editor name="editor1" [(ngModel)]="editorValue" [fullPage]="false" skin="moonocolor" language="en" ></ck-editor>-->
+<!--<script src="//https://cdn.ckeditor.com/4.7.1/full/ckeditor.js"></script>-->
+<!--<ck-editor name="editor1" [(ngModel)]="editorValue" skin="moonocolor" [fullPage]="true"></ck-editor>-->
+<!--<ck-editor name="editor1" [(ngModel)]="editorValue" skin="moono-lisa" language="en" [fullPage]="true"></ck-editor>-->
+<!--<div class="ui-grid-row mt-2 ">
+  <div class="ui-grid-col-6">
+    Entity Type *:
+  </div>
+  <div class="ui-g-3"><p-radioButton name="group1" value="Person" label="Person" formControlName="funtion" inputId="Person"></p-radioButton></div>
+  <div class="ui-g-3"><p-radioButton name="group1" value="Bussiness" label="Bussiness" formControlName="funtion" inputId="Bussiness"></p-radioButton></div>
+</div>-->
+<div class="ui-grid-row mt-2 ">
+  <div class="ui-grid-col-6">
+    Test name :
+  </div>
+  <div class="d-flex ui-grid-col-6 justify-content-start">
+    <div style="z-index:1;background-color:red;" class="p-1 status-indicator"></div>
+    <input pInputText type="text" placeholder="Required" />
+  </div>
+</div>
+
+<div class="ui-grid-row mt-2 ">
+  <div class="ui-grid-col-6">
+    Gender :
+  </div>
+  <div class="d-flex ui-grid-col-6 justify-content-start">
+    <div style="z-index:1;background-color:red;" class="p-1 status-indicator"></div>
+    <div class="radioContainer">
+      <div class="pt-1 pb-1 pl-2"><p-radioButton name="Gender" value="Male" label="Male" inputId="Male"></p-radioButton></div>
+      <div class="pt-1 pb-1 pl-2"><p-radioButton name="Gender" value="Female" label="Female" inputId="Female"></p-radioButton></div>
+      <div class="pt-1 pb-1 pl-2"><p-radioButton name="Gender" value="Other" label="Other" inputId="Other"></p-radioButton></div>
+    </div>
+  </div>
+</div>
+
+<div class="ui-grid-row mt-2 ">
+  <div class="ui-grid-col-6">
+    Hobies :
+  </div>
+  <div class="d-flex ui-grid-col-6 justify-content-start">
+    <div style="z-index:1;background-color:red;" class="p-1 status-indicator"></div>
+    <div class="radioContainer">
+      <div class="pt-1 pb-1 pl-2"><p-checkbox name="Hobies" value="Photography" label="Photography"></p-checkbox></div>
+      <div class="pt-1 pb-1 pl-2"><p-checkbox name="Hobies" value="Hunting" label="Hunting"></p-checkbox></div>
+      <div class="pt-1 pb-1 pl-2"><p-checkbox name="Hobies" value="4x4" label="4x4"></p-checkbox></div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--<div class="m-3">
+  <p-table #dp [columns]="cols2" [value]="people" rowExpandMode="single" [(selection)]="selectedParent" dataKey="id" [paginator]="true" [rows]="50">
+    <ng-template *ngIf="gFilterParent" pTemplate="caption">
+      <div>
+        <h4><b style="color:white">Transaction list</b></h4>
+        <div style="text-align: right;">
+          <i class="fa fa-search" style="margin:4px 4px 0 0; color:white"></i>
+          <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dp.filterGlobal($event.target.value, 'contains')" style="width:30%">
+          <button class="ml-3" type="button" pButton icon="fa fa-filter" (click)="toggleFilterPVisibility()" [ngClass]="filterExpansionP ? 'ui-button-success' : 'ui-button-danger'" style="width:5%;color:white;"></button>
+
+        </div>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+      <tr *ngIf="sortParent">
+        <th style="width: 3em" *ngIf="selectParent"><p-tableHeaderCheckbox></p-tableHeaderCheckbox></th>
+
+
+        <th style="width:3em"></th>
+        <th *ngFor="let col2 of columns" [pSortableColumn]="col2.field">
+          {{col2.header}}
+          <p-sortIcon *ngIf="sortParent" [field]="col2.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+        </th>
+        <th *ngIf="actionParent">
+          Actions
+        </th>
+      </tr>
+      <tr *ngIf="filterParent" [hidden]="filterExpansionP">
+        <th *ngIf="selectParent"></th>
+        <th></th>
+        <th *ngFor="let col2 of columns" [ngSwitch]="col2.field">
+          <input *ngSwitchCase=col2.header style="width:100%" pInputText type="text" (input)="dp.filter($event.target.value, col2.field, col2.filterMatchMode)">
+        </th>
+        <th *ngIf="actionParent"></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-expanded='expanded' let-columns="columns">
+      <tr [pSelectableRow]="rowData">
+        <td *ngIf="selectParent">
+          <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+        </td>
+
+        <td *ngIf="!rowData.hasChildren"></td>
+        <td *ngIf="rowData.hasChildren">
+          <a *ngIf="!selectParent" href="#" [pRowToggler]="rowData">
+            <i [ngClass]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'" style="color:darkgray" (click)="selectParentRow(rowData, expanded)"></i>
+          </a>
+        </td>
+        <td *ngFor="let col2 of columns">
+          {{rowData[col2.field]}}
+        </td>
+        <td *ngIf="actionParent" class="justify-content-center">
+          <i (click)="selectParentWithButtonEdit(rowData)" class="fa fa-check mr-2 ml-2" pbutton pTooltip="Accept" tooltipPosition="top"></i>
+          <i (click)="selectParentWithButtonDel(rowData)" pTooltip="Reject" tooltipPosition="top" class="fa fa-close mr-2 ml-2" pbutton></i>
+          <i (click)="goToReg()" class="fa fa-pencil mr-2 ml-2" pbutton pTooltip=" register" tooltipPosition="top"></i>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+
+
+<p-dialog header="Details" [(visible)]="displayDialogParentDel" [responsive]="true" showEffect="fade" [modal]="true" [width]="300">
+  <div class="ui-g ui-fluid" *ngIf="Parent">
+    <div *ngFor="let headers of parentHeaders; let i = index" [attr.data-index]="i" class="ui-g-12">
+      <div class="ui-g-4">
+        <label for="id">{{parentHeaders[i]}}</label>
+      </div>
+      <div class="ui-g-8">
+        <input pInputText id="id" [(ngModel)]="Parent[headers]" disabled />
+      </div>
+    </div>
+  </div>
+  <div class="ui-g-4">
+    <label for="id">Reason:</label>
+  </div>
+  <div class="ui-g-8">
+    <textarea rows="4" class="form-control"></textarea>
+  </div>
+  <p-footer>
+    <div class="ui-dialog-buttonpane ui-helper-clearfix">
+      <button type="button" pButton (click)="cancel()" class="ui-button-info " label="Cancel"></button>
+      <button type="button" pButton class="ui-button-danger " icon="fa fa-close" (click)="deleteParent()" label="Reject"></button>
+    </div>
+  </p-footer>
+</p-dialog>
+
+<p-dialog header="Details" [(visible)]="displayDialogParentReject" [responsive]="true" showEffect="fade" [modal]="true" [width]="300">
+  <div class="ui-g ui-fluid" *ngIf="Parent">
+
+  </div>
+  <div class="ui-g-4">
+    <label for="id">Reason:</label>
+  </div>
+  <div class="ui-g-8">
+    <textarea rows="4" class="form-control"></textarea>
+  </div>
+  <p-footer>
+    <div class="ui-dialog-buttonpane ui-helper-clearfix">
+      <button type="button" pButton (click)="cancel()" class="ui-button-info " label="Cancel"></button>
+      <button type="button" pButton class="ui-button-danger " icon="fa fa-close" (click)="deleteParent()" label="Reject"></button>
+    </div>
+  </p-footer>
+</p-dialog>
+
+
+
+
+<p-dialog header="Details" [(visible)]="displayDialogParentEdit" [responsive]="true" showEffect="fade" [modal]="true" [width]="300">
+  <div class="ui-g ui-fluid" *ngIf="Parent">
+    <div *ngFor="let headers of parentHeaders; let i = index" [attr.data-index]="i" class="ui-g-12">
+      <div class="ui-g-4">
+        <label for="id">{{parentHeaders[i]}}</label>
+      </div>
+      <div class="ui-g-8">
+        <input pInputText id="id" [(ngModel)]="Parent[headers]" disabled />
+      </div>
+    </div>
+  </div>
+  <p-footer>
+    <div class="ui-dialog-buttonpane ui-helper-clearfix">
+      <button type="button" pButton (click)="cancel()" class="ui-button-info" label="cancel"></button>
+      <button type="button" pButton icon="fa fa-check" class="ui-button-success" (click)="saveParent()" label="Accept"></button>
+    </div>
+  </p-footer>
+</p-dialog>-->

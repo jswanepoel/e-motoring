@@ -1,0 +1,54 @@
+<p-panel [toggleable]="false" *ngIf="true">
+  <p-header>
+    <span class="component-header-text">Open Shift</span>
+  </p-header>
+  <!--<ngx-dynamic-form #floatAmount [formDefinition]="formDefinition" [questionData]="null" [header]="'Test'"></ngx-dynamic-form>-->
+  <h3><b>{{'Preset float amount: '+formatCurrency(expectedFloatAmount)}}</b></h3>
+  <div class="w-50">
+    <p-table [value]="shiftDetails.floatDetails.denominations">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Denomination</th>
+          <th>Quantity</th>
+          <th>Value</th>
+          <th style="width:0px !important;"></th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowData>
+        <tr>
+          <td>
+            {{rowData.value}}
+          </td>
+          <td pEditableColumn style="text-align:center">
+            <p-cellEditor>
+              <ng-template pTemplate="input">
+                <input class="p-1" pInputText type="number" [(ngModel)]="rowData.amount" required>
+
+              </ng-template>
+              <ng-template pTemplate="output">
+                {{rowData.amount}}
+              </ng-template>
+            </p-cellEditor>
+          </td>
+          <td>
+            {{formatCurrency((rowData.value?rowData.value:0) * (rowData.amount?rowData.amount:0))}}
+          </td>
+          <td style="border-right:hidden;border-top:hidden">
+            <div class="ml-1" *ngIf="!isValid(rowData.amount)" [@slideInValidation]>
+              <p-message severity="info" text="You must enter a value"></p-message>
+            </div>
+          </td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="summary">
+        <div>{{'Total: '+formatCurrency(getTotalFloat())}}</div>
+        <div class="four-wide-column">
+          <div class="m-1 ml-3 p-1 w-100" *ngIf="!floatMatch" [@slideInValidation]>
+            <p-message *ngIf="expectedFloatAmount > getTotalFloat()" severity="warn" text="You are {{'('+formatCurrency(expectedFloatAmount - getTotalFloat())+')'}} short!"></p-message>
+            <p-message *ngIf="expectedFloatAmount < getTotalFloat()" severity="warn" text="You are {{'('+formatCurrency(getTotalFloat() - expectedFloatAmount)+')' }} over!"></p-message>
+          </div>
+        </div>
+      </ng-template>
+    </p-table>
+  </div>
+</p-panel>

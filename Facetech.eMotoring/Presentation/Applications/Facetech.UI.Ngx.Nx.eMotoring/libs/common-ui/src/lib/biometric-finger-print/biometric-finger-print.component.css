@@ -1,0 +1,77 @@
+.w-finger-print-capture {
+  width: 54em;
+}
+
+.w-finger-print-box {
+  width: 4em;
+}
+
+
+.h-finger-print-img {
+  height: 4em;
+}
+
+.hands-width {
+  width: 36em;
+}
+
+.ngx-page {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.2cm rgba(0,0,0,0.5);
+}
+
+  .ngx-page[size="FPI"] {
+    width: 7cm;
+    height: 7cm;
+  }
+
+
+.staySelected {
+  opacity: 2;
+}
+
+.notSelected {
+  opacity: 1;
+}
+
+
+
+/*https://codepen.io/desandro/pen/LmWoWe*/
+
+.flipContainer {
+  perspective: 1500px;
+}
+
+.flipable {
+  position: relative;
+  transition: transform .5s;
+  transform-style: preserve-3d;
+}
+
+.flipActive {
+  transform: rotateY(180deg);
+}
+
+.flipable__face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.flipable__face--front {
+}
+
+.flipable__face--back {
+  background: rgba(0, 120, 247, 0.7);
+  transform: rotateY(180deg);
+}
+
+.fingerNodeHourglass {
+  background-color: white;
+  color: rgba(0, 120, 247, 0.7);
+  text-shadow: 1px 1px rgb(0, 44, 90);
+}
